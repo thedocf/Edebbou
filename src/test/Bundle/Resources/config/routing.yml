@@ -1,0 +1,46 @@
+test_homepage:
+    path:     /
+    defaults: { _controller: testBundle:Default:index }
+
+show1:
+    path:     /show1
+    defaults: { _controller: testBundle:c1:show1 }
+show2:
+    path:     /show2
+    defaults: { _controller: testBundle:c1:show2 }
+
+addP:
+        path:     /addP
+        defaults: { _controller: testBundle:c1:addP }
+
+addCat:
+        path:     /addCat
+        defaults: { _controller: testBundle:c1:addCat}
+
+manCat:
+        path:     /manCat
+        defaults: { _controller: testBundle:c1:manCat}
+
+deleteCat:
+    path:     /deleteCat/{qdt}
+    defaults: { _controller: testBundle:c1:deleteCat }
+
+editCat:
+    path:     /editC/{id}
+    defaults: { _controller: testBundle:c1:editCat }
+
+manP:
+    path:     /manP
+    defaults: { _controller: testBundle:c1:manP}
+
+deleteP:
+    path:     /deleteP/{qdt}
+    defaults: { _controller: testBundle:c1:deleteP }
+
+editP:
+    path:     /editP/{id}
+    defaults: { _controller: testBundle:c1:editP }
+
+showByCat:
+    path:     /showByCat/{id}
+    defaults: { _controller: testBundle:c1:showByCat }
