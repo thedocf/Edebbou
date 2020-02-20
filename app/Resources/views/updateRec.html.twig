@@ -191,26 +191,26 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
 
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Gestion Reclamations</p>
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Gestion Reclamations</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
 
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Traiter Reclamations</p>
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Traiter Reclamations</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ path('addCat') }}" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Add Message Category</p>
+                                        <p>Edit Message</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
 
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Manage Message Category </p>
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Manage Message Category </p>
                                     </a>
                                 </li>
                             </ul>
@@ -377,7 +377,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="addCateg" class="nav-link active">
+                                    <a href="addCateg" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ajouter Categorie</p>
                                     </a>
@@ -389,7 +389,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="listmessages" class="nav-link">
+                                    <a href="listMessages" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Liste Messages</p>
                                     </a>
@@ -723,9 +723,9 @@
             <!-- Content Header (Page header) -->
             <div class="content-header">
                 <div class="container-fluid">
-                    <div class="row mb-4">
+                    <div class="row mb-2">
 
-                        <div class="col-sm-9">
+                        <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
 
                                 <li class="breadcrumb-item"><a href="{{ path('fos_user_security_logout') }}" >Logout</a></li>
@@ -739,35 +739,44 @@
             <!-- Main content -->
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Add Message Category</h3>
+                    <h3 class="card-title">Edit Message</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
                 <div class="card-body">
 
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-                    {{ form_start(Form) }}
-                    <div class="card-body">
-                        <br><br><br>
-                        <div class="form-group">
+                        <div class="form-group has-error">
                             <br>
-                            <div class="form-control">
-
-                                {{ form_row(Form.label) }}
-
-
-                            </div>
+                            {{ form_start(form) }}
+                            <br>
+                            {{ form_widget(form.title,{'attr':{'type':'text','class':'form-control','placeholder':'Title...'}}) }}
+                            <br>
+                            {{ form_widget(form.category,{'attr':{'type':'text','class':'form-control','placeholder':'category...'}}) }}
+                            <br>
+                            {{ form_widget(form.description,{'attr':{'type':'textarea','class':'form-control','placeholder':'Description...'}}) }}
+                            <br>
+                            {{ form_widget(form.photo,{'attr':{'type':'text','class':'form-control','placeholder':'photo...'}}) }}
+                            <br>
+                            {{ form_widget(form.Submit,{'attr':{'type':'text','class':'btn','placeholder':'Submit...'}}) }}
+                            <br>
+                            {{ form_end(form) }}
                         </div>
-                    </div>
+                    {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+                        <br><br><br>
 
-                    <button type="submit" class="btn btn-primary">Add Category</button>
-                    <br><br><br><br><br><br><br><br><br><br>
-                    {{ form_end(Form) }}
+                        <div class="alert alert-warning" role="alert">
+                            <h3>
+                                In order to send a message to the administration you need to be connected, if you are not
+                                you can join us by clicking <a href="{{ path('fos_user_registration_register') }}">HERE</a>
+                                Or if you already have an account click <a href="{{ path('fos_user_security_login') }}" >HERE</a> to connect !
+                            </h3>
 
+                        </div>
+                    {% endif %}
 
-                </div>
-            </div>
-            <!-- /.content -->
+                    <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">

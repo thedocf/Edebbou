@@ -1,0 +1,41 @@
+message_homepage:
+    path:     /
+    defaults: { _controller: MessageBundle:Default:index }
+
+addMessage:
+    path:     /messageus
+    defaults: { _controller: MessageBundle:Message:addmessage}
+
+listerMessage:
+    path:     /listmessages
+    defaults: { _controller: MessageBundle:Message:listmessages}
+
+listerMessages:
+        path:     /listm
+        defaults: { _controller: MessageBundle:Message:listmessages}
+
+
+updateMessage:
+    path:     /updatemessage/{id}
+    defaults: { _controller: MessageBundle:Message:updatemessage }
+
+deleteMessage:
+    path:     /deletemessage/{id}
+    defaults: { _controller: MessageBundle:Message:deletemessage }
+addCat:
+        path:     /addCateg
+        defaults: { _controller: MessageBundle:Message:addCat }
+showCateg:
+    path:     /showCateg
+    defaults: { _controller: MessageBundle:Message:manCat }
+
+editCateg:
+        path:     /editCateg/{id}
+        defaults: { _controller: MessageBundle:Message:editCat }
+deleteCateg:
+            path:     /deleteCateg/{qdt}
+            defaults: { _controller: MessageBundle:Message:deleteCat }
+ajax_search:
+    path:     /search
+    defaults: { _controller: MessageBundle:Message:search }
+

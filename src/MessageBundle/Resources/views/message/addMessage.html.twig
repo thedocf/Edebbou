@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <h2 class="contact-title">
+                <br> <br>
+                <b> Contact us! </b>
+            </h2>
+        <div class="form-group has-error">
+            <br> <br><br><br><br>
+            {{ form_start(form) }}
+            <br><br><br>
+            {{ form_widget(form.title,{'attr':{'type':'text','class':'form-control','placeholder':'Title...'}}) }}
+            <br> <br>
+            {{ form_widget(form.category,{'attr':{'type':'text','class':'form-control','placeholder':'category...'}}) }}
+            <br> <br><br><br>
+            {{ form_widget(form.description,{'attr':{'type':'textarea','class':'form-control','placeholder':'Description...'}}) }}
+            <br> <br>
+            {{ form_widget(form.photo,{'attr':{'type':'text','class':'form-control','placeholder':'photo...'}}) }}
+            <br> <br>
+            {{ form_widget(form.Submit,{'attr':{'type':'text','class':'btn btn-common','placeholder':'Submit...'}}) }}
+            <br> <br>
+            {{ form_end(form) }}
+        </div>
+    {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+        <br><br><br>
+
+        <div class="alert alert-warning" role="alert">
+            <h3>
+                In order to send a message to the administration you need to be connected, if you are not
+                you can join us by clicking <a href="{{ path('fos_user_registration_register') }}">HERE</a>
+                Or if you already have an account click <a href="{{ path('fos_user_security_login') }}" >HERE</a> to connect !
+            </h3>
+
+        </div>
+    {% endif %}
+{% endblock %}

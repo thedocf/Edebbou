@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,7 @@
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700') }}" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-{% block testAA %}
+{% block test22 %}
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -158,7 +158,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="{{ asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                <img src="{{ asset('dist/img/avatar.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                      style="opacity: .8">
                 <span class="brand-text font-weight-light">Edebbou</span>
             </a>
@@ -168,10 +168,10 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ asset('dist/img/avatar.png')}}" class="img-circle elevation-2" alt="User Image">
+
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Admin</a>
+                        <a href="#" class="d-block">admin</a>
                     </div>
                 </div>
 
@@ -181,7 +181,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
                         <li class="nav-item has-treeview menu-closed">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Products
@@ -191,26 +191,26 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
 
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Gestion Reclamations</p>
+                                    <i class="far fa-circle nav-icon"></i>
+
                                     </a>
                                 </li>
                                 <li class="nav-item">
 
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Traiter Reclamations</p>
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Manage Products</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ path('addCat') }}" class="nav-link active">
+                                    <a href="{{ path('addCat') }}" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Add Message Category</p>
+                                        <p>Add Category</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Manage Message Category </p>
+                                        <p>Manage Category</p>
                                     </a>
                                 </li>
                             </ul>
@@ -377,7 +377,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="addCateg" class="nav-link active">
+                                    <a href="addCateg" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ajouter Categorie</p>
                                     </a>
@@ -389,7 +389,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="listmessages" class="nav-link">
+                                    <a href="listmessages" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Liste Messages</p>
                                     </a>
@@ -723,9 +723,9 @@
             <!-- Content Header (Page header) -->
             <div class="content-header">
                 <div class="container-fluid">
-                    <div class="row mb-4">
+                    <div class="row mb-2">
 
-                        <div class="col-sm-9">
+                        <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
 
                                 <li class="breadcrumb-item"><a href="{{ path('fos_user_security_logout') }}" >Logout</a></li>
@@ -739,30 +739,137 @@
             <!-- Main content -->
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Add Message Category</h3>
+                    <h3 class="card-title">Messages List</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
                 <div class="card-body">
 
 
-                    {{ form_start(Form) }}
-                    <div class="card-body">
-                        <br><br><br>
-                        <div class="form-group">
-                            <br>
-                            <div class="form-control">
 
-                                {{ form_row(Form.label) }}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+
+                                    <div class="album py-5 bg-light">
+                                        <div class="container">
 
 
+                                            <h2>Search!</h2>
+
+                                            <div class="sidebar-search">
+
+                                                <div class="input-group custom-search-form">
+
+                                                    <input type="text" id="search" class="form-control" placeholder="Search here">
+                                                </div>
+                                                <!-- /input-group -->
+                                            </div>
+                                            <ul class="nav" id="side-menu">
+                                                <li>
+                                                    <a href="#"> Entities<span class="fa arrow"></span></a>
+                                                    <ul class="nav nav-second-level" id="entitiesNav">
+                                                    </ul>
+                                                </li>
+                                            </ul><br><br><br><br>
+
+                                            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function() {
+                                                    var searchRequest = null;
+                                                    $("#search").keyup(function() {
+                                                        var minlength = 1;
+                                                        var that = this;
+                                                        var value = $(this).val();
+                                                        var entitySelector = $("#entitiesNav").html('');
+                                                        if (value.length >= minlength ) {
+                                                            if (searchRequest != null)
+                                                                searchRequest.abort();
+                                                            searchRequest = $.ajax({
+                                                                type: "GET",
+                                                                url: "{{ path('ajax_search') }}",
+                                                                data: {
+                                                                    'q' : value
+                                                                },
+                                                                dataType: "text",
+                                                                success: function(msg){
+                                                                    //we need to check if the value is the same
+                                                                    if (value===$(that).val()) {
+                                                                        var result = JSON.parse(msg);
+                                                                        $.each(result, function(key, arr) {
+                                                                            $.each(arr, function(id, value) {
+                                                                                if (key === 'message') {
+                                                                                    if (id !== 'error') {
+                                                                                        console.log(value[1]);
+                                                                                        entitySelector.append('<li><b>'+value[1]+'</b><a href=" /src/'+id+'">'+'<img src="/web/imagesrec/'+value[0]+'" style="width: 50px; height: 50px"/>'+'</a></li>');
+                                                                                    } else {
+                                                                                        entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                                                    }
+                                                                                }
+                                                                            });
+                                                                        });
+                                                                    }
+                                                                }
+                                                            });
+                                                        }
+                                                    });
+                                                });
+                                            </script>
+
+
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body table-responsive p-0" style="height: 300px;">
+                                    <table class="table table-head-fixed text-nowrap">
+                                        <thead>
+
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Titre</th>
+
+                                            <th>User</th>
+                                            <th>Photo</th>
+                                            <th>Description</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        {% for r in message %}
+
+                                        <tbody>
+
+
+
+                                        <tr>
+
+                                            <td> {{ r.id }}</td>
+
+
+                                            <td>{{  r.title}} </td>
+
+                                            <td>{{  r.createur}} </td>
+
+                                            <td><figure><img  style="height: 60x" width="70x" src="{{ asset('imagesrec/'~(r.photo) ) }}" ></td>
+                                            <td>{{ r.description}}</td>
+
+                                            <td> {{ r.postdate|date() }} </td>
+
+
+                                            <td> <a href="{{ path('updateMessage',{'id':r.id}) }}'"> Edit</a></td>
+                                            <td><a href="{{ path('deleteMessage',{'id':r.id}) }}'">Delete</a></td>
+
+                                        </tbody>
+                                        {% endfor %}
+
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
                             </div>
+                            <!-- /.card -->
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Add Category</button>
-                    <br><br><br><br><br><br><br><br><br><br>
-                    {{ form_end(Form) }}
 
 
                 </div>
