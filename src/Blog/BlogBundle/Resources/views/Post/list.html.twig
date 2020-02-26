@@ -1,0 +1,217 @@
+{%  extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <div class="products-catagories-area clearfix">
+
+        <div class="container">
+
+            <div class="sidebar-search">
+
+                <div class="input-group custom-search-form">
+
+                    <input type="text" id="search" class="form-control" placeholder="Search here">
+                </div>
+                <!-- /input-group -->
+            </div>
+            <ul class="nav" id="side-menu">
+                <li>
+                    <a href="#"> Entities<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level" id="entitiesNav">
+                    </ul>
+                </li>
+            </ul><br><br><br><br>
+
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+            <script type="text/javascript">
+                jQuery(document).ready(function() {
+                    var searchRequest = null;
+                    $("#search").keyup(function() {
+                        var minlength = 1;
+                        var that = this;
+                        var value = $(this).val();
+                        var entitySelector = $("#entitiesNav").html('');
+                        if (value.length >= minlength ) {
+                            if (searchRequest != null)
+                                searchRequest.abort();
+                            searchRequest = $.ajax({
+                                type: "GET",
+                                url: "{{ path('ajax_search') }}",
+                                data: {
+                                    'q' : value
+                                },
+                                dataType: "text",
+                                success: function(msg){
+                                    //we need to check if the value is the same
+                                    if (value===$(that).val()) {
+                                        var result = JSON.parse(msg);
+                                        $.each(result, function(key, arr) {
+                                            $.each(arr, function(id, value) {
+                                                if (key === 'posts') {
+                                                    if (id !== 'error') {
+                                                        console.log(value[1]);
+                                                        entitySelector.append('<li><b>'+value[1]+'</b><a href="/detailedpost/'+id+'">'+'<img src="/uploads/post/'+value[0]+'" style="width: 50px; height: 50px"/>'+'</a></li>');
+                                                    } else {
+                                                        entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                    }
+                                                }
+                                            });
+                                        });
+                                    }
+                                }
+                            });
+                        }
+                    });
+                });
+            </script>
+        </div>
+        <div class="nav nav-treeview">
+            <div class="container-fluid">
+
+
+                <div class="post-container">
+                    <div class="row">
+
+
+                        <section class="featured section-padding">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="dropdown">
+                                        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Sort by
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="{{ path('list_date') }}">Newest</a>
+                                            <a class="dropdown-item" href="{{ path('list_like') }}">Date</a>
+                                            <a class="dropdown-item" href="{{ path('list_post') }}">List</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+
+                                        <div class="heading">
+                                            <h1 class="section-title">Latest Posts</h1>
+                                            <h4 class="sub-title">You can also post your own thoughts</h4>
+                                        </div>
+                                    </div>
+
+                                    {% for posts in posts %}
+
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                                            <div class="featured-box">
+                                                <figure>
+                                                    <div class="homes-tag featured">Blog</div>
+
+                                                    <a href="{{ path('detailed_post',{'id': posts.id}) }}"><img class="img-fluid" src="{{ asset('uploads/post/' ~ posts.photo) }}" alt=""></a>
+                                                </figure>
+                                                <div class="content-wrapper">
+                                                    <div class="feature-content">
+                                                        <div class="line"></div>
+                                                        <h4><a href="{{ path('detailed_post',{'id': posts.id}) }}">{{ posts.title }}</a></h4>
+                                                        <p class="listing-tagline">{{ posts.description|trim }}</p>
+                                                        <div class="meta-tag">
+                                                            <div class="listing-review">
+
+                                                                <a href="{{ path('post_like', {'id':posts.id}) }}" class="btn btn-link js-like">
+                                                                    {% if app.user and posts.isLikeByUser(app.user) %}
+
+                                                                        <i class="lni-heart-filled"></i>
+
+                                                                    {% else %}
+                                                                        <i class="lni-heart"></i>
+
+                                                                    {% endif %}
+                                                                    <span class="js-likes">{{ posts.likes | length }}</span>
+
+
+                                                                    <span class="js-label">J'aime</span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="user-name">
+                                                                <a href="#"><i class="lni-user"></i>{{ posts.creator }}</a>
+                                                            </div>
+                                                            <div class="listing-category">
+                                                                <a href="#"><i class="lni-alarm-clock"></i>{{ posts.postdate|date() }} </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="listing-bottom clearfix">
+                                                        <div class="btn-group">
+                                                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                                                {% if(posts.creator.id == app.user.id) %}
+
+                                                                    <a href="{{ path('delete_post',{'id': posts.id}) }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
+                                                                    <a href="{{ path('update_post',{'id': posts.id}) }}"><button type="button" class="btn btn-sm btn-outline-alert">Update</button></a>
+                                                                {% else %}
+
+
+                                                                {% endif %}
+                                                            {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+                                                                <br>
+
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+
+                        </section>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        function onClickBtnLike(event)
+        {
+            event.preventDefault();
+
+            const url= this.href;
+            const spanCount = this.querySelector('span.js-likes');
+            const icone = this.querySelector('i');
+            axios.get(url).then(function(response) {
+                spanCount.textContent= response.data.likes;
+                if(icone.classList.contains('fas')) {
+
+                    icone.classList.replace('fas', 'far');
+                    document.reload()
+                }
+                else {
+                    icone.classList.replace('far', 'fas');
+document.reload();
+                } }).catch(function(error) {
+                if(error.response.status ===403){
+                    $(function() {
+                        $.bootstrapGrowl("Veuillez vous connecter pour pouvoir aimer cette publication !");
+
+                    })
+                }
+            });
+        }
+        document.querySelectorAll('a.js-like').forEach(function (link) {
+            link.addEventListener('click',onClickBtnLike);
+
+        })
+
+    </script>
+
+
+
+{% endblock %}

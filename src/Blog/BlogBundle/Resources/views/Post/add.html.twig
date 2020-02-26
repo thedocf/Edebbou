@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <div class="cart-table-area section-padding-100">
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-12 col-lg-8">
+        <div class="checkout_details_area mt-50 clearfix">
+
+        <div class="cart-title">
+            <h2>Create Blog </h2>
+        </div>
+            {% for msg in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ msg }}
+                </div>
+            {% endfor %}
+            <br><br><br>
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+
+                <div class="alert alert-success">
+                    {{ flashMessage }}
+                </div>
+
+            {% endfor %}
+       <div class="form-group has-error">
+        {{ form_start(Form,{ 'attr': { 'novalidate':
+            'novalidate' }}) }}
+
+            <div class="col-12">
+                {{ form_label(Form.title) }}
+                {{ form_widget(Form.title,{'attr':{'type':'text','class':'form-control','placeholder':'Title...'}}) }}
+
+                {{ form_errors(Form.title) }}
+            </div>
+                <div class="col-12">
+                    {{ form_label(Form.description) }}
+                {{ form_widget(Form.description,{'attr':{'type':'textarea','class':'form-control','placeholder':'Description...'}}) }}
+
+                {{ form_errors(Form.description) }}
+            </div>
+                <div class="col-12">
+                    {{ form_label(Form.photo) }}
+                {{ form_widget(Form.photo,{'attr':{'type':'text','class':'form-control','placeholder':'photo...'}}) }}
+
+                {{ form_errors(Form.photo) }}
+            </div>
+                <div class="col-12">
+
+                <center><div > {{ form_widget(Form.captcha,{'attr':{'type':'captcha'}}) }}</div></center>
+                {{ form_errors(Form.captcha) }}
+            </div>
+                <div class="col-12">
+
+                <center> {{ form_widget(Form.Submit,{'attr':{'type':'text','class':'btn amado-btn w-100','placeholder':'Submit...'}}) }}        </center>
+
+            </div>
+        <br> <br> <br>
+        {{ form_end(Form) }}
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+        <br><br><br>
+        <div class="col-12 col-lg-4">
+            <br><br>
+            <br><br>
+
+            <div class="alert alert-warning" role="alert">
+
+                <div class="container-fluid">
+
+
+      <center>
+               In order to post in our blog you need to be connected, if you are not
+                you can join us by clicking <a href="{{ path('fos_user_registration_register') }}">HERE</a>
+                Or if you already have an account click <a href="{{ path('fos_user_security_login') }}" >HERE</a> to connect !
+            </center>
+                </div>
+        </div>
+        </div>
+
+    {% endif %}
+{% endblock %}

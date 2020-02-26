@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <div class="cart-table-area section-padding-100">
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-12 col-lg-8">
+    <div class="checkout_details_area mt-50 clearfix">
+
+    <div class="cart-title">
+        <h2>Update Your Post </h2>
+    </div>
+
+    {{ form_start(form) }}
+
+
+    {{ form_end(form) }}
+{</div>
+    </div>
+    </div>
+    </div>
+    </div>
+        </div>
+    {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+        <br><br><br>
+        <div class="col-12 col-lg-4">
+            <div class="alert alert-warning" role="alert">
+
+            <center><h2>
+                    In order to post in our blog you need to be connected, if you are not
+                    you can join us by clicking <a href="{{ path('fos_user_registration_register') }}">HERE</a>
+                    Or if you already have an account click <a href="{{ path('fos_user_security_login') }}" >HERE</a> to connect !
+                </h2></center
+            </div>
+        </div>
+        </div></div>
+    {% endif %}
+{% endblock %}

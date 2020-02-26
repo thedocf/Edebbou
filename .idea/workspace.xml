@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="">
+    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Blog">
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Controller/BlogController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Controller/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Form/PostType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/config/routing.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/config/services.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/list.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/notif.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/tri.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/add.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/detailedpost.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/list.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/listD.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/listP.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/top.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/update.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/TutorialBlogBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Controller/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Controller/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Redirection/AfterLoginRedirection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/config/routing.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/config/services.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/views/Admin/base2.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/TutorialUserBundle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="eaadfc9c-f83a-44c7-9c1f-c15ccce983c4" name="Add files via upload" comment="Add files via upload">
+      <changelist_data name="Linathraya" email="48921204+linathraya@users.noreply.github.com" date="1581668855000" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.phar" beforeDir="false" afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +48,16 @@
     </execution>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="fiiiida" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fyras" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -75,11 +116,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload C:/wamp64/www/ffosuser/composer.json" value="--no-interaction --ansi --verbose" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Edebbou\src" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\views" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle\views" />
@@ -145,8 +193,17 @@
       <workItem from="1581606976533" duration="8579000" />
       <workItem from="1581615637945" duration="133000" />
       <workItem from="1581615804631" duration="219000" />
-      <workItem from="1581669501653" duration="255000" />
+      <workItem from="1581669501653" duration="2170000" />
+      <workItem from="1582756977694" duration="1559000" />
     </task>
+    <task id="LOCAL-00001" summary="Blog">
+      <created>1581669837806</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581669837806</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,33 +212,58 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Blog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blog" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="407" y="256" key="ComposerCompositePathDialog" timestamp="1581255195922">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="407" y="256" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581255195922" />
-    <state x="462" y="109" key="FileChooserDialogImpl" timestamp="1581271359195">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="462" y="109" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581271359195" />
-    <state x="186" y="10" key="SettingsEditor" timestamp="1581255223343">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581255223343" />
-    <state x="454" y="279" key="SymfonyPathDialog" timestamp="1581255214917">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="454" y="279" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581255214917" />
+    <state x="407" y="256" key="ComposerCompositePathDialog" />
+    <state x="407" y="256" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" />
+    <state x="462" y="109" key="FileChooserDialogImpl" />
+    <state x="462" y="109" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" />
+    <state x="186" y="10" key="SettingsEditor" />
+    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" />
+    <state x="454" y="279" key="SymfonyPathDialog" />
+    <state x="454" y="279" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" />
   </component>
 </project>

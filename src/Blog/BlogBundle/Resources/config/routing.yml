@@ -1,0 +1,57 @@
+tutorial_blog_homepage:
+    path:     /
+    defaults: { _controller: TutorialBlogBundle:Default:index }
+
+Create_post:
+    path:     /addpost
+    defaults: { _controller: TutorialBlogBundle:Blog:add }
+
+list_post:
+    path:     /postslist
+    defaults: { _controller: TutorialBlogBundle:Blog:listpost }
+
+update_post:
+    path:     /updatepost/{id}
+    defaults: { _controller: TutorialBlogBundle:Blog:updatepost }
+
+delete_post:
+    path:     /deletepost/{id}
+    defaults: { _controller: TutorialBlogBundle:Blog:deletepost }
+
+
+detailed_post:
+    path:     /detailedpost/{id}
+    defaults: { _controller: TutorialBlogBundle:Blog:showdetailed }
+
+ajax_search:
+    path:     /search
+    defaults: { _controller: TutorialBlogBundle:Blog:search }
+
+
+add_comment:
+    path:     /addcomment
+    defaults: { _controller: TutorialBlogBundle:Blog:addComment }
+delete_comment:
+    path:     /deletecomment/{id}
+    defaults: { _controller: TutorialBlogBundle:Blog:deleteComment }
+liste_admin:
+    path:     /admin/liste
+    defaults: { _controller: TutorialBlogBundle:Blog:listad }
+delete_admin:
+    path:     /delete/{id}
+    defaults: { _controller: TutorialBlogBundle:Blog:deleteadan }
+post_like:
+    path:    /post/{id}/like
+    defaults: { _controller: TutorialBlogBundle:Blog:like }
+notif_list:
+    path:    /admin/notif
+    defaults: { _controller: AppBundle:Notification:list }
+tri_admin:
+    path:     /admin/tri
+    defaults: { _controller: TutorialBlogBundle:Blog:tri }
+list_date:
+    path:     /postlist
+    defaults: { _controller: TutorialBlogBundle:Blog:list }
+list_like:
+    path:     /postslit
+    defaults: { _controller: TutorialBlogBundle:Blog:lisst }

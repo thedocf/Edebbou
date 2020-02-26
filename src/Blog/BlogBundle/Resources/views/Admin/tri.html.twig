@@ -1,0 +1,54 @@
+{%  extends 'base2.html.twig' %}
+
+{% block body %}
+
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Liste des posts</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>{{ knp_pagination_sortable(posts, 'id', 'a.id') }}</th>
+                                <th>{{ knp_pagination_sortable(posts, 'Title', 'a.title') }}</th>
+                                <th>Creator</th>
+                                <th>{{ knp_pagination_sortable(posts, 'Date', 'a.postdate') }}</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for posts in posts %}
+                            <tr>
+                                <td>{{ posts.id }}</td>
+                                <td>{{posts.title }}</td>
+                                <td>{{ posts.creator }}</td>
+                                <td> {{ posts.postdate|date() }}</td>
+
+
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+                <div class="navigation">
+                    {{ knp_pagination_render(posts) }}
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+
+{% endblock %}
