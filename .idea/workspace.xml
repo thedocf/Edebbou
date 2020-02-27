@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/CommandeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/DefaultController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/LigneCommandeController.php" beforeDir="false" />
@@ -195,7 +193,7 @@
       <workItem from="1582756977694" duration="1559000" />
       <workItem from="1582758558302" duration="4527000" />
       <workItem from="1582811309471" duration="882000" />
-      <workItem from="1582815084346" duration="223000" />
+      <workItem from="1582815084346" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
@@ -239,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582807776280</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Register">
+      <created>1582815357329</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582815357329</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Login">
+      <created>1582815496520</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582815496520</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +303,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Blog" />
     <MESSAGE value="Service Vente : ikbel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Service Vente : ikbel" />
+    <MESSAGE value="Register" />
+    <MESSAGE value="Login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="256" key="ComposerCompositePathDialog" />
