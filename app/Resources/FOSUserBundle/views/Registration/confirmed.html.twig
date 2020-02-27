@@ -4,7 +4,5 @@
 
 {% block fos_user_content %}
     <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
-    {% if targetUrl %}
-    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-    {% endif %}
+    <td><a href="{{ path('test_homepage') }}" >Home</a></td>
 {% endblock fos_user_content %}

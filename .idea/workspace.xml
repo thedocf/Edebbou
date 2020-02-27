@@ -17,6 +17,11 @@
     </execution>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fyras" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -146,7 +151,16 @@
       <workItem from="1581615637945" duration="133000" />
       <workItem from="1581615804631" duration="219000" />
       <workItem from="1581669501653" duration="255000" />
+      <workItem from="1582208077673" duration="391000" />
     </task>
+    <task id="LOCAL-00001" summary="Test">
+      <created>1582208202380</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582208202380</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,31 +171,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="407" y="256" key="ComposerCompositePathDialog" timestamp="1581255195922">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="407" y="256" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581255195922" />
-    <state x="462" y="109" key="FileChooserDialogImpl" timestamp="1581271359195">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="462" y="109" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581271359195" />
-    <state x="186" y="10" key="SettingsEditor" timestamp="1581255223343">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581255223343" />
-    <state x="454" y="279" key="SymfonyPathDialog" timestamp="1581255214917">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="454" y="279" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581255214917" />
+    <state x="407" y="256" key="ComposerCompositePathDialog" />
+    <state x="407" y="256" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" />
+    <state x="462" y="109" key="FileChooserDialogImpl" />
+    <state x="462" y="109" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" />
+    <state x="186" y="10" key="SettingsEditor" />
+    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" />
+    <state x="454" y="279" key="SymfonyPathDialog" />
+    <state x="454" y="279" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" />
   </component>
 </project>

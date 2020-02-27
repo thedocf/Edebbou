@@ -1,9 +1,3 @@
-This work has:
-FOSUSER 
-CRUD Service Apres Vente
-Search with Ajax
-Paginator
-
 Symfony Standard Edition
 ========================
 
