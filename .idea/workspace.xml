@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Notifications">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/CommandeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/DefaultController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/LigneCommandeController.php" beforeDir="false" />
@@ -124,7 +123,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload C:/wamp64/www/ffosuser/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -136,11 +135,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Edebbou\tests" />
       <recent name="C:\wamp\www\Edebbou\src\AppBundle\Entity" />
       <recent name="C:\wamp\www\Edebbou\src\AppBundle\Controller" />
       <recent name="C:\wamp\www\Edebbou\src" />
       <recent name="C:\wamp\www\Edebbou\app\Resources\views\default" />
-      <recent name="C:\wamp64\www\ffosuser\app\Resources\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -207,7 +206,7 @@
       <workItem from="1582756977694" duration="1559000" />
       <workItem from="1582758558302" duration="4527000" />
       <workItem from="1582811309471" duration="882000" />
-      <workItem from="1582815084346" duration="3714000" />
+      <workItem from="1582815084346" duration="3973000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
@@ -300,7 +299,28 @@
       <option name="project" value="LOCAL" />
       <updated>1582817743748</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Admin dashboard">
+      <created>1582818961517</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582818961517</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Blog">
+      <created>1582819064210</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1582819064210</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Blog">
+      <created>1582819159478</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1582819159478</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +370,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Blog" />
     <MESSAGE value="Service Vente : ikbel" />
     <MESSAGE value="Register" />
     <MESSAGE value="Login" />
@@ -358,7 +377,9 @@
     <MESSAGE value="Gestion d'entrepot login" />
     <MESSAGE value="Notifications" />
     <MESSAGE value="Notifications entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notifications entity" />
+    <MESSAGE value="Admin dashboard" />
+    <MESSAGE value="Blog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blog" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="256" key="ComposerCompositePathDialog" />
