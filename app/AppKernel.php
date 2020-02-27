@@ -17,15 +17,11 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new AppBundle\AppBundle(),
-            new FournisseurBundle\FournisseurBundle(),
             new test\Bundle\testBundle(),
+            new FournisseurBundle\FournisseurBundle(),
             new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
             new FOS\MessageBundle\FOSMessageBundle(),
-            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
-            new MessageBundle\MessageBundle(),
-            new EventBundle\EventBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
