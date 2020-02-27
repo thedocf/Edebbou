@@ -1,0 +1,29 @@
+{% extends "manProduct.html.twig" %}
+{% block titre %}Fournisseur{% endblock %}
+{% block body %}
+
+    <div class="container" style="text-align: center">
+    {{ form_start(form) }}
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.nom) }}</label>
+            {{ form_widget(form.nom,{'attr':{'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.prenom) }}</label>
+            {{ form_widget(form.prenom,{'attr':{'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.numTel) }}</label>
+            {{ form_widget(form.numTel,{'attr':{'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.disponible) }}</label>
+            {{ form_widget(form.disponible,{'attr':{'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.captcha) }}</label>
+            {{ form_widget(form.captcha,{'attr':{'class': 'form-control'}}) }}
+        </div>
+    {{ form_end(form) }}
+    </div>
+{% endblock %}
