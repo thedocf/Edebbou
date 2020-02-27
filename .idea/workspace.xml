@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Blog">
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Controller/CommandeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Controller/LigneCommandeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Controller/LivreurController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Entity/Commande.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Entity/LigneCommande.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Entity/Livreur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Form/LivreurType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Listener/EventListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Repository/CommandeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Repository/LigneCommandeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Repository/LivreurRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/commande.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/lignecommande.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/livreur.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/views/cart.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/views/commandes.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/CommandeControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/LigneCommandeControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/LivreurControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VenteBundle/VenteBundle.php" afterDir="false" />
+    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/CommandeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/DefaultController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/LigneCommandeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/LivreurController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Entity/Commande.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Entity/LigneCommande.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Entity/Livreur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Form/LivreurType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Listener/EventListener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Repository/CommandeRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Repository/LigneCommandeRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Repository/LivreurRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/commande.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/lignecommande.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/livreur.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/config/services.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/views/Default/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/views/cart.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/views/commandes.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/CommandeControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/LigneCommandeControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/LivreurControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle/VenteBundle.php" beforeDir="false" />
     </list>
     <list id="eaadfc9c-f83a-44c7-9c1f-c15ccce983c4" name="Add files via upload" comment="Add files via upload">
       <changelist_data name="Linathraya" email="48921204+linathraya@users.noreply.github.com" date="1581668855000" />
@@ -111,7 +112,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload C:/wamp64/www/ffosuser/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,7 +193,9 @@
       <workItem from="1581615804631" duration="219000" />
       <workItem from="1581669501653" duration="2170000" />
       <workItem from="1582756977694" duration="1559000" />
-      <workItem from="1582758558302" duration="3022000" />
+      <workItem from="1582758558302" duration="4527000" />
+      <workItem from="1582811309471" duration="882000" />
+      <workItem from="1582815084346" duration="223000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
@@ -229,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582807097840</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Service Vente : ikbel">
+      <created>1582807776280</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582807776280</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +290,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Blog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Blog" />
+    <MESSAGE value="Service Vente : ikbel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Service Vente : ikbel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="256" key="ComposerCompositePathDialog" />
