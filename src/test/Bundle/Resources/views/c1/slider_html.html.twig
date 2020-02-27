@@ -1,0 +1,24 @@
+{##
+ # This file is part of the SilvioMessiSliderBundle package.
+ #
+ # (c) SilvioMessi <https://github.com/SilvioMessi/SliderBundle>
+ #
+ # For the full copyright and license information, please view the LICENSE
+ # file that was distributed with this source code.
+ #}
+
+<div id="slider_{{ options.slider_id }}"></div>
+<br>
+<div id="slider_value_{{ options.slider_id }}"></div>
+
+{% if options.slider_dimension is defined %}
+    <style>
+        #slider_{{ options.slider_id }} {
+        {% if options.orientation == 'vertical' and options.slider_dimension.height is defined %}
+            height: {{ options.slider_dimension.height }};
+        {% elseif options.orientation == 'horizontal' and options.slider_dimension.width is defined%}
+            width: {{ options.slider_dimension.width }};
+        {% endif %}
+        }
+    </style>
+{% endif %}

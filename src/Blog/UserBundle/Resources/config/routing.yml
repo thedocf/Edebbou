@@ -1,4 +1,0 @@
-
-admin_dashboard:
-    path:     /admin
-    defaults: { _controller: TutorialUserBundle:User:admin }

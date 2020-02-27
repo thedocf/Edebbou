@@ -5,6 +5,7 @@ namespace test\Bundle\Form;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use test\Bundle\Entity\Category;
@@ -22,14 +23,15 @@ class ProductType extends AbstractType
             ->add('Category', EntityType::class, [
                 // looks for choices from this entity
 
-
+                'required' => true,
                 'class' => Category::class,
 
                 // uses the User.username property as the visible option string
                 'choice_label' => 'label',
 
 
-            ]);
+            ])
+            ->add('image',FileType::class,array('data_class'=>null));
 
 
     }/**

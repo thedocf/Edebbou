@@ -164,14 +164,20 @@
                             </div>
                         </div>
                         <!-- Sorting -->
+                        <script src="{{ asset('js/sc.js') }}" ></script>
                         <div class="product-sorting d-flex">
-                            <div class="sort-by-date d-flex align-items-center mr-15">
-                                <p>Sort by</p>
-                                <form action="#" method="get">
-                                    <select name="select" id="sortBydate">
-                                        <option value="value">Expiration Date</option>
 
-                                    </select>
+                            <div class="sort-by-date d-flex align-items-center mr-15">
+                                <p>Sort by Price:</p>
+                            </div>
+                            <div class="sort-by-date d-flex align-items-center mr-15">
+                                <form action="{{ path('sortByP') }}" method="post" name="range">
+
+                                    <button class="btn w-100" type="submit" name="desc"><i class="fas fa-arrow-circle-down"></i></button>
+                                </form>
+                                <form action="{{ path('sortByP2') }}" method="post" name="range">
+
+                                    <button class="btn w-100 " type="submit" name="asc" ><i class="fas fa-arrow-circle-up " ></i></button>
                                 </form>
                             </div>
 
@@ -189,10 +195,10 @@
                     <div class="single-product-wrapper">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <img src="{{ asset('img/product-img/product' ~ car.idp ~ '.jpg')}}" alt="">
+                            <img src="{{ asset('uploads/images/depots/') }}{{ car.image }}" alt="">
                             <!-- Hover Thumb -->
                             {% set x=car.idp+1 %}
-                            <img class="hover-img" src="{{ asset('img/product-img/product' ~ x ~ '.jpg')}}" alt="">
+
                         </div>
 
                         <!-- Product Description -->

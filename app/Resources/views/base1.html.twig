@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% block t %}
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Amado - Furniture Ecommerce Template | Shop</title>
+    <title>Edebbou | Shop</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="{{ asset('img/core-img/favicon.ico')}}">
@@ -70,11 +70,16 @@
         <!-- Amado Nav -->
         <nav class="amado-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="shop.html">Shop</a></li>
-                <li><a href="product-details.html">Product</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
+                <li  class="active"><a href="{{ path('fronthome') }}">Home</a></li>
+                <li><a href="{{ path('affiche_front') }}">Providers</a></li>
+
+                <li><a href="{{ path('show1') }}">Shop</a></li>
+
+
+                <li><a href="{{ path('fos_message_inbox') }}">Messages</a></li>
+                <li><a href="{{ path('video') }}">Discover us</a></li>
+                <li><a href="{{ path('map') }}">Location</a></li>
+                <li><a href="{{ path('addMessage') }}">Contact us</a></li>
             </ul>
         </nav>
         <!-- Button Group -->
@@ -131,14 +136,23 @@
 
             <div class="widget-desc">
                 <div class="slider-range">
-                    <div data-min="10" data-max="1000" data-unit="$" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="10" data-value-max="1000" data-label-result="">
-                        <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
-                        <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                        <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                    </div>
-                    <div class="range-price">$10 - $1000</div>
+
+
+                <form action="{{ path('showByP') }}" method="post" name="range">
+                    <label for="min">Min:</label>
+                    <input class="form-control" type="number" id="min" name="min" min="0" step="10" required/>
+                    <br />
+                    <label for="max">Max:</label>
+                    <input class="form-control" type="number" id="max" name="max" max="5000" step="10" required/>
+
+                    <br />
+                    <input class="btn amado-btn w-100" type="submit" name="filter" value="Filter" />
+                </form>
+                    <div class="range-price">TND 1 - TND 5000</div>
+
                 </div>
             </div>
+
         </div>
     </div>
     <a href="{{ path('fos_user_security_logout') }}" >Logout</a>
@@ -158,17 +172,25 @@
                         </div>
                         <!-- Sorting -->
 
+                        <script src="{{ asset('js/sc.js') }}" ></script>
+
                         <div class="product-sorting d-flex">
 
                             <div class="sort-by-date d-flex align-items-center mr-15">
-                                <p>Sort by</p>
-                                <form action="#" method="get">
-                                    <select name="select" id="sortBydate">
-                                        <option value="value">Expiration Date</option>
+                                <p>Sort by Price:</p>
+                            </div>
+                            <div class="sort-by-date d-flex align-items-center mr-15">
+                                <form action="{{ path('sortByP') }}" method="post" name="range">
 
-                                    </select>
+                                    <button class="btn w-100" type="submit" name="desc"><i class="fas fa-arrow-circle-down "></i></button>
+                                </form>
+                                <form action="{{ path('sortByP2') }}" method="post" name="range">
+
+                                    <button class="btn w-100" type="submit" name="asc"><i class="fas fa-arrow-circle-up"></i></button>
                                 </form>
                             </div>
+
+
 
                         </div>
                     </div>
@@ -184,10 +206,8 @@
                     <div class="single-product-wrapper">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <img src="{{ asset('img/product-img/product' ~ car.idp ~ '.jpg')}}" alt="">
+                            <img src="{{ asset('uploads/images/depots/') }}{{ car.image }}" alt="">
                             <!-- Hover Thumb -->
-                            {% set x=car.idp+1 %}
-                            <img class="hover-img" src="{{ asset('img/product-img/product' ~ x ~ '.jpg')}}" alt="">
                         </div>
 
                         <!-- Product Description -->
@@ -195,7 +215,7 @@
                             <!-- Product Meta Data -->
                             <div class="product-meta-data">
                                 <div class="line"></div>
-                                <p class="product-price">{{ car.prix }}$</p>
+                                <p class="product-price">{{ car.prix }} TND</p>
                                 <a href="product-details.html">
                                     <h6>{{ car.nom }}</h6>
                                 </a>
@@ -239,6 +259,7 @@
     </div>
 </div>
 <!-- ##### Main Content Wrapper End ##### -->
+</div>
 
 <!-- ##### Newsletter Area Start ##### -->
 <section class="newsletter-area section-padding-100-0">
@@ -329,5 +350,5 @@
 <script src="{{ asset('js/active.js')}}"></script>
 
 </body>
-
+{% endblock %}
 </html>

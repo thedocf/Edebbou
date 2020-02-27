@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div style="margin-top: 10%" class="products-catagories-area clearfix">
+    <div class="amado-pro-catagory clearfix">
+
+        <h1>{% trans from 'FOSMessageBundle' %}messenger{% endtrans %}</h1>
+
+        <ul>
+            <li><a style="color: blue" href="{{ url('fos_message_inbox') }}">{% trans from 'FOSMessageBundle' %}inbox{% endtrans %}</a></li>
+            <li><a style="color: blue" href="{{ url('fos_message_sent') }}">{% trans from 'FOSMessageBundle' %}sent{% endtrans %}</a></li>
+            <li><a style="color: blue" href="{{ url('fos_message_deleted') }}">{% trans from 'FOSMessageBundle' %}deleted{% endtrans %}</a></li>
+        </ul>
+
+        {% block fos_message_content %}{% endblock %}
+    </div></div>
+{% endblock %}
+

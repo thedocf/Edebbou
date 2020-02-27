@@ -21,7 +21,7 @@ class DefaultController extends Controller
         }
         else if ($authChecker->isGranted('ROLE_USER'))
         {
-            return $this->redirectToRoute('show1');
+            return $this->redirectToRoute('fronthome');
         }
         return $this->render('baseok.html.twig');
     }

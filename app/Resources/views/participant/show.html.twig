@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Participant</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ participant.id }}</td>
+            </tr>
+            <tr>
+                <th>Confirmation</th>
+                <td>{% if participant.confirmation %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ participant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ participant.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Dateinscrit</th>
+                <td>{% if participant.dateInscrit %}{{ participant.dateInscrit|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('._participant_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('._participant_edit', { 'id': participant.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

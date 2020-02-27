@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Eventcour</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ eventcour.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomevent</th>
+                <td>{{ eventcour.nomEvent }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ eventcour.description }}</td>
+            </tr>
+            <tr>
+                <th>Datedebut</th>
+                <td>{% if eventcour.dateDebut %}{{ eventcour.dateDebut|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ eventcour.image }}</td>
+            </tr>
+            <tr>
+                <th>Nbplaces</th>
+                <td>{{ eventcour.nbPlaces }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('eventcours_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('eventcours_edit', { 'id': eventcour.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

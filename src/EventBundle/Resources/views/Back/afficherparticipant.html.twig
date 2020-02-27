@@ -1,0 +1,65 @@
+{% extends  'back.html.twig' %}
+{% block footer %}
+    <h2>participants</h2>
+    <table>
+    <div class="col-xs-12">
+        <br>
+        <button class="btn btn-info btn-icon-text" onclick="window.print();"><i class="mdi mdi-printer btn-icon-append"></i>      IMPRIMER</button>
+
+    </div>
+    <table border="1" class="table table-dark">
+
+        <tr>
+
+            <td> evenements</td>
+
+
+            <td> confirmation </td>
+
+            <td> nom </td>
+            <td> prenom </td>
+
+            <td> date_inscrit </td>
+
+
+        </tr>
+        <tbody id="evt">
+        {% for vv in participants %}
+
+            <tr>
+
+
+               <td>
+                   {# {{ vv.evenement }}#}
+                </td>
+
+                <td>
+                    {{ vv.confirmation }}
+                </td>
+
+                <td>
+                    {{ vv.nom }}
+                </td>
+
+                <td>
+                    {{ vv.prenom }}
+                </td>
+
+                <td>
+                    {{ vv.dateInscrit |date }}
+                </td>
+
+                <td>
+                    <a class="btn btn-danger"
+                       href="{{ path('supprimerparticipant' , {'id':vv.id}) }}">supprimer</a>
+                    <br>
+                    <a class="btn btn-success btn btn-primary btn-sm" href="{{ path('modifierparticipant' , {'id':vv.id}) }}">modifier</a>
+                </td>
+
+
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
