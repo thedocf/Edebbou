@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Gestion d'entrepot login">
+    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Notifications">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/CommandeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/DefaultController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/LigneCommandeController.php" beforeDir="false" />
@@ -135,11 +136,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Edebbou\src\AppBundle\Entity" />
+      <recent name="C:\wamp\www\Edebbou\src\AppBundle\Controller" />
       <recent name="C:\wamp\www\Edebbou\src" />
       <recent name="C:\wamp\www\Edebbou\app\Resources\views\default" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\views" />
-      <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle" />
-      <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -206,7 +207,7 @@
       <workItem from="1582756977694" duration="1559000" />
       <workItem from="1582758558302" duration="4527000" />
       <workItem from="1582811309471" duration="882000" />
-      <workItem from="1582815084346" duration="2404000" />
+      <workItem from="1582815084346" duration="3714000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
@@ -285,7 +286,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582817441754</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Notifications">
+      <created>1582817643618</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582817643618</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Notifications entity">
+      <created>1582817743748</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582817743748</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +356,9 @@
     <MESSAGE value="Login" />
     <MESSAGE value="fiiiida" />
     <MESSAGE value="Gestion d'entrepot login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestion d'entrepot login" />
+    <MESSAGE value="Notifications" />
+    <MESSAGE value="Notifications entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notifications entity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="256" key="ComposerCompositePathDialog" />
