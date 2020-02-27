@@ -2,11 +2,13 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@FournisseurBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    imagedepot_directory: '%kernel.project_dir%/web/uploads/images/depots'
 
 framework:
     #esi: ~
@@ -79,3 +81,14 @@ fos_user:
     from_email:
         address: "test@test.com"
         sender_name: "test"
+
+gregwar_captcha: ~
+
+fos_message:
+    db_driver: orm
+    thread_class: AppBundle\Entity\Thread
+    message_class: AppBundle\Entity\Message
+
+
+
+

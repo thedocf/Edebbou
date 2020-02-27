@@ -1,3 +1,7 @@
+fournisseur:
+    resource: "@FournisseurBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
@@ -9,3 +13,7 @@ fos_user:
 test:
     resource: "@testBundle/Resources/config/routing.yml"
     prefix:   /
+
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix:   /message
