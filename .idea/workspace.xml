@@ -2,38 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Blog">
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Controller/BlogController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Form/PostType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/config/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/list.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/notif.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/tri.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/add.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/detailedpost.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/list.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/listD.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/listP.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/top.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/update.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/BlogBundle/TutorialBlogBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Redirection/AfterLoginRedirection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/config/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/views/Admin/base2.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/UserBundle/TutorialUserBundle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="eaadfc9c-f83a-44c7-9c1f-c15ccce983c4" name="Add files via upload" comment="Add files via upload">
       <changelist_data name="Linathraya" email="48921204+linathraya@users.noreply.github.com" date="1581668855000" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.phar" beforeDir="false" afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +87,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload C:/wamp64/www/ffosuser/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fidaa" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -127,6 +99,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Edebbou\app\Resources\views\default" />
       <recent name="C:\wamp\www\Edebbou\src" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\views" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle" />
@@ -195,6 +168,7 @@
       <workItem from="1581615804631" duration="219000" />
       <workItem from="1581669501653" duration="2170000" />
       <workItem from="1582756977694" duration="1559000" />
+      <workItem from="1582758558302" duration="2533000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
@@ -203,7 +177,28 @@
       <option name="project" value="LOCAL" />
       <updated>1581669837806</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Blog">
+      <created>1582758774317</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582758774317</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Blog">
+      <created>1582760038546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582760038546</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Blog">
+      <created>1582806830865</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582806830865</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
