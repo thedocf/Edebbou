@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="fida blog">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Gestion d'entrepot login">
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/CommandeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/DefaultController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/LigneCommandeController.php" beforeDir="false" />
@@ -124,7 +123,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload C:/wamp64/www/ffosuser/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AppBundle/Controller" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -207,7 +206,7 @@
       <workItem from="1582756977694" duration="1559000" />
       <workItem from="1582758558302" duration="4527000" />
       <workItem from="1582811309471" duration="882000" />
-      <workItem from="1582815084346" duration="2156000" />
+      <workItem from="1582815084346" duration="2404000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
@@ -279,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582816260595</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Gestion d'entrepot login">
+      <created>1582817441754</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582817441754</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +340,8 @@
     <MESSAGE value="Register" />
     <MESSAGE value="Login" />
     <MESSAGE value="fiiiida" />
-    <option name="LAST_COMMIT_MESSAGE" value="fiiiida" />
+    <MESSAGE value="Gestion d'entrepot login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gestion d'entrepot login" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="256" key="ComposerCompositePathDialog" />
