@@ -1,0 +1,45 @@
+{% extends "manProduct.html.twig" %}
+{% block titre %}Manage Depot{% endblock %}
+{% block body %}
+
+    <!-- /.card-header -->
+    <div class="card-body table-responsive p-0" style="height: 300px;">
+        <table class="table table-head-fixed text-nowrap">
+            <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Entreprise</th>
+                <th>Fournisseurs</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ depot.id }}</td>
+                <td>{{ depot.entreprise }}</td>
+                <td>
+                    <ul>
+                        {% for f in fournisseurs %}
+                            <li>{{ f.nom }} {{ f.prenom }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+    </div>
+    </div>
+
+
+
+    </div>
+    </div>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+{% endblock %}
