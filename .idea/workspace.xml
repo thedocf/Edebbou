@@ -2,6 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Blog">
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Controller/CommandeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Controller/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Controller/LigneCommandeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Controller/LivreurController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Entity/Commande.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Entity/LigneCommande.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Entity/Livreur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Form/LivreurType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Listener/EventListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Repository/CommandeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Repository/LigneCommandeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Repository/LivreurRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/commande.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/lignecommande.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/routing/livreur.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/config/services.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/views/cart.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/views/commandes.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/CommandeControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/LigneCommandeControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/Tests/Controller/LivreurControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VenteBundle/VenteBundle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="eaadfc9c-f83a-44c7-9c1f-c15ccce983c4" name="Add files via upload" comment="Add files via upload">
@@ -27,7 +51,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fyras" />
+        <entry key="$PROJECT_DIR$" value="fida" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,7 +111,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload C:/wamp64/www/ffosuser/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fidaa" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -99,8 +123,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\Edebbou\app\Resources\views\default" />
       <recent name="C:\wamp\www\Edebbou\src" />
+      <recent name="C:\wamp\www\Edebbou\app\Resources\views\default" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\views" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle\views" />
@@ -168,7 +192,7 @@
       <workItem from="1581615804631" duration="219000" />
       <workItem from="1581669501653" duration="2170000" />
       <workItem from="1582756977694" duration="1559000" />
-      <workItem from="1582758558302" duration="2533000" />
+      <workItem from="1582758558302" duration="3022000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
@@ -198,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582806830865</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Blog">
+      <created>1582807097840</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582807097840</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
