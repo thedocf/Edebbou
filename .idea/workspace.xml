@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="">
+    <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Notifications">
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/CommandeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/DefaultController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VenteBundle/Controller/LigneCommandeController.php" beforeDir="false" />
@@ -43,6 +43,19 @@
     </execution>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/fida" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="fiiiida" />
@@ -110,7 +123,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload C:/wamp64/www/ffosuser/composer.json" value="--no-interaction --ansi --verbose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/var" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -122,11 +135,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Edebbou\web" />
+      <recent name="C:\wamp\www\Edebbou\tests" />
+      <recent name="C:\wamp\www\Edebbou\src\AppBundle\Entity" />
+      <recent name="C:\wamp\www\Edebbou\src\AppBundle\Controller" />
       <recent name="C:\wamp\www\Edebbou\src" />
-      <recent name="C:\wamp\www\Edebbou\app\Resources\views\default" />
-      <recent name="C:\wamp64\www\ffosuser\app\Resources\views" />
-      <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle" />
-      <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -193,7 +206,7 @@
       <workItem from="1582756977694" duration="1559000" />
       <workItem from="1582758558302" duration="4527000" />
       <workItem from="1582811309471" duration="882000" />
-      <workItem from="1582815084346" duration="650000" />
+      <workItem from="1582815084346" duration="4226000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
@@ -251,7 +264,70 @@
       <option name="project" value="LOCAL" />
       <updated>1582815496520</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fiiiida">
+      <created>1582815778006</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582815778006</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fiiiida">
+      <created>1582816260595</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582816260595</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Gestion d'entrepot login">
+      <created>1582817441754</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582817441754</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Notifications">
+      <created>1582817643618</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582817643618</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Notifications entity">
+      <created>1582817743748</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582817743748</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Admin dashboard">
+      <created>1582818961517</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582818961517</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Blog">
+      <created>1582819064210</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1582819064210</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Blog">
+      <created>1582819159478</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1582819159478</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Blog Uploads">
+      <created>1582819357454</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1582819357454</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,11 +377,17 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Blog" />
     <MESSAGE value="Service Vente : ikbel" />
     <MESSAGE value="Register" />
     <MESSAGE value="Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login" />
+    <MESSAGE value="fiiiida" />
+    <MESSAGE value="Gestion d'entrepot login" />
+    <MESSAGE value="Notifications" />
+    <MESSAGE value="Notifications entity" />
+    <MESSAGE value="Admin dashboard" />
+    <MESSAGE value="Blog" />
+    <MESSAGE value="Blog Uploads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blog Uploads" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="256" key="ComposerCompositePathDialog" />
