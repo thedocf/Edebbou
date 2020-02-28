@@ -158,19 +158,6 @@ class eventcoursController extends Controller
 
     public function confirmerAction(Request $request ,$id)
     {
-        $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com',465, 'ssl')
-            ->setUsername('wifek.ouerghemmi@esprit.tn')
-            ->setPassword('esprit123.');
-
-        $mailer = Swift_Mailer::newInstance($transport);
-
-
-        $message = (new \Swift_Message('ajouter evenement'))
-            ->setFrom('lina.thraya@esprit.tn')
-            ->setTo('lina.thraya@esprit.tn')
-            ->setBody(' bonjour, votre événement a été ajouté.');
-        $mailer->send($message);
-        $this->get('mailer')->send($message);
         $em=$this->getDoctrine()->getManager();
         $event=$em->getRepository('EventBundle:eventcours')->find($id);
         $Eventr=new evenement();

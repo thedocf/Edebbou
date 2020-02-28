@@ -55,7 +55,7 @@ class participantController extends Controller
         $mails=$participant->getMail();
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com',465, 'ssl')
             ->setUsername('wifek.ouerghemmi@esprit.tn')
-            ->setPassword('esprit123.');
+            ->setPassword('wifekespritinfo2017.');
 
         $mailer = Swift_Mailer::newInstance($transport);
 
