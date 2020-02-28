@@ -319,8 +319,51 @@
                     </li>
 
 
+                    <li class="nav-item has-treeview ">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Vente
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ path('livreur_index') }}" class="nav-link ">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Livreurs</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ path('livreur_new') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>new livreur</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ path('commande_index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Commandes</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-                </ul>
+                    <li class="nav-item has-treeview ">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Blog
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ path('post_admin') }}" class="nav-link ">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Manage Posts</p>
+                                </a>
+                            </li>
             </nav>
         </div>
     </aside>
@@ -344,7 +387,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     {% block contenu %}
-                    <div class="col-sm-6">
+                        <div class="col-sm-6">
 
 
 
@@ -354,7 +397,7 @@
 
 
 
-                    </div>
+                        </div>
                     {% endblock %}
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -370,54 +413,67 @@
 
 
 
-
-
-
-
-</div>
-</div>
-
-
-
-
-        {% block footer %}{% endblock %}
-
-        <footer class="main-footer">
-            <strong>Droits Réserves 2020 DEV CREW.</strong>
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 1
-
-            </div>
-        </footer>
-
-        <aside class="control-sidebar control-sidebar-dark">
-
-        </aside>
-
-
-<script src="{{ asset('jquery-3.4.1.min.js')}}"></script>
-
-<script src="{{ asset('assetsBack/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
-<script>
-    $.widget.bridge('uibutton', $.ui.button)
-</script>
-<script src="{{ asset('assetsBack/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/chart.js/Chart.min.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/sparklines/sparkline.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/moment/moment.min.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/daterangepicker/daterangepicker.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/summernote/summernote-bs4.min.js')}}"></script>
-<script src="{{ asset('assetsBack/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
-<script src="{{ asset('assetsBack/dist/js/adminlte.js')}}"></script>
-<script src="{{ asset('assetsBack/dist/js/pages/dashboard.js')}}"></script>
-<script src="{{ asset('assetsBack/dist/js/demo.js')}}"></script>
-        {% block javascripts %}
+        {% block body %}
 
 
         {% endblock %}
+
+
+
+    </div>
+
+
+
+
+    {% block footer %}{% endblock %}
+
+    <footer class="main-footer">
+        <strong>Droits Réserves 2020 DEV CREW.</strong>
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 1
+
+        </div>
+    </footer>
+
+    <aside class="control-sidebar control-sidebar-dark">
+
+    </aside>
+
+
+    <script src="{{ asset('jquery-3.4.1.min.js')}}"></script>
+
+    <script src="{{ asset('assetsBack/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <script src="{{ asset('assetsBack/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/chart.js/Chart.min.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/sparklines/sparkline.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/moment/moment.min.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/daterangepicker/daterangepicker.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/summernote/summernote-bs4.min.js')}}"></script>
+    <script src="{{ asset('assetsBack/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+    <script src="{{ asset('assetsBack/dist/js/adminlte.js')}}"></script>
+    <script src="{{ asset('assetsBack/dist/js/pages/dashboard.js')}}"></script>
+    <script src="{{ asset('assetsBack/dist/js/demo.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.min.js') }}"></script>
+
+    <script src="{{ asset('') }}IntlTableSort.js"></script>
+    <script src="{{ asset('') }}IntlTableSort.DateTime.js"></script>
+    <script src="{{ asset('') }}IntlTableSort.Number.js"></script>
+    <script src="{{ asset('') }}IntlTableSort.String.js"></script>
+
+    {% block javascripts %}
+
+
+    {% endblock %}
+    {% block js %}
+
+
+    {% endblock %}
 </body>
 </html>

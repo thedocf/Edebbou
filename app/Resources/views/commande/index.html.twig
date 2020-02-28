@@ -1,0 +1,73 @@
+{% extends 'back.html.twig' %}
+
+
+{% block body %}
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Commandes</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <div class="card-body">
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+
+
+                        <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0" style="height: 300px;">
+                        <table class="table table-head-fixed text-nowrap">
+        <thead>
+            <tr>
+                <th onclick="stringTableSort(this,'Lower','en')">Id</th>
+                <th onclick="dateTimeTableSort(this,'DateTime','en')">Date</th>
+                <th onclick="tableSort(this,'en')">Etatlivraion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commande in commandes %}
+            <tr>
+                <td><a href="{{ path('commande_show', { 'id': commande.id }) }}">{{ commande.id }}</a></td>
+                <td>{% if commande.date %}{{ commande.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ commande.etatLivraion }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('commande_show', { 'id': commande.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+commande_index:
+    path:     /
+    defaults: { _controller: "VenteBundle:Commande:index" }
+    methods:  GET
+
+
+commande_show:
+    path:     /{id}/show
+    defaults: { _controller: "VenteBundle:Commande:show" }
+
+
+
+

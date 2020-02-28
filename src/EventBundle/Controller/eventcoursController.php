@@ -158,6 +158,7 @@ class eventcoursController extends Controller
 
     public function confirmerAction(Request $request ,$id)
     {
+
         $em=$this->getDoctrine()->getManager();
         $event=$em->getRepository('EventBundle:eventcours')->find($id);
         $Eventr=new evenement();

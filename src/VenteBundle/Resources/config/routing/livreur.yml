@@ -1,0 +1,28 @@
+livreur_index:
+    path:     /
+    defaults: { _controller: "VenteBundle:Livreur:index" }
+    methods:  GET
+
+livreur_show:
+    path:     /{id}/show
+    defaults: { _controller: "VenteBundle:Livreur:show" }
+    methods:  GET
+
+livreur_new:
+    path:     /new
+    defaults: { _controller: "VenteBundle:Livreur:new" }
+    methods:  [GET, POST]
+
+livreur_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VenteBundle:Livreur:edit" }
+    methods:  [GET, POST]
+
+livreur_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VenteBundle:Livreur:delete" }
+    methods:  DELETE
+rechercheLivreur:
+    path:     /rechercheLivreur
+    defaults: { _controller: "VenteBundle:Livreur:rechercheLivreur" }
+    methods:

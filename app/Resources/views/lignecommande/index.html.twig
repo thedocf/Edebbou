@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Lignecommandes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Qte</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ligneCommande in ligneCommandes %}
+            <tr>
+                <td><a href="{{ path('lignecommande_show', { 'id': ligneCommande.id }) }}">{{ ligneCommande.id }}</a></td>
+                <td>{{ ligneCommande.qte }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('lignecommande_show', { 'id': ligneCommande.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

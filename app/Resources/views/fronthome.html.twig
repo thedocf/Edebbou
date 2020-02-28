@@ -99,6 +99,8 @@
 
                 <li><a href="{{ path('show1') }}">Shop</a></li>
 
+                <li><a href="{{ path('list_post') }}">Blog</a></li>
+
 
                 <li><a href="{{ path('fos_message_inbox') }}">Messages</a></li>
                 <li><a href="{{ path('video') }}">Discover us</a></li>
@@ -113,6 +115,9 @@
         </div>
         <div class="cart-fav-search mb-100">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+                {{ render(controller('AppBundle:Notification:display')) }}
+
                 <a href="{{ path('fos_user_security_logout') }}" class="header-top-button"><i class="lni-lock"></i> Log Out</a>
             {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
                 <a href="{{ path('fos_user_security_login') }}" class="header-top-button"><i class="lni-lock"></i> Log In</a>

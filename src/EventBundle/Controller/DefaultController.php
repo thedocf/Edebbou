@@ -36,8 +36,8 @@ class DefaultController extends Controller
             $em->flush();
             $mails=$participant->getMail();
             $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com',465, 'ssl')
-                ->setUsername('wifek.ouerghemmi@esprit.tn')
-                ->setPassword('wifekespritinfo2017.');
+                ->setUsername('alaa.guissouma@esprit.tn')
+                ->setPassword('Skotinka00_');
 
             $mailer = Swift_Mailer::newInstance($transport);
 
