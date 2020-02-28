@@ -1,0 +1,106 @@
+{% extends 'back.html.twig' %}
+
+
+{% block body %}
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Commandes</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <div class="card-body">
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+
+
+                        <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0" style="height: 300px;">
+                        <table class="table table-head-fixed text-nowrap">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ commande.id }}</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>{% if commande.date %}{{ commande.date|date('d/m/Y') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Etatlivraion</th>
+            <td>{{ commande.etatLivraion }}</td>
+        </tr>
+        <tr>
+            <th>Utilisateur</th>
+            <td>{{ commande.user.username }}</td>
+        </tr>
+        <tr>
+            <th>Livreur</th>
+            <td>{% if commande.livreur is not null %}{{ commande.livreur.nom }} {% endif %}</td>
+        </tr>
+        </tbody>
+                        </table>
+                        <br>
+                        <br>
+                        Lignes de commande
+                        <br>
+                        <br>
+
+
+                        <table class="table table-head-fixed text-nowrap">
+        <thead>
+        <tr>
+            <th>Produit</th>
+            <th>Qte</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for ligneCommande in commande.lignes %}
+            <tr>
+                <td>{{ ligneCommande.product.nom }}</td>
+                <td>{{ ligneCommande.qte }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+                        {% if commande.livreur is null %}
+Affecter Livreur
+                        {{ form_start(form) }}
+                        {{ form_end(form) }}
+                        {% endif %}
+
+    <ul>
+        <li>
+            <a href="{{ path('commande_index') }}">Back to the list</a>
+        </li>
+    </ul>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}
+

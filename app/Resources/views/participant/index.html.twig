@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Participants list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Confirmation</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Dateinscrit</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for participant in participants %}
+            <tr>
+                <td><a href="{{ path('._participant_show', { 'id': participant.id }) }}">{{ participant.id }}</a></td>
+                <td>{% if participant.confirmation %}Yes{% else %}No{% endif %}</td>
+                <td>{{ participant.nom }}</td>
+                <td>{{ participant.prenom }}</td>
+                <td>{% if participant.dateInscrit %}{{ participant.dateInscrit|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('._participant_show', { 'id': participant.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('._participant_edit', { 'id': participant.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('._participant_new') }}">Create a new participant</a>
+        </li>
+    </ul>
+{% endblock %}

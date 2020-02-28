@@ -1,0 +1,50 @@
+{% extends "Fournisseur.html.twig" %}
+{% block titre %}Fournisseur{% endblock %}
+{% block body %}
+    {% if not form.vars.valid %}
+        <div class="alert alert-error color red">
+            {{ form_errors(form) }}
+        </div>
+    {% endif %}
+    {% for msg in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+    <br><br><br>
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+
+        <div class="alert alert-success">
+            {{ flashMessage }}
+        </div>
+
+    {% endfor %}
+    <div class="container" style="text-align: center">
+    {{ form_start(form) }}
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.nom) }}</label>
+            {{ form_widget(form.nom,{'attr':{'class': 'form-control'}}) }}
+            {{ form_errors(form.nom) }}
+        </div>
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.prenom) }}</label>
+            {{ form_widget(form.prenom,{'attr':{'class': 'form-control'}}) }}
+            {{ form_errors(form.prenom) }}
+        </div>
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.numTel) }}</label>
+            {{ form_widget(form.numTel,{'attr':{'class': 'form-control'}}) }}
+            {{ form_errors(form.numTel) }}
+        </div>
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.disponible) }}</label>
+            {{ form_widget(form.disponible,{'attr':{'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group col-xl-6" style="text-align: left">
+            <label>{{ form_label(form.captcha) }}</label>
+            {{ form_widget(form.captcha,{'attr':{'class': 'form-control'}}) }}
+            {{ form_errors(form.captcha) }}
+        </div>
+    {{ form_end(form) }}
+    </div>
+{% endblock %}

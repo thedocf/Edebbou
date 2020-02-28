@@ -1,11 +1,51 @@
+vente:
+    resource: "@VenteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fournisseur:
+  resource: "@FournisseurBundle/Resources/config/routing.yml"
+  prefix:   /
+
 app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+  resource: '@AppBundle/Controller/'
+  type: annotation
 
 
 fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+  resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+
+fos_message:
+  resource: "@FOSMessageBundle/Resources/config/routing.xml"
+  prefix:   /message
+message:
+  resource: "@MessageBundle/Resources/config/routing.yml"
+  prefix:   /
 test:
-    resource: "@testBundle/Resources/config/routing.yml"
+  resource: "@testBundle/Resources/config/routing.yml"
+  prefix:   /
+
+event:
+    resource: "@EventBundle/Resources/config/routing.yml"
     prefix:   /
+
+event_participant:
+  resource: "@EventBundle/Controller/participantController.php"
+  type:     annotation
+
+event_eventcours:
+  resource: "@EventBundle/Controller/eventcoursController.php"
+  type:     annotation
+
+event_evenement:
+  resource: "@EventBundle/Controller/evenementController.php"
+  type:     annotation
+
+Tutorial:
+  resource: "@TutorialBlogBundle/Resources/config/routing.yml"
+  prefix:   /
+
+
+
+ancarebeca_fullcalendar:
+  resource: "@FullCalendarBundle/Resources/config/routing.yml"

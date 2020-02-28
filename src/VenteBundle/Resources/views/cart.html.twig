@@ -118,26 +118,26 @@
                             <tbody>
                             {% set total = 0 %}
                             {% for id,qt in panier %}
-                            <tr>
-                                {% set total = total + produits[id].prix * qt %}
-                                <td class="cart_product_img">
-                                    <a href="#"><img src="{{ asset('') }}img/bg-img/cart1.jpg" alt="Product"></a>
-                                </td>
-                                <td class="cart_product_desc">
-                                    <h5>{{ produits[id].nom }}</h5>
-                                </td>
-                                <td class="price">
-                                    <span >${{ produits[id].prix }}</span>
-                                </td>
-                                <td class="qty">
-                                    <div class="qty-btn d-flex">
-                                        <p>Qty</p>
-                                        <div class="quantity">
-                                            <input type="number" class="qty-text" id="{{ id }}" step="1" min="1" max="300" name="quantity" value="{{ qt }}">
+                                <tr>
+                                    {% set total = total + produits[id].prix * qt %}
+                                    <td class="cart_product_img">
+                                        <img src="{{ asset('uploads/images/depots/') }}{{ produits[id].image }}" alt="">
+                                    </td>
+                                    <td class="cart_product_desc">
+                                        <h5>{{ produits[id].nom }}</h5>
+                                    </td>
+                                    <td class="price">
+                                        <span >${{ produits[id].prix }}</span>
+                                    </td>
+                                    <td class="qty">
+                                        <div class="qty-btn d-flex">
+                                            <p>Qty</p>
+                                            <div class="quantity">
+                                                <input type="number" class="qty-text" id="{{ id }}" step="1" min="1" max="300" name="quantity" value="{{ qt }}">
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
                             {% endfor %}
                             </tbody>
                         </table>

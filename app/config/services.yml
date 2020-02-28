@@ -33,3 +33,22 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+
+    app_bundle.service.listener:
+        class: VenteBundle\Listener\EventListener
+        tags:
+            - { name: 'kernel.event_listener', event: 'fullcalendar.set_data', method: loadData }
+
+    Tutorial\BlogBundle\Controller\BlogController:
+        autowire: true # or define your controller constructor and configure its arguments explicitly
+        tags: ['controller.service_arguments']
+    AppBundle\Repository\PostLikeRepository:
+        autowire: true # or define your controller constructor and configure its arguments explicitly
+        tags: ['controller.service_arguments']
+    post_provider_service:
+        class: 'AppBundle\Repository\PostRepository'
+        public: true
+        factory: ['@doctrine.orm.entity_manager', getRepository]
+        arguments:
+        - AppBundle\Entity\Post

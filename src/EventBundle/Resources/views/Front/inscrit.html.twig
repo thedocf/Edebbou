@@ -1,0 +1,91 @@
+{% extends  'baselina.html.twig' %}
+{% block body %}
+
+    <table class="table table-striped">
+        {{form_start(form)  }}
+        <tr>
+            <td>{{ form_label(form.nom)  }}</td>
+            <td>{{ form_widget(form.nom)  }}<span  id="span">le nom ne doit pas contenir de  chiffres</span></td>
+        </tr>
+
+
+        <tr>
+            <td>{{ form_label(form.prenom)  }}</td>
+            <td>{{ form_widget(form.prenom)  }}<span  id="span">le prenom ne doit pas contenir de  chiffres</span></td>
+
+        </tr>
+        <tr>
+            <td>{{ form_label(form.dateInscrit)  }}</td>
+            <td>{{ form_widget(form.dateInscrit)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.confirmation)  }}</td>
+            <td>{{ form_widget(form.confirmation)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.mail)  }}</td>
+            <td>{{ form_widget(form.mail)  }}</td>
+        </tr>
+
+        <tr>
+            <td>{{ form_label(form.evenement)  }}</td>
+            <td>{{ form_widget(form.evenement)  }}</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="ajouter participant" class="btn btn-primary" /></td>
+        </tr>
+        {{ form_end(form) }}
+    </table>
+{% endblock %}
+
+
+{% block javascripts %}
+
+
+    <script>
+        $(document).ready(function () {
+            $("#form_date_inscrit_date_year").val(new Date().getFullYear());
+            $("#form_date_inscrit_date_month").val(new Date().getMonth()+1);
+            $("#form_date_inscrit_date_day").val(new Date().getDate());
+            $('#form_nom').keyup(function () {
+
+                var nom = $('#form_nom').val();
+                var test=/^[A-Za-z]+$/;
+                if (test.test(nom)) {
+
+
+                    $('#span').hide();
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span').show();
+                    $('#ajouter').prop('disabled', true);
+                }
+
+            });
+
+
+
+            $('#form_prenom').keyup(function () {
+
+                var prenom = $('#form_prenom').val();
+                var test=/^[A-Za-z]+$/;
+                if (test.test(prenom)) {
+
+
+                    $('#span').hide();
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span').show();
+                    $('#ajouter').prop('disabled', true);
+                }
+
+            });
+
+
+        })
+    </script>
+{% endblock %}

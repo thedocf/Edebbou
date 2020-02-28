@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="http://localhost/ffosuser/web/plugins/fontawesome-free/css/all.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Tempusdominus Bbootstrap 4 -->
+<link rel="stylesheet" href="http://localhost/ffosuser/web/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<!-- iCheck -->
+<link rel="stylesheet" href="http://localhost/ffosuser/web/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<!-- JQVMap -->
+<link rel="stylesheet" href="http://localhost/ffosuser/web/plugins/jqvmap/jqvmap.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="http://localhost/ffosuser/web/dist/css/adminlte.min.css">
+<!-- overlayScrollbars -->
+<link rel="stylesheet" href="http://localhost/ffosuser/web/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+<!-- Daterange picker -->
+<link rel="stylesheet" href="http://localhost/ffosuser/web/plugins/daterangepicker/daterangepicker.css">
+<!-- summernote -->
+<link rel="stylesheet" href="http://localhost/ffosuser/web/plugins/summernote/summernote-bs4.css">
+<!-- Google Font: Source Sans Pro -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+<img src="{{ app.request.getSchemeAndHttpHost() ~ asset('img/dev.png') }}" id="img1">
+<div class="callout callout-info" align="right" >
+    <h2><i class="fas fa-globe">Edebbou</i> </h2>
+    {{ "Extracted at " }}{{ "now"|date("m/d/Y") }} {{ "now"|date("h:i A") }}
+</div>
+
+<br>
+<br>
+
+<title>Products</title>
+<center><h1>Products</h1></center>
+
+<br>
+<br>
+
+<div class="card-body  p-0" style="height: 300px;">
+    {%  for cat in category %}
+        <strong>{{ cat.label  }}   :</strong>
+        <br>
+        <br>
+    <table class="table table-head-fixed text-nowrap">
+        <thead>
+
+        <tr>
+            <td><strong>ID</strong></td>
+            <td><strong>Name</strong></td>
+            <td><strong>Price</strong></td>
+            <td><strong>Quantity</strong></td>
+            <td><strong>Description</strong></td>
+            <td><strong>Expiration Date</strong></td>
+
+
+        </tr>
+
+
+        </thead>
+        {%  for pro in product %}
+        {% if pro.category==cat %}
+        <tbody>
+        <tr>
+            <td>{{ pro.idp }}</td>
+            <td>{{ pro.nom }}</td>
+            <td>{{ pro.prix }}</td>
+            <td>{{ pro.qte }}</td>
+            <td>{{ pro.description }}</td>
+            <td>{{ pro.dateExpiration }}</td>
+
+        </tr>
+
+        </tbody>
+
+        {% endif %}
+        {% endfor %}
+    </table>
+        <br>
+        <br>
+    {% endfor %}
+
+</div>

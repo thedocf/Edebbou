@@ -3,7 +3,7 @@
 namespace test\Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Category
  *
@@ -23,7 +23,9 @@ class Category
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Length(min="5",exactMessage="5 letters at least")
+     * @Assert\Regex(pattern="/^[a-zA-Z\s]+$/")
      * @ORM\Column(name="label", type="string", length=255)
      */
     private $label;

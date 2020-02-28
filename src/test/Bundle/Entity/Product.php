@@ -3,7 +3,7 @@
 namespace test\Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Product
  *
@@ -23,21 +23,22 @@ class Product
 
     /**
      * @var float
-     *
+     *@Assert\NotBlank()
+     * @Assert\Regex(pattern="/^-?(?:\d+|\d*\.\d+)$/")
      * @ORM\Column(name="prix", type="float")
      */
     private $prix;
 
     /**
      * @var int
-     *
+     *@Assert\NotBlank()
      * @ORM\Column(name="qte", type="integer")
      */
     private $qte;
 
     /**
      * @var string
-     *
+     * @Assert\Length(min="4")
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
@@ -46,6 +47,7 @@ class Product
 
     /**
      * @var string
+     *@Assert\Date
      *
      * @ORM\Column(name="date_expiration", type="string", length=255)
      */
@@ -53,7 +55,10 @@ class Product
 
     /**
      * @var string
-     *
+
+     *@Assert\NotBlank()
+     * @Assert\Length(min="5")
+     * @Assert\Regex(pattern="/^[a-zA-Z\s]+$/")
      * @ORM\Column(name="nom", type="string", length=255)
      */
     private $nom;
@@ -76,11 +81,37 @@ class Product
 
     /**
      * @ORM\ManyToOne(targetEntity="Category")
+     *  @Assert\NotBlank(message="Category Required")
      * @ORM\JoinColumn(name="cat_id",referencedColumnName="id")
      */
     private $category;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255)
+     */
+    private $image;
+
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     *
      * @return mixed
      */
     public function getCategory()

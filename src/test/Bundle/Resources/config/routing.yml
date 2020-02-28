@@ -8,7 +8,9 @@ show1:
 show2:
     path:     /show2
     defaults: { _controller: testBundle:c1:show2 }
-
+fronthome:
+    path:     /fronthome
+    defaults: { _controller: testBundle:c1:fronthome }
 addP:
         path:     /addP
         defaults: { _controller: testBundle:c1:addP }
@@ -44,3 +46,40 @@ editP:
 showByCat:
     path:     /showByCat/{id}
     defaults: { _controller: testBundle:c1:showByCat }
+
+showByP:
+    path:     /showByP/
+    defaults: { _controller: testBundle:c1:showByP }
+
+sortByP:
+    path:     /sortByP/
+    defaults: { _controller: testBundle:c1:sortByP }
+
+sortByP2:
+  path:     /sortByP2/
+  defaults: { _controller: testBundle:c1:sortByP2 }
+
+
+searchP:
+    path:     /searchP/
+    defaults: { _controller: testBundle:c1:searchP }
+
+searchC:
+  path:     /searchC/
+  defaults: { _controller: testBundle:c1:searchC }
+
+pdf:
+    path:     /pdf/
+    defaults: { _controller: testBundle:c1:pdf }
+
+spdf:
+    path:     /spdf/
+    defaults: { _controller: testBundle:c1:showpdf }
+
+stat:
+    path:     /stat/
+    defaults: { _controller: testBundle:c1:stat }
+
+delExp:
+  path:     /delExp/{id}
+  defaults: { _controller: testBundle:c1:delExp }

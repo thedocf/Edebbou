@@ -1,0 +1,66 @@
+{% extends "Fournisseur.html.twig" %}
+{% block titre %}Manage Depot{% endblock %}
+{% block body %}
+
+    <!-- /.card-header -->
+    <div class="card-body table-responsive p-0" style="height: 300px;">
+        <table class="table table-head-fixed text-nowrap">
+            <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Entreprise</th>
+                <th>Surface</th>
+                <th>Ville</th>
+                <th>Capacite</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Delete</th>
+                <th>Edit</th>
+                <th>Details</th>
+            </tr>
+            {%  for car in depots %}
+            </thead>
+            <tbody id="myTable">
+            <tr>
+                <td>{{ car.id }}</td>
+                <td>{{ car.entreprise }}</td>
+                <td>{{ car.surface }}</td>
+                <td>{{ car.ville }}</td>
+                <td>{{ car.capacite }}</td>
+                <td><img width="100px" height="100px" src="{{ asset('uploads/images/depots/') }}{{ car.image }}"></td>
+                <td><p class="text-wrap" style="width: 200px">{{ car.description }}</p></td>
+                <td><a href="{{ path('deleteD',{'id': car.id }) }}" >Delete</a></td>
+                <td><a href="{{ path('editD',{'id': car.id }) }}" >Edit</a></td>
+                <td><a href="{{ path('detailD',{'id': car.id }) }}" >Fournisseurs</a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+    </div>
+    </div>
+
+
+
+    </div>
+    </div>
+    <!-- /.content -->
+    </div>
+
+    <!-- /.content-wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+{% endblock %}
