@@ -17,11 +17,11 @@ class DefaultController extends Controller
         $authChecker = $this->container->get('security.authorization_checker');
         if($authChecker->isGranted('ROLE_ADMIN'))
         {
-            return $this->redirectToRoute('show2');
+            return $this->redirectToRoute('addF');
         }
         else if ($authChecker->isGranted('ROLE_USER'))
         {
-            return $this->redirectToRoute('show1');
+            return $this->redirectToRoute('affiche_front');
         }
         return $this->render('baseok.html.twig');
     }

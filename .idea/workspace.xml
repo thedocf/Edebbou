@@ -56,6 +56,17 @@
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha-bundle" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/blackknight467/star-rating-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/message-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XZY5gdX79FPRqMjH3zLgXWAtVW" />
@@ -70,13 +81,23 @@
     <property name="dumpAutoload C:/wamp64/www/ffosuser/composer.json" value="--no-interaction --ansi --verbose" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSMessage\views" />
+      <recent name="C:\wamp64\www\ffosuser\app\Resources" />
       <recent name="C:\wamp64\www\ffosuser\app\Resources\views" />
-      <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle" />
-      <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSUserBundle\views" />
+      <recent name="C:\wamp64\www\ffosuser\vendor\blackknight467" />
+      <recent name="C:\wamp64\www\ffosuser\vendor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ffosuser\app\Resources" />
+      <recent name="C:\wamp64\www\ffosuser\app\Resources\FOSMessageBundle" />
+      <recent name="C:\wamp64\www\ffosuser\app\Resources\views" />
+      <recent name="C:\wamp64\www\ffosuser\src\FournisseurBundle\Resources\views\depot" />
+      <recent name="C:\wamp64\www\ffosuser\src\FournisseurBundle" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -93,14 +114,26 @@
       <command value="php -v" />
       <command value="php app/console server:run" />
       <command value="php app/console server:start" />
+      <command value="php bin/console server:start" />
       <command value="php bin/console server:status" />
+      <command value="php bin/console server:run" />
       <command value="composer update" />
       <command value="composer require friendsofsymfony/user-bundle &quot;~2.0&quot;" />
+      <command value="s doctrine:generate:entity --force" />
+      <command value="s router:match" />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entity" />
+      <command value="s doctrine:generate:form" />
+      <command value="s doctrine:generate:form FournisseurBundle:Fournisseur" />
+      <command value="s doctrine:generate:form FournisseurBundle:Depot" />
+      <command value="php bin/console fos:user:promote yahyaoui ROLE_ADMIN" />
+      <command value="s fos:user:promote yahyaoui ROLE_ADMIN" />
+      <command value="php doctrine:schema:update --force" />
+      <command value="c dump-autoload" />
       <command value="php bin/console doctrine:schema:update --force" />
-      <command value="php bin/console fos:user:promote testuser ROLE_ADMIN" />
-      <command value="php bin/console server:run" />
-      <command value="php bin/console server:start" />
-      <command value="php bin/console fos:user:promote firas ROLE_ADMIN" />
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s debug:router" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -136,9 +169,22 @@
       <workItem from="1581374023636" duration="1486000" />
       <workItem from="1581503299874" duration="3506000" />
       <workItem from="1581510152878" duration="71000" />
-      <workItem from="1581606976533" duration="8579000" />
-      <workItem from="1581615637945" duration="133000" />
-      <workItem from="1581615804631" duration="219000" />
+      <workItem from="1581606976533" duration="3318000" />
+      <workItem from="1581617131010" duration="26000" />
+      <workItem from="1581617157691" duration="1739000" />
+      <workItem from="1581619266638" duration="1429000" />
+      <workItem from="1581624243143" duration="383000" />
+      <workItem from="1581624640766" duration="530000" />
+      <workItem from="1581625184823" duration="16369000" />
+      <workItem from="1581667990201" duration="114000" />
+      <workItem from="1581668116353" duration="6560000" />
+      <workItem from="1582140166671" duration="689000" />
+      <workItem from="1582141086016" duration="55803000" />
+      <workItem from="1582258984388" duration="11422000" />
+      <workItem from="1582659892247" duration="10689000" />
+      <workItem from="1582672135332" duration="2331000" />
+      <workItem from="1582714955031" duration="10528000" />
+      <workItem from="1582744209576" duration="6310000" />
     </task>
     <servers />
   </component>
@@ -162,5 +208,15 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="279" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581255214917" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
