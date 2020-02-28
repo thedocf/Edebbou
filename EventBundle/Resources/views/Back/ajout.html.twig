@@ -1,0 +1,91 @@
+{% extends  'back.html.twig' %}
+{% block contenu %}
+    <table class="table table-striped">
+        {{form_start(form)  }}
+        <tr>
+            <td> {{ form_label(form.nomEvent)  }}</td>
+            <td>{{ form_widget(form.nomEvent)  }}<span  id="span">le nom ne doit pas contenir de  chiffres</span></td>
+        </tr>
+
+
+        <tr>
+            <td>{{ form_label(form.nbPlaces)  }}</td>
+            <td>{{ form_widget(form.nbPlaces)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.description)  }}</td>
+            <td>{{ form_widget(form.description)  }}<span  id="span2"> la description ne doit pas contenir de  chiffres</span></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.dateDebut)  }}</td>
+            <td>{{ form_widget(form.dateDebut)  }}</td>
+        </tr>
+
+        <tr>
+            <td>{{ form_label(form.image)  }}</td>
+            <td>{{ form_widget(form.image)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.dateFin)  }}</td>
+            <td>{{ form_widget(form.dateFin)  }}</td>
+            <td>{{  form_errors(form.dateFin)  }}</td>
+
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="ajouter event" class="btn btn-primary" /></td>
+        </tr>
+        {{ form_end(form) }}
+    </table>
+{% endblock %}
+
+{% block javascripts %}
+
+
+    <script>
+        $(document).ready(function () {
+            $("#form_dateDebut_date_year").val(new Date().getFullYear());
+            $("#form_dateDebut_date_month").val(new Date().getMonth()+1);
+            $("#form_dateDebut_date_day").val(new Date().getDate());
+            $('#form_nomEvent').keyup(function () {
+
+                var nom = $('#form_nomEvent').val();
+                var test=/^[A-Za-z]+$/;
+                if (test.test(nom)) {
+
+
+                    $('#span').hide();
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span').show();
+                    $('#ajouter').prop('disabled', true);
+                }
+
+            });
+
+
+
+            $('#form_description').keyup(function () {
+
+                var desc = $('#form_description').val();
+                var test=/^[A-Za-z]+$/;
+                if (test.test(desc)) {
+
+
+                    $('#span2').hide();
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span2').show();
+                    $('#ajouter').prop('disabled', true);
+                }
+
+            });
+
+
+
+
+        })
+    </script>
+{% endblock %}

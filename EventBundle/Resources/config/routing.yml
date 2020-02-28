@@ -1,0 +1,46 @@
+event_homepage:
+    path:     /
+    defaults: { _controller: EventBundle:Default:index }
+
+supprimerevent:
+    path:      /supp/{id}
+    defaults:  { _controller: EventBundle:evenement:supprimerevent }
+supprimereventcours:
+    path:      /suppc/{id}
+    defaults:  { _controller: EventBundle:eventcours:supprimereventencours }
+modifiereventcours:
+    path:      /modif/{id}
+    defaults:  { _controller: EventBundle:eventcours:modifiereventcours }
+modifierevent:
+    path:      /modife/{id}
+    defaults:  { _controller: EventBundle:evenement:edit }
+modifierparticipant:
+    path:      /modiferp/{id}
+    defaults:  { _controller: EventBundle:participant:edit }
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+afficherevent:
+    path:      /aff
+    defaults:  { _controller: EventBundle:evenement:index }
+afficherparticipant:
+    path:      /affp
+    defaults:  { _controller: EventBundle:participant:index }
+detail:
+    path:      /detail/{id}
+    defaults:  { _controller: EventBundle:evenement:Details }
+confirmer:
+    path:      /confirmer/{id}
+    defaults:  { _controller: EventBundle:eventcours:confirmer }
+supprimerparticipant:
+    path:      /suppp/{id}
+    defaults:  { _controller: EventBundle:participant:supprimerparticipant }
+ajoutevent:
+    path:      /ajoutevent
+    defaults:  { _controller: EventBundle:eventcours:ajoutereventencours }
+affichefront:
+    path:      /afffront
+    defaults:  { _controller: EventBundle:evenement:affichefront }
+test:
+    path:      /test/{id}
+    defaults:  { _controller: EventBundle:Default:test }

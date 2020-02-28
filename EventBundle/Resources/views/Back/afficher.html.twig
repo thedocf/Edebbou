@@ -1,0 +1,117 @@
+{% extends  'back.html.twig' %}
+{% block contenu %}
+
+    <table>
+    <div class="col-xs-12">
+        <br>
+        <button class="btn btn-info btn-icon-text" onclick="window.print();"><i class="mdi mdi-printer btn-icon-append"></i>      IMPRIMER</button>
+
+    </div>
+    <a href="{{ path('ajoutevent')}}">ajouter</a>
+
+
+
+<table>
+
+    <table border="1" class="table table-dark">
+
+        <tr>
+
+        <td> nomEvent</td>
+
+
+        <td> nbPlaces </td>
+
+        <td> dateDebut </td>
+            <td> description </td>
+
+        <td> dateFin </td>
+            <td> image </td>
+<td>action</td>
+
+        </tr>
+        <tbody id="evt">
+        {% for vv in evenements %}
+
+            <tr>
+
+                <td>{{ vv.nomEvent }}</td>
+                <td>{{ vv.nbPlaces }}</td>
+                <td>{{ vv.dateDebut|date }}</td>
+                <td>{{ vv.description }}</td>
+
+                <td>{{ vv.dateFin|date}}</td>
+                <td>{{ vv.image }}</td>
+                <td><iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost.dev%2F2a7_php5%2Fview%2Fafficher_wishlist.php&layout=button_count&size=small&width=83&height=20&appId" width="83" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></td>
+
+                <td>
+                    <a class="btn btn-danger"
+                     href="{{ path('supprimerevent' , {'id':vv.id}) }}">supprimer</a>
+                    <br>
+                    <a class="btn btn-success btn btn-primary btn-sm" href="{{ path('modifierevent' , {'id':vv.id}) }}">modifier</a>
+                </td>
+
+
+
+
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+    <h2>courant</h2>
+    <table>
+
+        <table border="1" class="table table-dark">
+
+            <tr>
+
+                <td> nomEvent</td>
+
+
+                <td> nbPlaces </td>
+
+                <td> dateDebut </td>
+                <td> description </td>
+
+                <td> dateFin </td>
+                <td> image </td>
+                <td>action</td>
+
+            </tr>
+            <tbody id="evt">
+            {% for vv in eventcours %}
+
+                <tr>
+
+                    <td>{{ vv.nomEvent }}</td>
+                    <td>{{ vv.nbPlaces }}</td>
+                    <td>{{ vv.dateDebut|date }}</td>
+                    <td>{{ vv.description }}</td>
+
+                    <td>{{ vv.dateFin|date}}</td>
+                    <td>{{ vv.image }}</td>
+
+                    <td>
+                        <a class="btn btn-danger" href="{{ path('supprimereventcours' , {'id':vv.id}) }}">supprimer</a>
+<br>
+                        <a class="btn btn-success btn btn-primary btn-sm" href="{{ path('modifiereventcours' , {'id':vv.id}) }}">modifier</a>
+                    <td>
+                        <a  class="btn btn-primary btn-sm"  href="{{ path('confirmer' , {'id':vv.id}) }}">confirmer</a>
+
+                    </td>
+
+
+
+
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+
+</table>
+{% endblock %}

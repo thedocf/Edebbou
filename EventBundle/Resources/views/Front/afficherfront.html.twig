@@ -1,0 +1,44 @@
+{% extends  'baselina.html.twig' %}
+{% block body %}
+
+    <h2>les evenements</h2>
+    <table>
+
+
+
+
+
+        {% for vv in evenements %}
+
+                <div class="products-catagories-area clearfix">
+                    <div class="amado-pro-catagory clearfix">
+                <div class="single-products-catagory clearfix">
+                    <a href="{{ path('detail' ,{ 'id':vv.id }) }}">
+                        <img src="{{ asset('photos/') }}{{ vv.image }}" alt="">
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <div class="line"></div>
+
+                            <h4>{{ vv.description }} </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+                    </div>
+                </div>
+<br><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+        {% endfor %}
+
+    </table>
+
+{% endblock %}
