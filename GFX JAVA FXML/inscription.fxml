@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="646.0" prefWidth="546.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.InscriptionController">
+    <stylesheets>
+        <URL value="@inscription.css" />
+    </stylesheets>
+   <children>
+      <Text layoutX="38.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S'inscrire" wrappingWidth="233.36572265625">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="43.0" />
+         </font>
+      </Text>
+      <TabPane layoutX="14.0" layoutY="97.0" prefHeight="615.0" prefWidth="516.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Utilisateur">
+            <content>
+              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="513.0" prefWidth="516.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom : " AnchorPane.leftAnchor="15.0" />
+                        <Text layoutX="13.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom : " AnchorPane.leftAnchor="15.0" />
+                        <Text layoutX="13.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email : " AnchorPane.leftAnchor="15.0" />
+                        <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Photo :" AnchorPane.leftAnchor="15.0" />
+                        <Text layoutX="12.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero tel :" AnchorPane.leftAnchor="15.0" />
+                        <Text layoutX="17.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age : " AnchorPane.leftAnchor="15.0" />
+                        <Text layoutX="17.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe : " AnchorPane.leftAnchor="15.0" />
+                        <Text layoutX="13.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe :" AnchorPane.leftAnchor="13.0" />
+                        <Text layoutX="15.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation mot de passe :" AnchorPane.leftAnchor="15.0" />
+                        <TextField fx:id="nomUser" layoutX="72.0" layoutY="13.0" prefHeight="26.0" prefWidth="422.0" />
+                        <TextField fx:id="prenomUser" layoutX="72.0" layoutY="47.0" prefHeight="26.0" prefWidth="422.0" />
+                        <TextField fx:id="emailUser" layoutX="72.0" layoutY="86.0" prefHeight="26.0" prefWidth="422.0" />
+                        <TextField fx:id="numeroUser" layoutX="108.0" layoutY="172.0" prefHeight="26.0" prefWidth="388.0" />
+                        <TextField fx:id="ageUser" layoutX="58.0" layoutY="216.0" prefHeight="31.0" prefWidth="436.0" />
+                        <PasswordField fx:id="mdpUser" layoutX="114.0" layoutY="348.0" prefHeight="26.0" prefWidth="379.0" />
+                        <PasswordField fx:id="confirmationMdpUser" layoutX="202.0" layoutY="388.0" prefHeight="26.0" prefWidth="290.0" />
+                        <Button fx:id="btnAddUser" layoutX="312.0" layoutY="455.0" mnemonicParsing="false" onAction="#addUser" prefHeight="34.0" prefWidth="170.0" style="-fx-background-color: FFCC00;" text="Confirmer">
+                           <font>
+                              <Font name="Bell MT" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="29.0" layoutY="455.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: FFCC00;" text="Retour">
+                           <font>
+                              <Font name="Bell MT" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnPhotoUser" layoutX="72.0" layoutY="126.0" mnemonicParsing="false" onAction="#photoUserChooser" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: FFCC00;" text="Choisir un fichier" />
+                        <Text fx:id="txtPhotoUser" layoutX="232.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="159.0000027269125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="comboRole" layoutX="62.0" layoutY="303.0" prefHeight="31.0" prefWidth="432.0" style="-fx-background-color: FFCC00;" />
+                        <Label layoutX="18.0" layoutY="307.0" text="Role :" AnchorPane.leftAnchor="15.0" />
+                        <ComboBox fx:id="comboSexe" layoutX="61.0" layoutY="257.0" prefHeight="31.0" prefWidth="433.0" style="-fx-background-color: FFCC00;" />
+                        <ImageView fitHeight="74.0" fitWidth="53.0" layoutX="228.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/E.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="67.0" fitWidth="159.0" layoutX="313.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/deb.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

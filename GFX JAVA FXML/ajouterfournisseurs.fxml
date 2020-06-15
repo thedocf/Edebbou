@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterFournisseursController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: FFCC00;">
+         <children>
+            <ImageView fitHeight="215.0" fitWidth="249.0" layoutX="1000.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/B.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="215.0" layoutX="72.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/logo2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="329.0" layoutY="487.0" prefHeight="43.0" prefWidth="169.0" text="depot_id" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="depot_id" layoutX="518.0" layoutY="493.0" prefHeight="31.0" prefWidth="447.0" />
+            <TextField fx:id="disponible" layoutX="518.0" layoutY="428.0" prefHeight="31.0" prefWidth="447.0" />
+            <Button fx:id="ajouter" layoutX="518.0" layoutY="568.0" mnemonicParsing="false" onAction="#insertFournisseurs" prefHeight="31.0" prefWidth="447.0" style="-fx-background-color: #000000;" text="Ajouter " textFill="#ffcc00" />
+            <ImageView fx:id="co" fitHeight="20.0" fitWidth="20.0" layoutX="527.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/apply_ok_check_yes_dialog-512.png" />
+               </image>
+            </ImageView>
+            <Line endX="29.0" layoutX="270.0" layoutY="512.0" startX="-200.0" strokeWidth="3.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="311.0" layoutY="85.0" prefHeight="78.0" prefWidth="652.0" style="-fx-background-color: #000000;">
+         <children>
+            <Text fill="WHITE" layoutX="-12.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Fournisseur" textAlignment="CENTER" wrappingWidth="670.13671875">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Label layoutX="347.0" layoutY="214.0" prefHeight="43.0" prefWidth="137.0" text="Nom" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font></Label>
+      <Label layoutX="338.0" layoutY="283.0" prefHeight="50.0" prefWidth="137.0" text="Prenom" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font></Label>
+      <Label layoutX="331.0" layoutY="355.0" prefHeight="43.0" prefWidth="137.0" text="Numero Tel" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font></Label>
+      <Label layoutX="315.0" layoutY="424.0" prefHeight="43.0" prefWidth="169.0" text="Disponible" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font></Label>
+      <TextField fx:id="nom" layoutX="516.0" layoutY="220.0" prefHeight="31.0" prefWidth="447.0" />
+      <TextField fx:id="prenom" layoutX="516.0" layoutY="292.0" prefHeight="31.0" prefWidth="447.0" />
+      <TextField fx:id="numtel" layoutX="516.0" layoutY="361.0" prefHeight="31.0" prefWidth="447.0" />
+      <Button fx:id="retour" layoutX="59.0" layoutY="614.0" mnemonicParsing="false" onAction="#retourafficher" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: #000000;" text="retour" textFill="#ffc300" />
+      <Line endX="381.0" layoutX="583.0" layoutY="171.0" startX="-268.0" strokeWidth="3.0" />
+      <ImageView fx:id="re" fitHeight="20.0" fitWidth="20.0" layoutX="67.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/27-512.png" />
+         </image>
+      </ImageView>
+      <Line endX="29.0" layoutX="271.0" layoutY="235.0" startX="-200.0" strokeWidth="3.0" />
+      <Line endX="-22.0" layoutX="271.0" layoutY="308.0" startX="-200.0" strokeWidth="3.0" />
+      <Line endX="29.0" layoutX="271.0" layoutY="376.0" startX="-200.0" strokeWidth="3.0" />
+      <Line endX="-22.0" layoutX="271.0" layoutY="445.0" startX="-200.0" strokeWidth="3.0" />
+   </children>
+</AnchorPane>
