@@ -1,0 +1,45 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'Fournisseurs.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iRm91cm5pc3NldXJzLmpubHAiPg0KICA8aW5mb3JtYXRpb24+DQogICAgPHRpdGxlPkZvdXJuaXNzZXVyczwvdGl0bGU+DQogICAgPHZlbmRvcj51c2VyPC92ZW5kb3I+DQogICAgPGRlc2NyaXB0aW9uPm51bGw8L2Rlc2NyaXB0aW9uPg0KICAgIDxvZmZsaW5lLWFsbG93ZWQvPg0KICA8L2luZm9ybWF0aW9uPg0KICA8cmVzb3VyY2VzPg0KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4NCiAgICA8amFyIGhyZWY9IkZvdXJuaXNzZXVycy5qYXIiIHNpemU9IjM2MTQwNjYiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlxOb3RpZmljYXRpb25BUEkuamFyIiBzaXplPSIyODIxIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcVHJheVRlc3Rlci5qYXIiIHNpemU9IjUyMDcwIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcZ3Nvbi0yLjguMi5qYXIiIHNpemU9IjIzMjkzMiIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGltZ3NjYWxyLWxpYi00LjEuamFyIiBzaXplPSIyNzY4MyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGl0ZXh0cGRmLTUuMS4wLmphciIgc2l6ZT0iMTYxNDQ1MyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGpCQ3J5cHQtMC40LjEuamFyIiBzaXplPSIxNzU3MCIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGphdmF4LmphciIgc2l6ZT0iNzcwOTU4IiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcamF2YXgubWFpbC5qYXIiIHNpemU9IjY1OTAzMyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGpmb2VuaXgtOC4wLjguamFyIiBzaXplPSIyNzA4NzcyIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcbWFpbC5qYXIiIHNpemU9IjQ2MjA5OCIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXG15c3FsLWNvbm5lY3Rvci1qYXZhLTUuMS4yMy1iaW4uamFyIiBzaXplPSI4MzQxMjYiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlxub3RpZmljYXRpb24tNC4zLjcuamFyIiBzaXplPSIyNDYxIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcc3RyaXBlLWphdmEtNi41LjAuamFyIiBzaXplPSIzOTk4MTgiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx0d2lsaW8tNy4xNC4xLWphci13aXRoLWRlcGVuZGVuY2llcy5qYXIiIHNpemU9IjgyMjM4NjgiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx6eGluZy0xLjctamF2YXNlLmphciIgc2l6ZT0iMjIwMDIiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx6eGluZy1jb3JlLTIuMC5qYXIiIHNpemU9IjQzMjc3MyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICA8L3Jlc291cmNlcz4NCiAgPGFwcGxldC1kZXNjICB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgbWFpbi1jbGFzcz0iY29tLmphdmFmeC5tYWluLk5vSmF2YUZYRmFsbGJhY2siICBuYW1lPSJGb3Vybmlzc2V1cnMiID4NCiAgICA8cGFyYW0gbmFtZT0icmVxdWlyZWRGWFZlcnNpb24iIHZhbHVlPSI4LjArIi8+DQogIDwvYXBwbGV0LWRlc2M+DQogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJHVUkuRm91cm5pc3NldXJzIiAgbmFtZT0iRm91cm5pc3NldXJzIiAvPg0KICA8dXBkYXRlIGNoZWNrPSJhbHdheXMiLz4NCjwvam5scD4NCg=='
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedGUI() {
+        dtjava.embed(
+            {
+                id : 'GUI',
+                url : 'Fournisseurs.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iRm91cm5pc3NldXJzLmpubHAiPg0KICA8aW5mb3JtYXRpb24+DQogICAgPHRpdGxlPkZvdXJuaXNzZXVyczwvdGl0bGU+DQogICAgPHZlbmRvcj51c2VyPC92ZW5kb3I+DQogICAgPGRlc2NyaXB0aW9uPm51bGw8L2Rlc2NyaXB0aW9uPg0KICAgIDxvZmZsaW5lLWFsbG93ZWQvPg0KICA8L2luZm9ybWF0aW9uPg0KICA8cmVzb3VyY2VzPg0KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4NCiAgICA8amFyIGhyZWY9IkZvdXJuaXNzZXVycy5qYXIiIHNpemU9IjM2MTQwNjYiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlxOb3RpZmljYXRpb25BUEkuamFyIiBzaXplPSIyODIxIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcVHJheVRlc3Rlci5qYXIiIHNpemU9IjUyMDcwIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcZ3Nvbi0yLjguMi5qYXIiIHNpemU9IjIzMjkzMiIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGltZ3NjYWxyLWxpYi00LjEuamFyIiBzaXplPSIyNzY4MyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGl0ZXh0cGRmLTUuMS4wLmphciIgc2l6ZT0iMTYxNDQ1MyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGpCQ3J5cHQtMC40LjEuamFyIiBzaXplPSIxNzU3MCIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGphdmF4LmphciIgc2l6ZT0iNzcwOTU4IiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcamF2YXgubWFpbC5qYXIiIHNpemU9IjY1OTAzMyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGpmb2VuaXgtOC4wLjguamFyIiBzaXplPSIyNzA4NzcyIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcbWFpbC5qYXIiIHNpemU9IjQ2MjA5OCIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXG15c3FsLWNvbm5lY3Rvci1qYXZhLTUuMS4yMy1iaW4uamFyIiBzaXplPSI4MzQxMjYiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlxub3RpZmljYXRpb24tNC4zLjcuamFyIiBzaXplPSIyNDYxIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcc3RyaXBlLWphdmEtNi41LjAuamFyIiBzaXplPSIzOTk4MTgiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx0d2lsaW8tNy4xNC4xLWphci13aXRoLWRlcGVuZGVuY2llcy5qYXIiIHNpemU9IjgyMjM4NjgiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx6eGluZy0xLjctamF2YXNlLmphciIgc2l6ZT0iMjIwMDIiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx6eGluZy1jb3JlLTIuMC5qYXIiIHNpemU9IjQzMjc3MyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICA8L3Jlc291cmNlcz4NCiAgPGFwcGxldC1kZXNjICB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgbWFpbi1jbGFzcz0iY29tLmphdmFmeC5tYWluLk5vSmF2YUZYRmFsbGJhY2siICBuYW1lPSJGb3Vybmlzc2V1cnMiID4NCiAgICA8cGFyYW0gbmFtZT0icmVxdWlyZWRGWFZlcnNpb24iIHZhbHVlPSI4LjArIi8+DQogIDwvYXBwbGV0LWRlc2M+DQogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJHVUkuRm91cm5pc3NldXJzIiAgbmFtZT0iRm91cm5pc3NldXJzIiAvPg0KICA8dXBkYXRlIGNoZWNrPSJhbHdheXMiLz4NCjwvam5scD4NCg=='
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedGUI);
+</script>
+
+</head><body>
+<h2>Test page for <b>Fournisseurs</b></h2>
+  <b>Webstart:</b> <a href='Fournisseurs.jnlp' onclick="return launchApplication('Fournisseurs.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

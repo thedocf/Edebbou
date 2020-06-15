@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifierdepotsController">
+   <children>
+      <Pane layoutX="-10.0" prefHeight="700.0" prefWidth="1311.0" style="-fx-background-color: FFCC00;">
+         <children>
+            <ImageView fitHeight="215.0" fitWidth="249.0" layoutX="1046.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/B.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="215.0" layoutX="72.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/logo2.png" />
+               </image>
+            </ImageView>
+            <Line endX="306.0" layoutX="687.0" layoutY="173.0" startX="-338.0" />
+            <Pane layoutX="348.0" layoutY="87.0" prefHeight="78.0" prefWidth="652.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Text fill="WHITE" layoutX="-9.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Depot" textAlignment="CENTER" wrappingWidth="670.13671875">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <TextField fx:id="modifentreprise" layoutX="525.0" layoutY="233.0" prefHeight="31.0" prefWidth="447.0" />
+            <TextField fx:id="modifsurface" layoutX="525.0" layoutY="297.0" prefHeight="31.0" prefWidth="447.0" />
+            <TextField fx:id="modifville" layoutX="525.0" layoutY="351.0" prefHeight="31.0" prefWidth="447.0" />
+            <TextField fx:id="modifcapacite" layoutX="525.0" layoutY="402.0" prefHeight="31.0" prefWidth="447.0" />
+            <TextField fx:id="modifdescription" layoutX="525.0" layoutY="463.0" prefHeight="31.0" prefWidth="447.0" />
+            <Button fx:id="retour" layoutX="72.0" layoutY="623.0" mnemonicParsing="false" onAction="#retourModif" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: #000000;" text="retour" textFill="#ffcc00" />
+            <Button fx:id="valider" layoutX="452.0" layoutY="555.0" mnemonicParsing="false" onAction="#validerModifdepots" prefHeight="31.0" prefWidth="447.0" style="-fx-background-color: #000000;" text="valider" textFill="#ffcc00" />
+            <ImageView fx:id="re" fitHeight="20.0" fitWidth="20.0" layoutX="92.0" layoutY="629.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/27-512.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="va" fitHeight="20.0" fitWidth="20.0" layoutX="479.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/apply_ok_check_yes_dialog-512.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="428.0" layoutY="351.0" text="ville" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="399.0" layoutY="400.0" text="capacite" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="374.0" layoutY="461.0" text="description" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Line endX="29.0" layoutX="294.0" layoutY="480.0" startX="-200.0" strokeWidth="3.0" />
+            <Line endX="29.0" layoutX="306.0" layoutY="246.0" startX="-200.0" strokeWidth="3.0" />
+            <Line endX="-22.0" layoutX="306.0" layoutY="319.0" startX="-200.0" strokeWidth="3.0" />
+            <Line endX="29.0" layoutX="301.0" layoutY="368.0" startX="-200.0" strokeWidth="3.0" />
+            <Line endX="-22.0" layoutX="306.0" layoutY="417.0" startX="-200.0" strokeWidth="3.0" />
+            <Label layoutX="404.0" layoutY="300.0" text="Surface" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="390.0" layoutY="230.0" text="Entreprise" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

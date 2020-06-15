@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifierFournisseursController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane layoutX="5.0" layoutY="5.0" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: FFCC00;">
+         <children>
+            <ImageView fitHeight="215.0" fitWidth="249.0" layoutX="1000.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/B.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="215.0" layoutX="72.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/logo2.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="339.0" layoutY="87.0" prefHeight="78.0" prefWidth="652.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Text fill="WHITE" layoutX="94.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Fournisseur" wrappingWidth="510.287109375">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Line endX="381.0" layoutX="609.0" layoutY="175.0" startX="-268.0" strokeWidth="3.0" />
+            <Label layoutX="357.0" layoutY="213.0" prefHeight="43.0" prefWidth="137.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="348.0" layoutY="282.0" prefHeight="50.0" prefWidth="137.0" text="Prenom" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="341.0" layoutY="354.0" prefHeight="43.0" prefWidth="137.0" text="Numero Tel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="423.0" prefHeight="43.0" prefWidth="169.0" text="Disponible" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="retour" layoutX="31.0" layoutY="607.0" mnemonicParsing="false" onAction="#retourModif" prefHeight="31.0" prefWidth="265.0" style="-fx-background-color: #000000;" text="retour" textFill="#ffcc00" />
+            <ImageView fx:id="re" fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/27-512.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="valider" layoutX="516.0" layoutY="567.0" mnemonicParsing="false" onAction="#validerModiffournisseurs" prefHeight="31.0" prefWidth="447.0" style="-fx-background-color: #000000;" text="valider" textFill="#ffcc00" />
+            <ImageView fx:id="va" fitHeight="20.0" fitWidth="20.0" layoutX="526.0" layoutY="573.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/apply_ok_check_yes_dialog-512.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="modifnom" layoutX="516.0" layoutY="219.0" prefHeight="31.0" prefWidth="447.0" />
+            <TextField fx:id="modifprenom" layoutX="516.0" layoutY="292.0" prefHeight="31.0" prefWidth="447.0" />
+            <TextField fx:id="modifnumtel" layoutX="516.0" layoutY="360.0" prefHeight="31.0" prefWidth="447.0" />
+            <TextField fx:id="modifdisponible" layoutX="516.0" layoutY="429.0" prefHeight="31.0" prefWidth="447.0" />
+            <Label layoutX="339.0" layoutY="496.0" prefHeight="43.0" prefWidth="137.0" text="depot_id" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modifdepot_id" layoutX="516.0" layoutY="502.0" prefHeight="31.0" prefWidth="447.0" />
+            <Line endX="29.0" layoutX="274.0" layoutY="517.0" startX="-200.0" strokeWidth="3.0" />
+         </children>
+      </Pane>
+      <Line endX="29.0" layoutX="281.0" layoutY="245.0" startX="-200.0" strokeWidth="3.0" />
+      <Line endX="-22.0" layoutX="281.0" layoutY="318.0" startX="-200.0" strokeWidth="3.0" />
+      <Line endX="29.0" layoutX="281.0" layoutY="386.0" startX="-200.0" strokeWidth="3.0" />
+      <Line endX="-22.0" layoutX="281.0" layoutY="455.0" startX="-200.0" strokeWidth="3.0" />
+   </children>
+</AnchorPane>

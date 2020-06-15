@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AfficherdepotsController">
+   <children>
+      <Text layoutX="464.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES DEPOTS" textAlignment="CENTER" wrappingWidth="299.837890625">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table" layoutX="45.0" layoutY="141.0" onKeyReleased="#testAff" prefHeight="527.0" prefWidth="1211.0">
+        <columns>
+          <TableColumn fx:id="entreprise" prefWidth="164.0" text="entreprise" />
+            <TableColumn fx:id="surface" prefWidth="91.0" text="surface" />
+            <TableColumn fx:id="ville" prefWidth="121.0" text="ville" />
+            <TableColumn fx:id="capacite" prefWidth="147.0" text="capacite" />
+            <TableColumn fx:id="description" prefWidth="344.0" text="description" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="959.0" layoutY="91.0" mnemonicParsing="false" onAction="#retourajouter" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: FFCC00;" text="ajouter" />
+      <Button fx:id="retour" layoutX="30.0" layoutY="15.0" mnemonicParsing="false" onAction="#retour" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: FFCC00;" text="retour" />
+      <ImageView fx:id="re" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/27-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="aj" fitHeight="20.0" fitWidth="20.0" layoutX="966.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/61183.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="93.0" fitWidth="303.0" layoutX="189.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/deb.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="stat" layoutX="959.0" layoutY="46.0" mnemonicParsing="false" onAction="#retourstat" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: FFCC00;" text="Statistiques" />
+      <Button fx:id="triPro" layoutX="804.0" layoutY="91.0" mnemonicParsing="false" onAction="#triPro" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: FFCC00;" text="Tri par Surface" />
+      <Button fx:id="triPro1" layoutX="804.0" layoutY="46.0" mnemonicParsing="false" onAction="#triProoo" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: FFCC00;" text="Tri par Capacite" />
+   </children>
+</AnchorPane>

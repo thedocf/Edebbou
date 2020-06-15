@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AfficherFournisseursController">
+   <children>
+      <Text layoutX="497.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES FOURNISSEURS" textAlignment="CENTER" wrappingWidth="299.837890625" AnchorPane.leftAnchor="497.0" AnchorPane.rightAnchor="503.162109375">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font></Text>
+          <Button fx:id="btAjArticl" layoutX="508.0" layoutY="258.0" mnemonicParsing="false" onAction="#redirectionAjArticle" text="Ajouter" />
+      <TableView fx:id="table" layoutX="45.0" layoutY="150.0" onKeyReleased="#testAff" prefHeight="488.0" prefWidth="1209.0">
+        <columns>
+            <TableColumn fx:id="depot_id" prefWidth="97.0" text="depot_id" />
+          <TableColumn fx:id="nom" prefWidth="178.99996948242188" text="nom" />
+            <TableColumn fx:id="prenom" prefWidth="157.0" text="prenom" />
+            <TableColumn fx:id="numTel" prefWidth="181.0" text="numTel" />
+            <TableColumn fx:id="disponible" prefWidth="151.0" text="disponible" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="844.0" layoutY="46.0" mnemonicParsing="false" onAction="#retourajouter" prefHeight="31.0" prefWidth="195.0" style="-fx-background-color: FFCC00;" text="ajouter" />
+      <Button fx:id="retour" layoutX="30.0" layoutY="15.0" mnemonicParsing="false" onAction="#retour" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: FFCC00;" text="retour" />
+      <ImageView fx:id="re" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/27-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="aj" fitHeight="20.0" fitWidth="20.0" layoutX="854.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/61183.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="93.0" fitWidth="303.0" layoutX="189.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/deb.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="printpdf" layoutX="1052.0" layoutY="46.0" mnemonicParsing="false" onAction="#pdf" prefHeight="31.0" prefWidth="195.0" style="-fx-background-color: FFCC00;" text="Print pdf" />
+      <TextField fx:id="recherche" layoutX="1052.0" layoutY="91.0" onAction="#recher" prefHeight="31.0" prefWidth="195.0" />
+      <Button fx:id="ktiba" layoutX="846.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="195.0" style="-fx-background-color: FFCC00;" text="Recherche Selon Num Telephone">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
