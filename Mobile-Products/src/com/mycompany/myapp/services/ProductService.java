@@ -123,7 +123,7 @@ p.setImage(obj.get("image").toString());
         }
         );
         NetworkManager.getInstance().addToQueueAndWait(req);
-                        System.out.println(products);
+                      
         return products;
     }
    public ArrayList<Product> SearchProduct(String nom){
@@ -180,7 +180,7 @@ public ArrayList<Product> getAllProductC(int id) {
         }
         );
         NetworkManager.getInstance().addToQueueAndWait(req);
-                        System.out.println(products);
+                       
         return products;
     }
 
@@ -205,6 +205,23 @@ public boolean evastar(Product e) {
         });
         NetworkManager.getInstance().addToQueueAndWait(req);
         return resultOK;
+    }
+public ArrayList<Product> getTriProduct() {
+        String url = "http://localhost/debou/web/app_dev.php/Mobile/Tri";
+        req.setUrl(url);
+        req.setPost(false);
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                products = parseProduct(new String(req.getResponseData()));
+                req.removeResponseListener(this);
+
+            }
+        }
+        );
+        NetworkManager.getInstance().addToQueueAndWait(req);
+                       
+        return products;
     }
 }
 
