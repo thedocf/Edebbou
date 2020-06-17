@@ -18,37 +18,31 @@ public class Product {
     private String image;
      private int category;
      private String cat;
-     int like;
-     int unlike;
+    private int stars;
+     
 
-    public Product(int id, String nom, String image, int category, String cat, int like, int unlike, float prix, int qte, String description) {
+    public Product(int id, String nom, String image, int category, String cat, int stars, float prix, int qte, String description) {
         this.id = id;
         this.nom = nom;
         this.image = image;
         this.category = category;
         this.cat = cat;
-        this.like = like;
-        this.unlike = unlike;
+        this.stars = stars;
+      
         this.prix = prix;
         this.qte = qte;
         this.description = description;
     }
 
-    public int getLike() {
-        return like;
+    public int getStars() {
+        return stars;
     }
 
-    public void setLike(int like) {
-        this.like = like;
+    public void setStars(int like) {
+        this.stars = like;
     }
 
-    public int getUnlike() {
-        return unlike;
-    }
-
-    public void setUnlike(int unlike) {
-        this.unlike = unlike;
-    }
+ 
      //private LocalDate date_expiration;
     public String getCat() {
         return cat;

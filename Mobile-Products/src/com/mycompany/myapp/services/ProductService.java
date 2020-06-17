@@ -16,6 +16,7 @@ import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
+import com.codename1.ui.Container;
 import com.codename1.ui.Display;
 import com.codename1.ui.Font;
 import com.codename1.ui.FontImage;
@@ -42,6 +43,7 @@ import java.util.Map;
 public class ProductService {
 
     public ArrayList<Product> products;
+    boolean resultOK;
     public static ProductService instance;
     private ConnectionRequest req;
 
@@ -76,7 +78,8 @@ public class ProductService {
                 
        
                                                 p.setNom(obj.get("nom").toString());
-                
+                float stars = Float.parseFloat(obj.get("stars").toString());
+                p.setStars((int) stars);
                 
                 float prix = Float.parseFloat(obj.get("prix").toString());
                 p.setPrix(prix);
@@ -123,8 +126,8 @@ p.setImage(obj.get("image").toString());
                         System.out.println(products);
         return products;
     }
-   public ArrayList<Product> SearchProduct(Integer id){
-        String url = "http://localhost/debou/web/app_dev.php/Mobile/Find/"+id;
+   public ArrayList<Product> SearchProduct(String nom){
+        String url = "http://localhost/debou/web/app_dev.php/Mobile/Find/"+nom;
         req.setUrl(url);
         //req.setPost(false);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -148,7 +151,7 @@ public Slider createStarRankSlider() {
     Slider starRank = new Slider();
     starRank.setEditable(true);
     starRank.setMinValue(0);
-    starRank.setMaxValue(10);
+    starRank.setMaxValue(5);
     Font fnt = Font.createTrueTypeFont("native:MainLight", "native:MainLight").
             derive(Display.getInstance().convertToPixels(5, true), Font.STYLE_PLAIN);
     Style s = new Style(0xffff33, 0, fnt, (byte)0);
@@ -163,11 +166,46 @@ public Slider createStarRankSlider() {
     starRank.setPreferredSize(new Dimension(fullStar.getWidth() * 5, fullStar.getHeight()));
     return starRank;
 }
-public void showStarPickingForm() {
-    Form hi = new Form("Star Slider", new BoxLayout(BoxLayout.Y_AXIS));
-    hi.add(FlowLayout.encloseCenter(createStarRankSlider()));
-    hi.show();
-}
+public ArrayList<Product> getAllProductC(int id) {
+        String url = "http://localhost/debou/web/app_dev.php/Mobile/CategP/"+id;
+        req.setUrl(url);
+        req.setPost(false);
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                products = parseProduct(new String(req.getResponseData()));
+                req.removeResponseListener(this);
+
+            }
+        }
+        );
+        NetworkManager.getInstance().addToQueueAndWait(req);
+                        System.out.println(products);
+        return products;
+    }
+
+public boolean evastar(Product e) {
+   
+        String Url = "http://localhost/debou/web/app_dev.php/Mobile/Evaluation?id="
+                + e.getId()
+                + "&nom=" + e.getNom()
+                + "&prix=" + e.getPrix()
+                + "&qte=" + e.getQte()
+                
+                + "&image=" + e.getImage()
+                + "&description=" + e.getDescription()
+                + "&stars=" + e.getStars();
+        req.setUrl(Url);
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+              resultOK = req.getResponseCode() == 200;
+                req.removeResponseListener(this);
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(req);
+        return resultOK;
+    }
 }
 
 

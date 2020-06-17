@@ -19,22 +19,25 @@
 package com.mycompany.myapp.gui;
 
 import com.codename1.components.MultiButton;
-import com.codename1.components.SpanLabel;
 import com.codename1.ui.Button;
+import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.EncodedImage;
+import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextComponent;
+import com.codename1.ui.TextField;
 import com.codename1.ui.URLImage;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
+import com.codename1.ui.plaf.Style;
+import com.codename1.ui.plaf.UIManager;
 import com.mycompany.myapp.entities.Product;
 import com.mycompany.myapp.services.ProductService;
-import com.sun.javafx.text.TextLine;
 
 import java.util.ArrayList;
 
@@ -57,7 +60,27 @@ Form current;
     public productsForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         current=this;
         initGuiBuilderComponents(resourceObjectInstance);
+        Container searchContainer = new Container(BoxLayout.x());
+        Style s = UIManager.getInstance().getComponentStyle("Title");
+       TextField searchField = new TextField("", " Search"); 
+searchField.getHintLabel().setUIID("Title");
+searchField.setUIID("Title");
+searchField.getAllStyles().setAlignment(Component.LEFT);
+FontImage  searchIcon= FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s);
 
+               Button searchbt = new Button("search");
+             searchbt.getAllStyles().setAlignment(Component.RIGHT);
+        
+
+        searchContainer.add(searchbt);
+        searchContainer.add(searchIcon);
+       searchContainer.add(searchField);
+       this.add(searchContainer);
+     
+       searchbt.addActionListener((e) -> {
+       new searchProduct(searchField.getText()).show();
+        
+       });
         getToolbar().setTitleComponent(
                 FlowLayout.encloseCenterMiddle(
                         new Label(" Produits ", "Title")
@@ -65,7 +88,7 @@ Form current;
         );
 
         installSidemenu(resourceObjectInstance);
-           TextComponent id = new TextComponent().label("Recherche par ID");
+          
         // getToolbar().addCommandToRightBar("", resourceObjectInstance.getImage("contact-b.png"), e -> {
         //});
 
@@ -132,5 +155,4 @@ Form current;
 
     }// </editor-fold>
 
-//-- DON'T EDIT ABOVE THIS LINE!!!
 }

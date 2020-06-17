@@ -68,10 +68,10 @@ public class BaseForm extends Form {
         
        
         
-        
+        String d="Harissa";
         getToolbar().addCommandToSideMenu("Produits", trendingImage, e -> new productsForm(res).show());
-        getToolbar().addCommandToSideMenu("Produits Favoris", trendingImage, e -> new fournisseurForm(res).show());
-        
+        getToolbar().addCommandToSideMenu("Categories", trendingImage, e -> new categorieForm(res).show());
+      
         // spacer
         getToolbar().addComponentToSideMenu(new Label(" ", "SideCommand"));
         getToolbar().addComponentToSideMenu(new Label(SessionManager.getPhoto(), "Container"));
