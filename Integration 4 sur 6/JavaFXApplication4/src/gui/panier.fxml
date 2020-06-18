@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #FFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PanierController">
+    <stylesheets>
+        <URL value="@panier.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="1054.0" layoutY="136.0" prefHeight="207.0" prefWidth="187.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <Text layoutX="45.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cart total">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button id="login" fx:id="checkoutb" layoutX="26.0" layoutY="132.0" mnemonicParsing="false" onAction="#checkout" prefHeight="33.0" prefWidth="147.0" styleClass="login" stylesheets="@../pidev/css/styles.css" text="Checkout">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Text fx:id="total" layoutX="87.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="673.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mon panier">
+         <font>
+            <Font name="Arial Bold" size="29.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table" layoutX="281.0" layoutY="118.0" prefHeight="429.0" prefWidth="722.0" style="-fx-background-radius: 20; -fx-background-color: #333333;">
+         <columns>
+            <TableColumn prefWidth="75.0" />
+            <TableColumn fx:id="nom" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="prix" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="qte" prefWidth="75.0" text="Quantité" />
+         </columns>
+      </TableView>
+      <Pane prefHeight="700.0" prefWidth="197.0" style="-fx-background-color: #FFF;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="95.0" fitWidth="162.0" layoutX="20.0" layoutY="30.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../JavaFXApplication4/src/ressources/logo.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="envoyer_btn" />
+                  <String fx:value="content-area-circle-btns" />
+                  <String fx:value="img" />
+               </styleClass>
+            </ImageView>
+            <Button fx:id="home" layoutX="1.0" layoutY="206.0" mnemonicParsing="false" onMouseClicked="#Home" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Home" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="checkout" layoutX="2.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#checkout" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Checkout" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="profile" layoutX="2.0" layoutY="362.0" mnemonicParsing="false" onAction="#profile" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Profile" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button id="login" fx:id="logout" layoutX="50.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="38.0" prefWidth="83.0" styleClass="login" stylesheets="@../pidev/css/styles.css" text="logout">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <ImageView fx:id="fb" fitHeight="24.0" fitWidth="25.0" layoutX="119.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/images.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="insta" fitHeight="38.0" fitWidth="31.0" layoutX="76.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/fa9e8a4cd42a9979840bcfff4c0d893e_factinate-facebook-logo-factinate-instagram-logo-logo-instagram-_880-919.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pro" fitHeight="25.0" fitWidth="32.0" layoutX="39.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/download%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="37.0" layoutX="34.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/search.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="search" layoutX="60.0" layoutY="492.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #fff;" text="Search" textFill="#756f6f">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Text layoutX="68.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cart">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Text>
+            <Button fx:id="checkout1" layoutX="6.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#Product" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Product" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fx:id="chariot" fitHeight="58.0" fitWidth="62.0" layoutX="554.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/cart.png" />
+         </image>
+      </ImageView>
+      <Button id="login2" fx:id="updateAnnonce" layoutX="562.0" layoutY="584.0" mnemonicParsing="false" onAction="#updateAnnonce" opacity="0.91" prefHeight="35.0" prefWidth="120.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Modifier" textAlignment="CENTER" textFill="#e7e5e5">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="quantite" layoutX="734.0" layoutY="587.0" />
+      <Button fx:id="Supprimer" layoutX="1100.0" layoutY="374.0" mnemonicParsing="false" onAction="#Supprimer" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Supprimer" />
+   </children>
+</AnchorPane>
