@@ -2,209 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3d0c810-8200-48f5-b753-e863fe0da03c" name="Default Changelist" comment="Notifications">
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSMessageBundle/views/Message/deleted.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSMessageBundle/views/Message/inbox.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSMessageBundle/views/Message/newThread.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSMessageBundle/views/Message/search.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSMessageBundle/views/Message/sent.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSMessageBundle/views/Message/thread.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSMessageBundle/views/Message/threads_list.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSMessageBundle/views/layout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/Fournisseur.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/addReponse.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/back.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/back2.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/baseP.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/baseSD.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/baseSP.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/baseSP2.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/baselina.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/commande/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/commande/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/default/client.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/default/editCategory.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/default/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/default/user.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/evenement/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/evenement/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/evenement/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/evenement/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/eventcours/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/eventcours/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/eventcours/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/eventcours/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/fronthome.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/homee.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/lignecommande/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/lignecommande/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/livreur/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/livreur/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/livreur/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/livreur/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/manCategoryS.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/manProductEXP.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/manProductS.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/participant/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/participant/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/participant/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/participant/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/showCategory.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/showMsgs.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/updateRec.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/MessageMetadata.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Thread.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/ThreadMetadata.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Repository/NotificationRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Repository/PostLikeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Repository/PostRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Repository/PostcommentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Controller/evenementController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Controller/eventcoursController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Controller/participantController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Entity/evenement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Entity/eventcours.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Entity/participant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/EventBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Form/evenementType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Form/eventcoursType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Form/participantType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Repository/evenementRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Repository/eventcoursRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Repository/participantRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/config/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Back/afficher.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Back/afficherparticipant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Back/ajout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Back/modifierevent.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Back/modifiereventcours.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Back/modifierparticipant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Front/afficherfront.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Front/ajout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Front/detailevent.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Front/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Front/inscrit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Tests/Controller/evenementControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Tests/Controller/eventcoursControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventBundle/Tests/Controller/participantControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Entity/Depot.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Entity/Fournisseur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Form/DepotType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Form/FournisseurType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/FournisseurBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Repository/DepotRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Repository/FournisseurRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/config/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/views/depot/addF.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/views/depot/detailback.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/views/depot/showback.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/views/depot/showfront.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/views/fournisseur/addF.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/views/fournisseur/affect.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FournisseurBundle/Resources/views/fournisseur/showback.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Entity/categ.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Entity/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Entity/reponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Form/categType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Form/messageType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Form/reponseType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/MessageBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Repository/categRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Repository/messageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Repository/reponseRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/config/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/Default/newMap.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/addCateg.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/addMessage.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/addRep.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/editCateg.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/newMap.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/promovid.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/showAll.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/showCateg.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/showMessages.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/showMsg.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/message/update.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBundle/Tests/Controller/MessageControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tutorial/UserBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/events_js.js.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/pdf.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/slider_html.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/slider_js.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/stat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ffosuser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ffosuser.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/addCategory.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/addCategory.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/addProduct.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/addProduct.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base1.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base1.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base2.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseCat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseCat.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseok.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseok.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/notificationsad.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/notificationsad.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/editCategory.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/editCategory.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/editProduct.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/editProduct.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/manCategory.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/manCategory.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/manProduct.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/manProduct.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/NotificationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Controller/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Form/PostType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Admin/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/notif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Admin/notif.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Admin/tri.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Admin/tri.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Post/add.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/detailedpost.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Post/detailedpost.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Post/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/listD.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Post/listD.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/listP.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Post/listP.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/top.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Post/top.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/Resources/views/Post/update.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/Resources/views/Post/update.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogBundle/TutorialBlogBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/BlogBundle/TutorialBlogBundle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/UserBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/UserBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/UserBundle/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/UserBundle/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/UserBundle/Redirection/AfterLoginRedirection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/UserBundle/Redirection/AfterLoginRedirection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/UserBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/UserBundle/Resources/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/views/Admin/base2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/UserBundle/Resources/views/Admin/base2.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/UserBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/UserBundle/TutorialUserBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tutorial/UserBundle/TutorialUserBundle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Resources/views/cart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/VenteBundle/Resources/views/cart.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Controller/c1Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Controller/c1Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Entity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Form/ProductType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Repository/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Repository/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/addP.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/addP.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Bundle/Resources/views/c1/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BlogBlogBundle/Controller/DefaultControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/VenteBundle/Controller/DefaultControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BlogUserBundle/Controller/DefaultControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/FournisseurBundle/Controller/DefaultControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/logs/.gitkeep" beforeDir="false" />
     </list>
     <list id="eaadfc9c-f83a-44c7-9c1f-c15ccce983c4" name="Add files via upload" comment="Add files via upload">
       <changelist_data name="Linathraya" email="48921204+linathraya@users.noreply.github.com" date="1581668855000" />
@@ -292,6 +92,24 @@
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/blackknight467/star-rating-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/message-bundle" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/mrad/notifications-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XZY5gdX79FPRqMjH3zLgXWAtVW" />
@@ -392,6 +210,8 @@
       <workItem from="1582822086056" duration="1982000" />
       <workItem from="1582882627680" duration="431000" />
       <workItem from="1582883780042" duration="1031000" />
+      <workItem from="1591183465633" duration="34000" />
+      <workItem from="1592425456665" duration="334000" />
     </task>
     <task id="LOCAL-00001" summary="Blog">
       <created>1581669837806</created>
