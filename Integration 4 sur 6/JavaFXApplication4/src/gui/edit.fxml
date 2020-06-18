@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent1" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EditController">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="197.0" style="-fx-background-color: #FFF;">
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="107.0" layoutX="33.0" layoutY="36.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../ressources/logo.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="envoyer_btn" />
+                  <String fx:value="content-area-circle-btns" />
+                  <String fx:value="img" />
+               </styleClass>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="119.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/images.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="76.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/fa9e8a4cd42a9979840bcfff4c0d893e_factinate-facebook-logo-factinate-instagram-logo-logo-instagram-_880-919.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="39.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/download%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="37.0" layoutX="34.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/search.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="search" layoutX="60.0" layoutY="492.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #fff;" text="Search" textFill="#756f6f">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="home" layoutX="8.0" layoutY="191.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Home" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="shop" layoutX="9.0" layoutY="233.0" mnemonicParsing="false" onAction="#product" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Shop" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cart" layoutX="7.0" layoutY="271.0" mnemonicParsing="false" onAction="#tocart" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Cart" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="checkout" layoutX="9.0" layoutY="309.0" mnemonicParsing="false" onAction="#checkout" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Checkout" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="profile" layoutX="7.0" layoutY="381.0" mnemonicParsing="false" onAction="#profile" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Profile" textFill="#131212">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="login" fx:id="login" layoutX="57.0" layoutY="423.0" mnemonicParsing="false" onAction="#logout" onMouseEntered="#Onmouseenter" onMouseExited="#onmouseexit" prefHeight="38.0" prefWidth="83.0" styleClass="login" stylesheets="@../pidev/css/styles.css" text="logout">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="profile1" layoutX="18.0" layoutY="347.0" mnemonicParsing="false" onAction="#annonce" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Announcement" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane id="container" fx:id="container" layoutX="197.0" prefHeight="700.0" prefWidth="1103.0" style="-fx-background-color: #FFF;">
+         <children>
+            <JFXTextField fx:id="nom" layoutX="287.0" layoutY="125.0" maxWidth="257.0" minWidth="257.0" onMouseExited="#checkNom" prefHeight="39.0" prefWidth="257.0" promptText="Nom" unFocusColor="#f2f2f2">
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#3b5dc3" />
+                        <Stop color="#d40e0e" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="prenom" layoutX="287.0" layoutY="183.0" maxWidth="246.0" minWidth="246.0" onMouseExited="#checkPrenom" prefHeight="39.0" prefWidth="246.0" promptText="prenom" unFocusColor="#f2f2f2">
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#3b5dc3" />
+                        <Stop color="#d40e0e" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="mail" layoutX="287.0" layoutY="301.0" maxWidth="239.0" minWidth="239.0" onMouseExited="#verifMail" prefHeight="39.0" prefWidth="239.0" promptText="Email" unFocusColor="WHITE">
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#3b5dc3" />
+                        <Stop color="#d40e0e" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="numtel" layoutX="286.0" layoutY="351.0" maxWidth="239.0" minWidth="239.0" prefHeight="39.0" prefWidth="239.0" promptText="Numéro téléphone" unFocusColor="WHITE">
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#b9c23c" />
+                        <Stop color="#c2c23c" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker fx:id="datedenaissance" editable="false" layoutX="287.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="239.0" promptText="Date de naissance" style=": ;">
+               <defaultColor>
+                  <RadialGradient centerX="0.5" centerY="1.0" radius="0.5">
+                     <stops>
+                        <Stop color="#c2a23c" />
+                        <Stop color="#d4860ffc" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </defaultColor>
+            </JFXDatePicker>
+            <JFXButton id="login2" fx:id="inscrire" layoutX="297.0" layoutY="584.0" onAction="#ajouter" prefHeight="30.0" prefWidth="205.0" ripplerFill="#f5f5f5" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="modifier" textFill="#f5f5f5" />
+            <JFXButton fx:id="choisirimg" layoutX="320.0" layoutY="401.0" onAction="#choisirimage" prefHeight="18.0" prefWidth="143.0" text="Changer l'image" textFill="#fbb710">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="img" fitHeight="121.0" fitWidth="159.0" layoutX="320.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="225.0" layoutY="79.0" text="Edit Profile" textFill="#fbb710">
+               <font>
+                  <Font name="Baskerville Old Face" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

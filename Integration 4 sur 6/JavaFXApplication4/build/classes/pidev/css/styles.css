@@ -1,0 +1,159 @@
+.login {
+-fx-font-family: 'Raleway-Bold';
+   -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-line-height: 1.2;
+   -fx-background-color: #fbb710;  
+}
+.login:hover {
+ -fx-background-color: #333333;
+ 
+}
+.edit {
+-fx-font-family: 'Raleway-Bold';
+   -fx-font-size: 13px;
+    -fx-text-fill: #fbb710;
+    -fx-line-height: 1.2;
+   -fx-background-color: #333333;  
+}
+.edit:hover {
+  
+ -fx-background-color: #fbb710;
+  -fx-text-fill: #ffffff;
+ 
+}
+.container{
+    -fx-background-radius: 15px;
+    -fx-background-color: #ebebeb;
+}
+.login2{
+    -fx-font-family: 'Raleway-Bold';
+   -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-line-height: 1.2;
+   -fx-background-color: #333333;  
+   -fx-background-radius: 15px;
+}
+.login2:hover {
+ -fx-background-color: #fbb710;  
+ 
+}
+.delete{
+   -fx-background-color: white;  
+}
+.delete:hover {
+ -fx-background-color: #fbb710;  
+ 
+}
+
+.TextFiled{
+      -fx-font-family: 'FontAwesome';
+ -fx-border-color: #fbb710;
+  -fx-line-height: 1.2;
+  -fx-font-size: 18px;
+  -fx-border-radius: 10px;
+
+}
+
+.label-checkbox100 {
+  -fx-font-family: 'Raleway-Regular';
+  -fx-font-size: 13px;
+  -fx-color: #999999;
+  -fx-line-height: 1.4;
+
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  -fx-cursor: pointer;
+}
+.login3{
+    -fx-font-family: 'Raleway-Bold';
+   -fx-font-size: 16px;
+    -fx-text-fill: #fff;
+    -fx-line-height: 1.2;
+   -fx-background-color: #fbb710;  
+   -fx-background-radius: 15px;
+}
+.login3:hover {
+ -fx-background-color:#333333;   
+ 
+}
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #333333;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-cor:  #333333;
+}
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #333333;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #333333;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: #333333; 
+}
+.table-view .column-header .label{
+   -fx-text-fill: white;
+   -fx-font-weight: bold; 
+   -fx-alignment: CENTER;
+}
+
+
+.table-row-cell{
+     -fx-alignment: CENTER;
+  
+}
+
+.table-row-cell:selected {
+   -fx-background-color: lightblue; 
+   -fx-text-background-color:  #6622CC;
+   
+       
+}
+
+
+.table-view2 {
+    -fx-base: #ffffff;
+    -fx-control-inner-background:#ffffff;
+    -fx-background-color: #ffffff;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view2 .column-header-background {
+    -fx-background-color: #ffffff;
+}
+
+.table-view2 .column-header, .table-view2 .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: #ffffff;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+      -fx-background-radius:20px;
+}
+
+.table-view2 .column-header .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #fbb710;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+  
+}
+
+.table-view2:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #fbb710;
+}
+.searchicon{
+    -fx-border-color: #b3b4b9;
+    -fx-border-width: 0px 0px 2px 0px;
+}

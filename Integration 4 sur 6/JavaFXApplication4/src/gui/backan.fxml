@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="parent1" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.BackanController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="-6.0" layoutY="-5.0" prefHeight="708.0" prefWidth="207.0" style="-fx-background-color: #333333;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="48.0" layoutY="18.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../ressources/logo2.png" />
+                     </image>
+                     <styleClass>
+                        <String fx:value="envoyer_btn" />
+                        <String fx:value="content-area-circle-btns" />
+                        <String fx:value="img" />
+                     </styleClass>
+                  </ImageView>
+                  <Button id="login" fx:id="logout" layoutX="56.0" layoutY="635.0" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="83.0" styleClass="login" stylesheets="@../pidev/css/styles.css" text="logout">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <JFXTabPane layoutX="201.0" prefHeight="700.0" prefWidth="1099.0" stylesheets="@../pidev/css/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Annonce">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="649.0" prefWidth="480.0">
+                     <children>
+                        <Button id="login3" fx:id="deleteAnnonce" layoutX="681.0" layoutY="588.0" mnemonicParsing="false" onAction="#deleteAnnonce" opacity="0.91" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #fbb700; -fx-background-radius: 20;" styleClass="login3" stylesheets="@../pidev/css/styles.css" text="Delete" textAlignment="CENTER" textFill="#e7e5e5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="table" layoutX="151.0" layoutY="130.0" opacity="0.9" prefHeight="435.0" prefWidth="703.0" style="-fx-background-radius: 20; -fx-background-color: #333333;">
+                           <columns>
+                              <TableColumn fx:id="aimee" prefWidth="76.0" text="Title" />
+                              <TableColumn fx:id="textt" prefWidth="67.0" text="Description" />
+                              <TableColumn fx:id="photoo" prefWidth="213.0" text="Photo" />
+                              <TableColumn fx:id="Userr" prefWidth="102.0" text="Creator" />
+                              <TableColumn fx:id="aimee1" prefWidth="90.0" text="Date" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button id="login2" fx:id="trier" layoutX="502.0" layoutY="588.0" mnemonicParsing="false" onAction="#trier" opacity="0.91" prefHeight="35.0" prefWidth="140.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Trier" textAlignment="CENTER" textFill="#e7e5e5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="171.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES ANNONCES" textAlignment="CENTER" wrappingWidth="620.837890625">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Ajout">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="632.0">
+                     <children>
+                        <TextField fx:id="tfNomAnnonce" layoutX="149.0" layoutY="142.0" opacity="0.9" prefHeight="30.0" prefWidth="371.0" promptText="Announcement name.." style="-fx-background-radius: 20;" />
+                        <TextField fx:id="tfIdAnnonce" layoutX="149.0" layoutY="102.0" opacity="0.23" prefHeight="30.0" prefWidth="180.0" promptText="Announcement id.." style="-fx-background-radius: 20;" />
+                        <TextField fx:id="tfUserId" layoutX="336.0" layoutY="102.0" opacity="0.28" prefHeight="30.0" prefWidth="116.0" promptText="User Id .." style="-fx-background-radius: 20;" />
+                        <Label layoutX="149.0" layoutY="62.0" prefHeight="35.0" prefWidth="175.0" text="Add announce" textFill="#6b6969">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="tfDescriptionAnnonce" layoutX="149.0" layoutY="179.0" opacity="0.9" prefHeight="319.0" prefWidth="509.0" promptText="Express yourself !!!" style="-fx-background-radius: 20;" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                        <Button id="login2" fx:id="btnAjouterAnnonce1" layoutX="306.0" layoutY="522.0" mnemonicParsing="false" onAction="#AjouterAnnonce" opacity="0.91" prefHeight="37.0" prefWidth="127.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Add" textAlignment="CENTER" textFill="#e7e5e5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="login2" fx:id="photo" layoutX="160.0" layoutY="524.0" mnemonicParsing="false" onAction="#import_image" prefHeight="37.0" prefWidth="116.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Add photo" />
+                        <ImageView fx:id="imageview" fitHeight="96.0" fitWidth="145.0" layoutX="506.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="statistique">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@../pidev/css/styles.css">
+                     <children>
+                        <PieChart fx:id="piechart" layoutX="222.0" layoutY="80.0" prefHeight="505.0" prefWidth="531.0" title="Annonce/user" />
+                        <Label fx:id="caption" layoutX="14.0" layoutY="80.0" prefHeight="2.0" prefWidth="130.0">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Button id="login3" fx:id="PDF1" layoutX="51.0" layoutY="23.0" mnemonicParsing="false" onAction="#imprimer" opacity="0.91" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #fbb700; -fx-background-radius: 20;" styleClass="login3" stylesheets="@../pidev/css/styles.css" text="imprimer" textAlignment="CENTER" textFill="#e7e5e5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <Button fx:id="Gdepotsss" layoutX="-1.0" layoutY="198.0" mnemonicParsing="false" onAction="#Gdepotsss" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Gestion Depot" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Glivreur" layoutX="-1.0" layoutY="327.0" mnemonicParsing="false" onAction="#Glivreur" onMouseClicked="#livreurs" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text=" Livreurs" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="GProduit" layoutX="2.0" layoutY="370.0" mnemonicParsing="false" onAction="#GProduit" onMouseClicked="#products" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Produits" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="GCategorie" layoutX="-1.0" layoutY="412.0" mnemonicParsing="false" onAction="#GCategorie" onMouseClicked="#categoriess" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Categorie" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Gcommande" layoutX="-1.0" layoutY="284.0" mnemonicParsing="false" onAction="#Gcommande" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Commandes" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Ghome" layoutX="2.0" layoutY="128.0" mnemonicParsing="false" onAction="#Ghome" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="GF" layoutX="-1.0" layoutY="241.0" mnemonicParsing="false" onAction="#GF" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Gestion fournisseurs" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="GCategorie1" layoutX="2.0" layoutY="457.0" mnemonicParsing="false" onAction="#buser" onMouseClicked="#categoriess" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Users" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="GCategorie11" layoutX="4.0" layoutY="503.0" mnemonicParsing="false" onAction="#bannonce" onMouseClicked="#categoriess" prefHeight="43.0" prefWidth="189.0" styleClass="login" stylesheets="@../pidev/css/styles.css" text="Annonces" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

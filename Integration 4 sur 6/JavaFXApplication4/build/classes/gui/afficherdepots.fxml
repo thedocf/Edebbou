@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AfficherdepotsController">
+   <children>
+      <Text layoutX="474.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES DEPOTS" textAlignment="CENTER" wrappingWidth="299.837890625">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table" layoutX="217.0" layoutY="141.0" onKeyReleased="#testAff" prefHeight="547.0" prefWidth="1054.0">
+        <columns>
+          <TableColumn fx:id="entreprise" prefWidth="164.0" text="entreprise" />
+            <TableColumn fx:id="surface" prefWidth="72.0" text="surface" />
+            <TableColumn fx:id="ville" prefWidth="113.0" text="ville" />
+            <TableColumn fx:id="capacite" prefWidth="130.0" text="capacite" />
+            <TableColumn fx:id="description" prefWidth="312.0" text="description" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="959.0" layoutY="91.0" mnemonicParsing="false" onAction="#retourajouter" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: FFCC00;" text="ajouter" />
+      <ImageView fx:id="aj" fitHeight="20.0" fitWidth="20.0" layoutX="966.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/61183.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="197.0" layoutX="247.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/deb.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="stat" layoutX="959.0" layoutY="46.0" mnemonicParsing="false" onAction="#retourstatssss" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: FFCC00;" text="Statistiques" />
+      <Button fx:id="triPro" layoutX="804.0" layoutY="91.0" mnemonicParsing="false" onAction="#triPro" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: FFCC00;" text="Tri par Surface" />
+      <Button fx:id="triPro1" layoutX="804.0" layoutY="46.0" mnemonicParsing="false" onAction="#triProoo" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: FFCC00;" text="Tri par Capacite" />
+      <Pane prefHeight="700.0" prefWidth="197.0" style="-fx-background-color: #333333;">
+         <children>
+            <Button id="login" fx:id="logout" layoutX="56.0" layoutY="635.0" mnemonicParsing="false" onAction="#logout" onMouseClicked="#logout" onMouseEntered="#Onmouseenter" onMouseExited="#onmouseexit" prefHeight="38.0" prefWidth="83.0" styleClass="login" stylesheets="@../pidev/css/styles.css" text="logout">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Text fill="WHITE" layoutX="51.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="Gdepotsss" layoutY="188.0" mnemonicParsing="false" onAction="#Gdepotsss" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Gestion Depot" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Glivreur" layoutY="317.0" mnemonicParsing="false" onAction="#Glivreur" onMouseClicked="#livreurs" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text=" Livreurs" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="GProduit" layoutX="3.0" layoutY="360.0" mnemonicParsing="false" onAction="#GProduit" onMouseClicked="#products" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Produits" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="GCategorie" layoutY="402.0" mnemonicParsing="false" onAction="#GCategorie" onMouseClicked="#categoriess" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Categorie" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="95.0" fitWidth="162.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../ressources/logo2.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="envoyer_btn" />
+                  <String fx:value="content-area-circle-btns" />
+                  <String fx:value="img" />
+               </styleClass>
+            </ImageView>
+            <Button fx:id="Gcommande" layoutY="274.0" mnemonicParsing="false" onAction="#Gcommande" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Commandes" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Ghome" layoutX="3.0" layoutY="118.0" mnemonicParsing="false" onAction="#Ghome" prefHeight="43.0" prefWidth="189.0" style="-fx-background-color: FFCC00;" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="GF" layoutY="231.0" mnemonicParsing="false" onAction="#GF" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Gestion fournisseurs" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="GCategorie1" layoutX="3.0" layoutY="447.0" mnemonicParsing="false" onAction="#buser" onMouseClicked="#categoriess" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Users" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="GCategorie11" layoutX="5.0" layoutY="493.0" mnemonicParsing="false" onAction="#bannonce" onMouseClicked="#categoriess" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Annonces" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent1" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProfileController">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="107.0" layoutX="33.0" layoutY="36.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../ressources/logo.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="envoyer_btn" />
+                  <String fx:value="content-area-circle-btns" />
+                  <String fx:value="img" />
+               </styleClass>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="119.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/images.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="76.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/fa9e8a4cd42a9979840bcfff4c0d893e_factinate-facebook-logo-factinate-instagram-logo-logo-instagram-_880-919.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="39.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/download%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="37.0" layoutX="34.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/search.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="search" layoutX="60.0" layoutY="492.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #fff;" text="Search" textFill="#756f6f">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Pane layoutX="423.0" layoutY="115.0" prefHeight="491.0" prefWidth="422.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane prefHeight="87.0" prefWidth="422.0" style="-fx-background-color: #333333;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Button fx:id="edit" layoutX="277.0" layoutY="36.0" mnemonicParsing="false" onAction="#edit" prefHeight="37.0" prefWidth="131.0" styleClass="edit" stylesheets="@../pidev/css/styles.css" text="Edit profile">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="EDIT" size="1.5em" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="photo" fitHeight="148.0" fitWidth="157.0" layoutX="18.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <JFXTextField fx:id="nom" layoutX="98.0" layoutY="219.0" maxWidth="107.0" minWidth="107.0" prefHeight="31.0" prefWidth="107.0" unFocusColor="#fbb710">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="prenom" layoutX="189.0" layoutY="219.0" maxWidth="107.0" minWidth="107.0" prefHeight="31.0" prefWidth="107.0" unFocusColor="#fbb710">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <TextField fx:id="mail" editable="false" layoutX="120.0" layoutY="286.0" prefHeight="31.0" prefWidth="188.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Baskerville Old Face" size="15.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIcon fill="#333333" iconName="ENVELOPE" layoutX="102.0" layoutY="306.0" size="1.25em" />
+                  <TextField fx:id="birth" editable="false" layoutX="120.0" layoutY="328.0" prefHeight="31.0" prefWidth="188.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Baskerville Old Face" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="phone" editable="false" layoutX="120.0" layoutY="365.0" prefHeight="31.0" prefWidth="188.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Baskerville Old Face" size="15.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIcon fill="#333333" iconName="CALENDAR" layoutX="102.0" layoutY="345.0" size="1.25em" />
+                  <FontAwesomeIcon fill="#333333" iconName="PHONE" layoutX="102.0" layoutY="385.0" size="1.25em" />
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#bcb9b9" />
+               </effect>
+            </Pane>
+            <Button fx:id="home" layoutX="7.0" layoutY="204.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Home" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="shop" layoutX="8.0" layoutY="246.0" mnemonicParsing="false" onAction="#product" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Shop" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cart" layoutX="6.0" layoutY="284.0" mnemonicParsing="false" onAction="#tocart" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Cart" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="checkout" layoutX="8.0" layoutY="322.0" mnemonicParsing="false" onAction="#checkout" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Checkout" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="profile" layoutX="6.0" layoutY="394.0" mnemonicParsing="false" onAction="#profile" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Profile" textFill="#131212">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="login" fx:id="login" layoutX="56.0" layoutY="436.0" mnemonicParsing="false" onAction="#logout" onMouseEntered="#Onmouseenter" onMouseExited="#onmouseexit" prefHeight="38.0" prefWidth="83.0" styleClass="login" stylesheets="@../pidev/css/styles.css" text="logout">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="profile1" layoutX="17.0" layoutY="360.0" mnemonicParsing="false" onAction="#annonce" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #fff;" text="Announcement" textFill="#131212">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

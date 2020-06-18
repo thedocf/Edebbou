@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RegisterController">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #FFF;">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1342.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FIF.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="700.0" fitWidth="1342.0" layoutX="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FIF.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="container" fx:id="container" layoutX="427.0" layoutY="136.0" prefHeight="458.0" prefWidth="491.0" style="-fx-background-color: #FFF;" styleClass="container" stylesheets="@../pidev/css/styles.css">
+         <children>
+            <JFXTextField fx:id="nom" layoutX="120.0" layoutY="63.0" maxWidth="257.0" minWidth="257.0" onMouseExited="#checkNom" prefHeight="39.0" prefWidth="257.0" promptText="Nom" unFocusColor="#f2f2f2">
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#3b5dc3" />
+                        <Stop color="#d40e0e" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="prenom" layoutX="120.0" layoutY="115.0" maxWidth="246.0" minWidth="246.0" onMouseExited="#checkPrenom" prefHeight="39.0" prefWidth="246.0" promptText="prenom" unFocusColor="#f2f2f2">
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#3b5dc3" />
+                        <Stop color="#d40e0e" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="motdepasse" layoutX="120.0" layoutY="211.0" maxWidth="246.0" minWidth="246.0" prefHeight="36.0" prefWidth="246.0" promptText="Mot de passe" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#d40e0e" />
+                        <Stop color="#d40e0efc" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+            </JFXPasswordField>
+            <JFXTextField fx:id="mail" layoutX="121.0" layoutY="255.0" maxWidth="239.0" minWidth="239.0" onMouseExited="#verifMail" prefHeight="39.0" prefWidth="239.0" promptText="Email" unFocusColor="WHITE">
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#3b5dc3" />
+                        <Stop color="#d40e0e" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="numtel" layoutX="120.0" layoutY="300.0" maxWidth="239.0" minWidth="239.0" prefHeight="39.0" prefWidth="239.0" promptText="Numéro téléphone" unFocusColor="WHITE">
+               <focusColor>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#b9c23c" />
+                        <Stop color="#c2c23c" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker fx:id="datedenaissance" editable="false" layoutX="121.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="239.0" promptText="Date de naissance" style=": ;">
+               <defaultColor>
+                  <RadialGradient centerX="0.5" centerY="1.0" radius="0.5">
+                     <stops>
+                        <Stop color="#c2a23c" />
+                        <Stop color="#d4860ffc" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </defaultColor>
+            </JFXDatePicker>
+            <JFXButton id="login2" fx:id="inscrire" layoutX="141.0" layoutY="379.0" onAction="#ajouter" prefHeight="30.0" prefWidth="205.0" ripplerFill="#f5f5f5" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="S'inscrire" textFill="#f5f5f5" />
+            <Label fx:id="testmail" layoutX="100.0" layoutY="276.0" textFill="RED" />
+            <Label fx:id="testprenom" layoutX="100.0" layoutY="160.0" textFill="RED" />
+            <Label fx:id="testnom" layoutX="100.0" layoutY="100.0" textFill="RED" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="623.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/Individual-Member-Icon.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
