@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.RepondreReclamationController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="100.0" text="Email de reponse:" />
+            <TextField fx:id="emailTXFLD" prefHeight="26.0" prefWidth="413.0" promptText="Email de reponse en cas de probleme d'access a l'email associé au compte" style="-fx-background-radius: 40; -fx-border-color: green;" />
+            <Label prefHeight="18.0" prefWidth="76.0" text="Sujet:" />
+            <TextField fx:id="sujetTextField" prefHeight="26.0" prefWidth="414.0" style="-fx-background-radius: 40; -fx-border-color: blue;" />
+            <Label text="Message:" />
+            <TextArea fx:id="messageTextField" prefHeight="264.0" prefWidth="494.0" />
+            <Button fx:id="envoyerMessageButton" mnemonicParsing="false" onAction="#envoyerMessage" text="Envoyer">
+               <VBox.margin>
+                  <Insets left="510.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

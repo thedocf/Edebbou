@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="accepterrefuser" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #d1e0e0;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.AccepterRefuserController">
+   <children>
+      <AnchorPane layoutY="14.0" prefHeight="591.0" prefWidth="1024.0" style="-fx-background-color: #d1e0e0;">
+         <children>
+            <Label contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="34.0" layoutY="29.0" prefHeight="36.0" prefWidth="569.0" text="Gestion bons plans partenaire">
+               <font>
+                  <Font name="Bodoni MT Black" size="31.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table" layoutX="135.0" layoutY="88.0" prefHeight="392.0" prefWidth="745.0">
+              <columns>
+                <TableColumn fx:id="libelle" prefWidth="130.0" text="Nom de bon plan" />
+                <TableColumn fx:id="adresse" minWidth="0.0" prefWidth="193.0" text="Adresse" />
+                  <TableColumn fx:id="image" prefWidth="202.0" text="Image" />
+                  <TableColumn fx:id="status" prefWidth="209.0" text="Status" />
+              </columns>
+            </TableView>
+            <JFXButton buttonType="RAISED" layoutX="232.0" layoutY="517.0" onAction="#accepter" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #ffffcc;" text="Accepter">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="635.0" layoutY="517.0" onAction="#refuser" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #ffffcc;" text="Refuser">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="232.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/img/icons8-lol-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="30.0" layoutX="635.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/img/icons8-nerd-48.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="bntn" buttonType="RAISED" layoutX="765.0" layoutY="35.0" onAction="#back" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: #00cc99;" text="Retourner" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="765.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/img/icons8-undo-64.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

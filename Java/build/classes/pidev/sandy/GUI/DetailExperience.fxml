@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane fx:id="UserPane" prefHeight="600" prefWidth="1024.0" styleClass="parent" stylesheets="@../ressources/css/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.DetailExperienceController">
+    <children>
+        <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" style="-fx-background-size: 900 600;" styleClass="sidebar">
+            <children>
+                <Label prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to top, #e8b600, #e8b600, #ff3950, #e8b600, #e8b600);" text="Eddebou" textFill="WHITE">
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <font>
+                        <Font name="Ebrima" size="18.0" />
+                    </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+                </Label>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="ANGLE_LEFT" size="1.3em" />
+                        <Label fx:id="backexp" onMouseClicked="#BackListExp" text="Précédent" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <VBox fx:id="vboxavis" prefHeight="200.0" prefWidth="100.0" styleClass="box" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="10.0" top="10.0" />
+                    </padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT" styleClass="btns">
+                     <children>
+                        <Label text="Les Avis" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+                </VBox>
+                <JFXButton fx:id="btnclose" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#closeApp" prefHeight="45.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Quitter" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Calibri Light" size="14.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="POWER_OFF" size="1.5em" />
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+            </children>
+        </VBox>
+        <VBox layoutX="300.0" prefHeight="600.0" prefWidth="724.0">
+            <children>
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="724.0" style="-fx-background-color: #fff;">
+                    <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#e8e4e4" height="10.0" radius="4.5" width="10.0" />
+                    </effect>
+                    <children>
+                        <Label fx:id="nomPExp" layoutX="14.0" layoutY="24.0" text="Détail" textFill="#7c8184">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                        </Label>
+                        <FontAwesomeIcon fx:id="notif" glyphStyle="-fx-fill:#7c8184" iconName="BELL" layoutX="651.0" layoutY="43.0" onMouseClicked="#getnotif" size="1.5em" />
+                        <Label alignment="CENTER" layoutX="659.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="8" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <HBox alignment="CENTER">
+                    <children>
+                        <VBox alignment="TOP_CENTER" layoutX="260.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="724.0" styleClass="card-03" HBox.hgrow="ALWAYS">
+                     <children>
+                        <AnchorPane fx:id="listpane" prefHeight="532.0" prefWidth="724.0">
+                           <children>
+                              <JFXButton fx:id="addexp" layoutX="513.0" layoutY="453.0" onAction="#showAddPartageExp" prefHeight="27.0" prefWidth="188.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Partager Votre Avis!" />
+                              <ImageView fx:id="imgdetail" fitHeight="170.0" fitWidth="300.0" layoutX="403.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="Description" layoutX="54.0" layoutY="62.0" text="Description" />
+                              <Label fx:id="decdetail" layoutX="163.0" layoutY="62.0" text="Label" />
+                              <Label fx:id="Adresse" layoutX="54.0" layoutY="92.0" text="Adresse" />
+                              <Label fx:id="adddetail" layoutX="163.0" layoutY="92.0" text="Label" />
+                              <Label fx:id="Region" layoutX="54.0" layoutY="128.0" text="Region" />
+                              <Label fx:id="regdetail" layoutX="163.0" layoutY="128.0" text="Label" />
+                              <Label layoutX="54.0" layoutY="170.0" text="Evaluation" />
+                              <Rating fx:id="ratdetail" layoutX="163.0" layoutY="163.0" />
+                              <JFXButton fx:id="imgshow" layoutX="318.0" layoutY="452.0" prefHeight="27.0" prefWidth="188.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Voir Gallery Image" />
+                              <Label layoutX="45.0" layoutY="218.0" text="Ajouter Avis">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <Rating fx:id="ratingavis" layoutX="155.0" layoutY="317.0" />
+                              <TextArea fx:id="descavis" layoutX="163.0" layoutY="366.0" prefHeight="75.0" prefWidth="320.0" />
+                              <JFXButton fx:id="addavis" layoutX="506.0" layoutY="390.0" onAction="#addAvis" prefHeight="27.0" prefWidth="188.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Ajouter Avis" />
+                              <Label fx:id="Description1" layoutX="45.0" layoutY="382.0" text="Description" />
+                              <Label layoutX="48.0" layoutY="325.0" text="Evaluation" />
+                              <Label layoutX="46.0" layoutY="282.0" text="Image" />
+                              <JFXButton fx:id="loadimgavis" layoutX="165.0" layoutY="278.0" onAction="#addimage" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Choisir l'image" />
+                              <ImageView fx:id="imageaviss" fitHeight="150.0" fitWidth="200.0" layoutX="494.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true" />
+                              <JFXButton fx:id="modifierexp" layoutX="37.0" layoutY="453.0" onAction="#ModifPartageExp" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Modifier" />
+                              <JFXButton fx:id="suppexp" layoutX="181.0" layoutY="452.0" onAction="#suppPartageExp" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Supprimer" />
+                              <Label layoutX="40.0" layoutY="8.0" text="Détail">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="addavis1" layoutX="483.0" layoutY="205.0" onAction="#sharefb" prefHeight="27.0" prefWidth="188.0" style="-fx-background-color: #3b5998;" text="Paratager Facebook" />
+                           </children>
+                        </AnchorPane>
+                     </children></VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

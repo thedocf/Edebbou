@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ListeDesDemandeCadeaAnchorPane" prefHeight="674.0" prefWidth="771.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.AfficherDemandeCadeauxController">
+   <children>
+      <AnchorPane prefHeight="101.0" prefWidth="771.0" AnchorPane.bottomAnchor="646.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="262.0" layoutY="26.0" text="Gestion des demandes Cadeaux">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="100.0" prefHeight="515.0" prefWidth="771.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <TableView fx:id="tableviewListeDemandeAffectation" prefHeight="502.0" prefWidth="771.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="tablecolonneNumero" maxWidth="4000.0" minWidth="0.0" prefWidth="140.00000190734863" text="Numero" />
+                  <TableColumn fx:id="tablecolonneDateDemande" maxWidth="4000.0" minWidth="0.0" prefWidth="100.79998779296875" text="Date Demande" />
+                  <TableColumn fx:id="tablecolonnePhotoMembreDemande" maxWidth="4000.0" prefWidth="64.0" text="Photo" />
+                  <TableColumn fx:id="tablecolonneMembreDemande" maxWidth="4000.0" prefWidth="107.20001220703125" text="Membre">
+                     <columns>
+                        <TableColumn fx:id="tablecolonnetablecolonneMembrPoint" prefWidth="88.0" text="Point" />
+                        <TableColumn fx:id="tablecolonnetablecolonneMembreId" maxWidth="6000.0" prefWidth="167.99993896484375" text="Photo" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="tablecolonnetablecolonneDemandeCadeau" maxWidth="4000.0" prefWidth="107.20001220703125" text="Cadeau" />
+                  <TableColumn fx:id="tablecolonnetablecolonneDemandeStatus1" maxWidth="4000.0" prefWidth="107.20001220703125" text="Status" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXButton fx:id="buttonAttenteDemande" buttonType="RAISED" layoutX="476.0" layoutY="567.0" onAction="#AttenteDemande" prefHeight="30.0" prefWidth="221.0" style="-fx-background-color: #0073B7;" text="Met en Attente Demande" textFill="#fffefe">
+               <font>
+                  <Font name="Roboto Black" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buttonAccepteDemande" buttonType="RAISED" layoutX="474.0" layoutY="517.0" onAction="#AccepteDemande" prefHeight="30.0" prefWidth="225.0" style="-fx-background-color: #0073B7;" text="Accepter Demande" textFill="#fffefe">
+               <font>
+                  <Font name="Roboto Black" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buttonRetourBonCadeaux" buttonType="RAISED" layoutX="36.0" layoutY="585.0" onAction="#RetourBonCadeaux" prefHeight="31.0" prefWidth="162.0" ripplerFill="#f52020" style="-fx-background-color: #F39C12;" text="Retour" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buttonRefuserDemande" buttonType="RAISED" layoutX="474.0" layoutY="617.0" onAction="#RefuserDemande" prefHeight="30.0" prefWidth="223.0" style="-fx-background-color: #0073B7;" text="Refuser Demande" textFill="#fffefe">
+               <font>
+                  <Font name="Roboto Black" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

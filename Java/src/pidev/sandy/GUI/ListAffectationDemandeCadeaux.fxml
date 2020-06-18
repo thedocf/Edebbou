@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ListeDesDemandeAffectationCadeaAnchorPane" prefHeight="679.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.ListAffectationDemandeCadeauxController">
+   <children>
+      <Label layoutX="146.0" layoutY="24.0" prefHeight="55.0" prefWidth="490.0" text="Historique D'affectation Des Affecation Et De Demande Des Cadeaux " textAlignment="CENTER" textFill="#e03540">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableviewListeDemandeAffectation" layoutX="10.0" layoutY="155.0" prefHeight="358.0" prefWidth="739.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="tablecolonneNumero" maxWidth="4000.0" minWidth="0.0" prefWidth="140.00000190734863" text="Numero" />
+            <TableColumn fx:id="tablecolonnePersonne" maxWidth="4000.0" minWidth="0.0" prefWidth="0.0" text="Personne" />
+            <TableColumn fx:id="tablecolonneType" maxWidth="4000.0" prefWidth="125.0" text="Type" />
+            <TableColumn fx:id="tablecolonneDate" maxWidth="4000.0" prefWidth="107.20001220703125" text="Date" />
+            <TableColumn fx:id="tablecolonneCadeau" prefWidth="88.0" text="Cadeaux" />
+            <TableColumn fx:id="tablecolonneCadeauValeur" maxWidth="6000.0" prefWidth="167.99993896484375" text="Valeur Point" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="buttonAfficgherListeCadeaux" buttonType="RAISED" layoutX="460.0" layoutY="634.0" onAction="#AfficherListedesCadeaux" prefHeight="30.0" prefWidth="223.0" style="-fx-background-color: #0073B7;" text="Afficher Liste des Cadeaux" textFill="#fffefe">
+         <font>
+            <Font name="Roboto Black" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonAfficherListeDemandeCadeaxu" buttonType="RAISED" layoutX="459.0" layoutY="534.0" onAction="#AfficherListeDemandeCadeaxu" prefHeight="30.0" prefWidth="221.0" style="-fx-background-color: #0073B7;" text="Afficher Liste des demande des cadeaux" textFill="#fffefe">
+         <font>
+            <Font name="Roboto Black" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonAfficherListeDemandeAffectationCadeaxu" buttonType="RAISED" layoutX="458.0" layoutY="579.0" onAction="#createtableviewBonCadeaux" prefHeight="30.0" prefWidth="223.0" style="-fx-background-color: #0073B7;" text="Afficher Liste des demande et affectation des cadeaux" textFill="#fffefe">
+         <font>
+            <Font name="Roboto Black" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonSupprimerDemandeAffectation" buttonType="RAISED" layoutX="28.0" layoutY="616.0" onAction="#SupprimerDemandeAffectation" prefHeight="35.0" prefWidth="279.0" ripplerFill="#f52020" style="-fx-background-color: #F39C12;" text="Supprimer Demande ou affectation" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

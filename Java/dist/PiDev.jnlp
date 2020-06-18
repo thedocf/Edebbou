@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PiDev.jnlp">
+  <information>
+    <title>PiDev</title>
+    <vendor>Sandy</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Bon_paln.jar" size="29022436" download="eager" />
+    <jar href="lib\Enzo-0.3.6.jar" size="2504009" download="eager" />
+    <jar href="lib\GMapsFX-2.0.9.jar" size="166541" download="eager" />
+    <jar href="lib\TrayNotification.jar" size="41019" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
+    <jar href="lib\client-3.3.0.jar" size="223998" download="eager" />
+    <jar href="lib\commons-cli-1.2.jar" size="41123" download="eager" />
+    <jar href="lib\commons-codec-1.9.jar" size="263965" download="eager" />
+    <jar href="lib\commons-io-2.6.jar" size="214788" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="lib\fluent-hc-4.5.5.jar" size="31427" download="eager" />
+    <jar href="lib\fontawesomefx-8.1.jar" size="179086" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\google-api-client-1.18.0-rc.jar" size="165975" download="eager" />
+    <jar href="lib\google-http-client-gson-1.18.0-rc.jar" size="8551" download="eager" />
+    <jar href="lib\google-maps-services-0.2.7.jar" size="184987" download="eager" />
+    <jar href="lib\gradle-wrapper.jar" size="54712" download="eager" />
+    <jar href="lib\gson-2.7.jar" size="231952" download="eager" />
+    <jar href="lib\gson-2.8.1.jar" size="232620" download="eager" />
+    <jar href="lib\httpasyncclient-4.1.3.jar" size="179335" download="eager" />
+    <jar href="lib\httpasyncclient-cache-4.1.3.jar" size="35005" download="eager" />
+    <jar href="lib\httpclient-4.5.3.jar" size="747794" download="eager" />
+    <jar href="lib\httpclient-cache-4.5.3.jar" size="159642" download="eager" />
+    <jar href="lib\httpcore-4.4.6.jar" size="323824" download="eager" />
+    <jar href="lib\httpcore-4.4.9.jar" size="325500" download="eager" />
+    <jar href="lib\httpcore-ab-4.4.9.jar" size="31660" download="eager" />
+    <jar href="lib\httpcore-nio-4.4.6.jar" size="356644" download="eager" />
+    <jar href="lib\httpcore-nio-4.4.9.jar" size="364991" download="eager" />
+    <jar href="lib\itextpdf-5.4.0.jar" size="1889485" download="eager" />
+    <jar href="lib\javafx-dialogs-0.0.1.jar" size="116201" download="eager" />
+    <jar href="lib\javafx-dialogs-0.0.2.jar" size="112358" download="eager" />
+    <jar href="lib\javafx-ui-controls.jar" size="1201545" download="eager" />
+    <jar href="lib\javax.mail.jar" size="654100" download="eager" />
+    <jar href="lib\javax.servlet-api-3.1.0.jar" size="95806" download="eager" />
+    <jar href="lib\javax.servlet-api-4.0.0.jar" size="102537" download="eager" />
+    <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
+    <jar href="lib\jfoenix-9.0.1.jar" size="2143605" download="eager" />
+    <jar href="lib\joda-time-2.9.9.jar" size="634048" download="eager" />
+    <jar href="lib\json-simple-1.1.1.jar" size="23737" download="eager" />
+    <jar href="lib\kairos-all-0.5.jar" size="326316" download="eager" />
+    <jar href="lib\mail.jar" size="666983" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\openjfx-dialogs-1.0.0-sources.jar" size="75974" download="eager" />
+    <jar href="lib\openjfx-dialogs-1.0.0.jar" size="95038" download="eager" />
+    <jar href="lib\restfb-2.4.0.jar" size="1195210" download="eager" />
+    <jar href="lib\selenium-server-standalone-3.11.0.jar" size="23422300" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="PiDev" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="pidev.sandy.test.MenuAdmin1"  name="PiDev" />
+  <update check="always"/>
+</jnlp>

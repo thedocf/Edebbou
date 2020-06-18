@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane fx:id="UserPane" prefHeight="600" prefWidth="1024.0" styleClass="parent" stylesheets="@../ressources/css/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.AjoutPartageExperienceController">
+    <children>
+        <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" style="-fx-background-size: 900 600;" styleClass="sidebar">
+            <children>
+                <Label prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to top, #e8b600, #e8b600, #ff3950, #e8b600, #e8b600);" text="Eddebou" textFill="WHITE">
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <font>
+                        <Font name="Ebrima" size="18.0" />
+                    </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+                </Label>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#BackHomes" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="ANGLE_LEFT" size="1.3em" />
+                        <Label fx:id="preclabel" onMouseClicked="#BackHomes" text="Précédent" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <VBox prefHeight="200.0" prefWidth="100.0" styleClass="box" visible="false" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="10.0" top="10.0" />
+                    </padding>
+                </VBox>
+                <JFXButton fx:id="btnclose" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#closeApp" prefHeight="45.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Quitter" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Calibri Light" size="14.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="POWER_OFF" size="1.5em" />
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+            </children>
+        </VBox>
+        <VBox layoutX="300.0" prefHeight="600.0" prefWidth="724.0">
+            <children>
+                <Pane fx:id="partageexpbtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="724.0" style="-fx-background-color: #fff;">
+                    <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#e8e4e4" height="10.0" radius="4.5" width="10.0" />
+                    </effect>
+                    <children>
+                        <Label layoutX="14.0" layoutY="24.0" text="Partager Votre Avis!" textFill="#7c8184">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#7c8184" iconName="BELL" layoutX="651.0" layoutY="43.0" size="1.5em" />
+                        <Label alignment="CENTER" layoutX="659.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="8" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <HBox alignment="CENTER">
+                    <children>
+                        <VBox alignment="TOP_CENTER" layoutX="260.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="724.0" styleClass="card-03" HBox.hgrow="ALWAYS">
+                     <children>
+                        <AnchorPane fx:id="partageexppanes" prefHeight="533.0" prefWidth="724.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="19.0" text="Nom">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="72.0" text="Description">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="18.0" layoutY="164.0" text="Image">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="16.0" layoutY="118.0" text="Addrese">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="16.0" layoutY="205.0" text="Region">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="17.0" layoutY="243.0" text="Option disponible">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="18.0" layoutY="431.0" text="Categorie" />
+                              <JFXTextField fx:id="nompx" layoutX="92.0" layoutY="12.0" />
+                              <JFXTextField fx:id="descripex" layoutX="92.0" layoutY="67.0" />
+                              <JFXTextField fx:id="adresseexp" layoutX="95.0" layoutY="108.0" />
+                              <JFXComboBox fx:id="regionexp" layoutX="99.0" layoutY="200.0" style="-fx-border-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" />
+                              <JFXComboBox fx:id="catexp" layoutX="101.0" layoutY="425.0" style="-fx-border-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" />
+                              
+                              <Label layoutX="17.0" layoutY="383.0" text="Evaluation">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Rating fx:id="raiting" layoutX="99.0" layoutY="378.0" />
+                             
+                            
+                              <JFXCheckBox fx:id="vguider" layoutX="91.0" layoutY="307.0" text="Performance">
+                                 <unCheckedColor>
+                                    <LinearGradient endX="0.49523809523809526" endY="0.5333333333333333">
+                                       <stops>
+                                          <Stop color="WHITE" />
+                                          <Stop color="#f54b4b" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </unCheckedColor></JFXCheckBox>
+                              <JFXCheckBox fx:id="fumer" layoutX="267.0" layoutY="307.0" text="Quality" />
+                              <JFXCheckBox fx:id="resrv" layoutX="268.0" layoutY="272.0" text="Design" />
+                              <JFXCheckBox fx:id="familial" layoutX="94.0" layoutY="272.0" text="Securite" />
+                              <JFXButton fx:id="btnajouterexp" layoutX="348.0" layoutY="468.0" onAction="#AjoutExperience" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Ajouter" />
+                              <JFXButton layoutX="241.0" layoutY="468.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Annuler" />
+                              <ImageView fx:id="expimages" fitHeight="236.0" fitWidth="302.0" layoutX="417.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../hai%20store/bonp/images.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="selectimg" layoutX="93.0" layoutY="160.0" onAction="#addimage" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Choisir image" />
+                           </children>
+                        </AnchorPane>
+                     </children></VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

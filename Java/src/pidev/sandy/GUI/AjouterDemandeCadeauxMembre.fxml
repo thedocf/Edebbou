@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorePanAjoutDemande" prefHeight="649.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.AjouterDemandeCadeauxMembreController">
+   <children>
+      <GridPane layoutX="87.0" layoutY="97.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="630.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.000048828125" minWidth="7.0" prefWidth="232.000048828125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="364.7999755859375" minWidth="10.0" prefWidth="364.7999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="32.80002441406248" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="93.60002288818359" minHeight="10.0" prefHeight="54.40000762939454" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="84.00001373291016" minHeight="10.0" prefHeight="74.40000610351562" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.6" minHeight="10.0" prefHeight="59.99999389648437" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.00000610351562" minHeight="10.0" prefHeight="61.000024414062494" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="145.59998168945313" minHeight="10.0" prefHeight="79.4000244140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="149.8" minHeight="0.0" prefHeight="74.5999755859375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="203.2" minHeight="20.0" prefHeight="55.79998779296875" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Message" />
+            <Label text="Description" GridPane.rowIndex="1" />
+            <Label text="Cadeaux" GridPane.rowIndex="5" />
+            <Label prefHeight="18.0" prefWidth="104.0" text="Membre demande" GridPane.rowIndex="6" />
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="386.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <JFXTextField fx:id="TXCadeaux" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="182.0" />
+               </children>
+            </HBox>
+            <Label text="Status" GridPane.rowIndex="2" />
+            <Label text="Datedexpiration" GridPane.rowIndex="3" />
+            <Label text="Datedemande" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="TXStatus" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="TXMessage" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="168.0" GridPane.columnIndex="1" />
+            <JFXTextField fx:id="TXDescription" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="TXMembredemande" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <JFXDatePicker fx:id="TXDatedexpiration" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXDatePicker fx:id="TXDatedemande" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Label layoutX="22.0" layoutY="47.0" text="Creation D'un Nouveau Demande Cadeaux">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="BtAnuller" buttonType="RAISED" layoutX="191.0" layoutY="583.0" onAction="#handleButtonAnnuler" prefHeight="35.0" prefWidth="90.0" ripplerFill="#f52020" style="-fx-background-color: #F39C12;" text="Annuler" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonConfirmer" buttonType="RAISED" layoutX="341.0" layoutY="583.0" onAction="#handleButtonConfirmer" prefHeight="35.0" prefWidth="90.0" ripplerFill="#3f25d7" style="-fx-background-color: rgb(0, 170, 207);" text="Confirmer" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="15.0" />
+         </font>
+  
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="UserPane" prefHeight="600" prefWidth="1024.0" styleClass="parent" stylesheets="@../ressources/css/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.DetailDemandeController">
+    <children>
+        <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" style="-fx-background-size: 900 600;" styleClass="sidebar">
+            <children>
+                <Label prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="TUNISIA BON PLAN" textFill="WHITE">
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <font>
+                        <Font name="Ebrima" size="18.0" />
+                    </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+                </Label>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#BackListsdemd" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="ANGLE_LEFT" size="1.3em" />
+                        <Label fx:id="backexp" onMouseClicked="#BackListsdemd" text="Précédent" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <VBox fx:id="vboxdemande" prefHeight="200.0" prefWidth="100.0" styleClass="box" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="10.0" top="10.0" />
+                    </padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT" styleClass="btns">
+                     <children>
+                        <Label text="Les Commentaires" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+                </VBox>
+                <JFXButton fx:id="btnclose" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#closeApp" prefHeight="45.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Quitter" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Calibri Light" size="14.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="POWER_OFF" size="1.5em" />
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+            </children>
+        </VBox>
+        <VBox layoutX="300.0" prefHeight="600.0" prefWidth="724.0">
+            <children>
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="724.0" style="-fx-background-color: #fff;">
+                    <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#e8e4e4" height="10.0" radius="4.5" width="10.0" />
+                    </effect>
+                    <children>
+                        <Label fx:id="nomPExp" layoutX="14.0" layoutY="24.0" text="Détail" textFill="#7c8184">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                        </Label>
+                        <FontAwesomeIcon fx:id="notif" glyphStyle="-fx-fill:#7c8184" iconName="BELL" layoutX="651.0" layoutY="43.0" onMouseClicked="#getnotif" size="1.5em" />
+                        <Label alignment="CENTER" layoutX="659.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="8" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <HBox alignment="CENTER">
+                    <children>
+                        <VBox alignment="TOP_CENTER" layoutX="260.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="724.0" styleClass="card-03" HBox.hgrow="ALWAYS">
+                     <children>
+                        <AnchorPane fx:id="listpane" prefHeight="532.0" prefWidth="724.0">
+                           <children>
+                              <JFXButton fx:id="adddmd" layoutX="480.0" layoutY="453.0" onAction="#showAddPartageExp" prefHeight="27.0" prefWidth="221.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Demander une recommandation" />
+                              <ImageView fx:id="imgdetail" fitHeight="192.0" fitWidth="320.0" layoutX="383.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="Description" layoutX="50.0" layoutY="71.0" text="Titre" />
+                              <Label fx:id="titledetail" layoutX="159.0" layoutY="71.0" text="Label" />
+                              <Label fx:id="Adresse" layoutX="48.0" layoutY="118.0" text="Description" />
+                              <Label fx:id="descdetail" layoutX="160.0" layoutY="118.0" text="Label" />
+                              <Label fx:id="Region" layoutX="54.0" layoutY="189.0" text="Addresse" />
+                              <Label fx:id="adddetail" layoutX="163.0" layoutY="187.0" text="Label" />
+                              <Label layoutX="45.0" layoutY="303.0" text="Ajouter Un commentaire">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="descavis" layoutX="163.0" layoutY="366.0" prefHeight="75.0" prefWidth="320.0" />
+                              <JFXButton fx:id="addavis" layoutX="506.0" layoutY="390.0" onAction="#addDemand" prefHeight="27.0" prefWidth="188.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Ajouter" />
+                              <Label fx:id="Description1" layoutX="45.0" layoutY="382.0" text="Message" />
+                              <JFXButton fx:id="modifierdmd" layoutX="37.0" layoutY="454.0" onAction="#ModifDemande" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Modifier" />
+                              <JFXButton fx:id="suppdmd" layoutX="181.0" layoutY="454.0" onAction="#suppDemande" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: linear-gradient(to top, #ff3356, #ff3653, #ff3950, #ff3c4e, #ff3f4b);" text="Supprimer" />
+                              <Label layoutX="40.0" layoutY="8.0" text="Détail">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children></VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

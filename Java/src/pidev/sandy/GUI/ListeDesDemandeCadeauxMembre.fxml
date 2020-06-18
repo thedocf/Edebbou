@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" fx:id="ListeDemandeCadeauxBorderPane" prefHeight="652.0" prefWidth="1114.0" stylesheets="@../ressources/css/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.ListeDesDemandeCadeauxMembreController">
+   <left>
+      <AnchorPane prefHeight="634.0" prefWidth="306.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="654.0" prefWidth="306.0" spacing="10.0" style="-fx-background-color: #73879C;" styleClass="background" stylesheets="@../ressources/css/dark-theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="357.0" prefWidth="306.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="306.0" text="Liste Des Demandes De Cadeaux" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ImageView fx:id="CadeauxDemande" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../ressources/img/divert.jpg" />
+                           </image>
+                        </ImageView>
+                        <HBox prefHeight="40.0" prefWidth="306.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="115.0" text="Cadeaux Demander" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="LibelleCadeauxDemande" prefHeight="28.0" prefWidth="114.0" text="Libelle" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="191.0" prefWidth="306.0" />
+                        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="306.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="58.79999389648438" minHeight="10.0" prefHeight="41.00000419616699" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="109.79999198913575" minHeight="10.0" prefHeight="20.99999580383301" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="134.40000762939454" minHeight="10.0" prefHeight="31.200020217895513" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="49.0" text="Status" />
+                              <Label text="Date D'expiration" GridPane.rowIndex="1" />
+                              <Label text="Date Demande" GridPane.rowIndex="2" />
+                              <Label fx:id="StatusCadeauxDemande" prefHeight="18.0" prefWidth="46.0" text="Status" GridPane.columnIndex="1" />
+                              <Label fx:id="LibelleDateExperationDemande" text="Date D'expiration" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="LibelleDateDemandeDemande" text="Date Demande" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <JFXButton fx:id="buttonSupprimerDemandeCadeaux" buttonType="RAISED" onAction="#supprimerDemandeCadeau" prefHeight="35.0" prefWidth="184.0" ripplerFill="#f52020" style="-fx-background-color: #F39C12;" text="Supprimer Demande" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Medium" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonModifierDemandeCadeaux" buttonType="RAISED" onAction="#modifierDemandeCadeauMembre" prefHeight="35.0" prefWidth="185.0" ripplerFill="#3d9a31" style="-fx-background-color: #26B99A;" text="Modifier Demande" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Medium" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonAjouterDemandeCadeaux" buttonType="RAISED" onAction="#AjouterDemandeCadeauxMembre" prefHeight="30.0" prefWidth="254.0" style="-fx-background-color: #0073B7;" text="Ajouter nouveau demande" textFill="#fffefe">
+                     <font>
+                        <Font name="Roboto Black" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonAfficherListeDemandeCadeaux" buttonType="RAISED" onAction="#createtableviewDemandeCadeaux" prefHeight="30.0" prefWidth="254.0" style="-fx-background-color: #0073B7;" text="Afficher Liste des Demande" textFill="#fffefe">
+                     <font>
+                        <Font name="Roboto Black" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonConsulteCadeauxDisponible" buttonType="RAISED" onAction="#ConsulteCadeauxDisponibleMembre" prefHeight="30.0" prefWidth="255.0" style="-fx-background-color: #0073B7;" text="Consulter liste des cadeaux Disponible" textFill="#fffefe">
+                     <font>
+                        <Font name="Roboto Black" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="652.0" prefWidth="807.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="searchfield" prefHeight="30.0" prefWidth="246.0" promptText="Rechercher ...">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="200.0" right="200.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TableView fx:id="tableviewListeDemandeCadeauxMembre" prefHeight="427.0" prefWidth="754.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="tablecolonneNumero" maxWidth="4000.0" minWidth="0.0" prefWidth="140.00000190734863" text="Numero" />
+                        <TableColumn fx:id="tablecolonneDemandeStatus" maxWidth="4000.0" minWidth="0.0" prefWidth="100.79998779296875" text="Status" />
+                        <TableColumn fx:id="tablecolonneDemandeDescription" maxWidth="4000.0" prefWidth="64.0" text="Description" />
+                        <TableColumn fx:id="tablecolonneDatedemandeCadeau" maxWidth="4000.0" prefWidth="107.20001220703125" text="Datedemande" />
+                        <TableColumn fx:id="tablecolonneDemandeMessage" maxWidth="4000.0" prefWidth="107.20001220703125" text="Message" />
+                        <TableColumn fx:id="tablecolonneDatedexpiration" maxWidth="4000.0" prefWidth="64.0" text="Datedexpiration" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPanceModifierCategorie" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #d1e0e0;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.sandy.controller.ModifierCategorieController">
+   <children>
+      <AnchorPane layoutX="200.0" layoutY="54.0" prefHeight="551.0" prefWidth="824.0" style="-fx-background-color: #d1e0e0;">
+         <children>
+                   <AnchorPane layoutX="-125.0" layoutY="-18.0" prefHeight="577.0" prefWidth="938.0" style="-fx-background-color: #d1e0e0;">
+               <children>
+                  <Label cache="true" cacheHint="SCALE" depthTest="DISABLE" layoutX="14.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.96" style="-fx-font-weight: #ff0000;" text="Modifier catégorie" textOverrun="CENTER_ELLIPSIS">
+                     
+                     <font>
+                        <Font name="System Italic" size="31.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="21.0" fitWidth="44.0" layoutX="52.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/appareil-photo-noflash-icone-6074-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="63.0" layoutX="50.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/dossier-icone-8757-48.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="description" layoutX="282.0" layoutY="189.0" prefHeight="25.0" prefWidth="255.0" />
+                  <JFXTextField fx:id="libelle" layoutX="282.0" layoutY="117.0" prefHeight="25.0" prefWidth="255.0" />
+                  <ImageView fitHeight="63.0" fitWidth="28.0" layoutX="36.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/modifier-texte-icone-4855-48.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="96.0" layoutY="130.0" prefHeight="25.0" prefWidth="79.0" text="Libelle">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="97.0" layoutY="199.0" prefHeight="32.0" prefWidth="126.0" text="Description">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="263.0" prefHeight="32.0" prefWidth="105.0" text="Catégorie">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="107.0" layoutY="336.0" prefHeight="17.0" prefWidth="72.0" text="Image">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="modifier" layoutX="320.0" layoutY="458.0" onAction="#modifierCategorie" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #00cc99;" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="image" layoutX="282.0" layoutY="334.0" onAction="#image" prefHeight="25.0" prefWidth="255.0" style="-fx-background-color: #BDBDBD;" text="Importer une image " />
+                  <JFXComboBox fx:id="categorie" layoutX="282.0" layoutY="260.0" prefHeight="25.0" prefWidth="255.0" promptText="Choisissez une catégorie" />
+                  <ImageView fx:id="warning" fitHeight="21.0" fitWidth="34.0" layoutX="634.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/avertissement-icone-9768-48.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="erreur" layoutX="655.0" layoutY="240.0" text="erruer" />
+                  <ImageView fx:id="imageaff" fitHeight="173.0" fitWidth="242.0" layoutX="1.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton buttonType="RAISED" layoutX="584.0" layoutY="22.0" onAction="#back" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: #00cc99;" text="Retourner" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="584.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/icons8-undo-64.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+                 
+           
+            
+            
+            
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
