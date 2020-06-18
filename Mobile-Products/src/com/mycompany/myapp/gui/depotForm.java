@@ -18,37 +18,46 @@
  */
 package com.mycompany.myapp.gui;
 
+import com.codename1.components.FloatingActionButton;
 import com.codename1.components.MultiButton;
+import com.codename1.components.ScaleImageLabel;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
+import static com.codename1.ui.Component.CENTER;
+import static com.codename1.ui.Component.LEFT;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
+import com.codename1.ui.Display;
 import com.codename1.ui.EncodedImage;
-import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
-import com.codename1.ui.TextComponent;
-import com.codename1.ui.TextField;
 import com.codename1.ui.URLImage;
+import com.codename1.ui.animations.CommonTransitions;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.geom.Rectangle;
+import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
+import com.codename1.ui.layouts.LayeredLayout;
+import com.codename1.ui.plaf.RoundBorder;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
-import com.mycompany.myapp.entities.Product;
-import com.mycompany.myapp.services.ProductService;
+import com.mycompany.myapp.entities.depot;
+import com.mycompany.myapp.services.DepotService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * GUI builder created Form
  *
  * @author shai
  */
-public class productsTriForm extends BaseForm {
-Form current;
-    public productsTriForm() {
+public class depotForm extends BaseForm {
+
+    public depotForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
     }
 
@@ -57,70 +66,47 @@ Form current;
         return true;
     }
 
-    public productsTriForm(com.codename1.ui.util.Resources resourceObjectInstance) {
-        current=this;
+    public depotForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         initGuiBuilderComponents(resourceObjectInstance);
-        Container searchContainer = new Container(BoxLayout.x());
-        Style s = UIManager.getInstance().getComponentStyle("Title");
-       TextField searchField = new TextField("", " Search"); 
-searchField.getHintLabel().setUIID("Title");
-searchField.setUIID("Title");
-searchField.getAllStyles().setAlignment(Component.LEFT);
-FontImage  searchIcon= FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s);
 
-               Button searchbt = new Button("search");
-             searchbt.getAllStyles().setAlignment(Component.RIGHT);
-        
-
-        searchContainer.add(searchbt);
-        searchContainer.add(searchIcon);
-       searchContainer.add(searchField);
-       this.add(searchContainer);
-     
-       searchbt.addActionListener((e) -> {
-       new searchProduct(searchField.getText()).show();
-        
-       });
         getToolbar().setTitleComponent(
                 FlowLayout.encloseCenterMiddle(
-                        new Label("Meilleures Produits ", "Title")
+                        new Label(" Depots ", "Title")
                 )
         );
 
         installSidemenu(resourceObjectInstance);
-          
+
         // getToolbar().addCommandToRightBar("", resourceObjectInstance.getImage("contact-b.png"), e -> {
         //});
 
-        int t = productsTriForm.this.getTintColor();
-        productsTriForm.this.setTintColor(0);
-        Container Product = new Container(BoxLayout.y());
+        int t = depotForm.this.getTintColor();
+        depotForm.this.setTintColor(0);
+        Container Depot = new Container(BoxLayout.y());
         // gui_Container_3_3.setUIID("List");
         //  gui_Container_3_3.setScrollableY(true);
-        ArrayList<Product> products = ProductService.getInstance().getTriProduct();
-        if (products != null) {
-            for (Product p : products) {
-                if (p.getStars()>3)
-                {
+        ArrayList<depot> depot = DepotService.getInstance().getAllDepot();
+        if (depot != null) {
+            for (depot p : depot) {
+                
                 EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(this.getWidth()/ 2 , this.getHeight() / 8, 0xFFFFFFFF), true);
-                Image image = URLImage.createToStorage(placeholder, p.getImage(), "http://localhost/backt/productimage/" + p.getImage(), URLImage.RESIZE_SCALE_TO_FILL);
+                Image image = URLImage.createToStorage(placeholder, p.getPhoto(), "http://localhost/test/uploads/" + p.getPhoto(), URLImage.RESIZE_SCALE_TO_FILL);
                 Container imgC = new Container();
                 imgC.add(image);
                 
-                MultiButton mb = new MultiButton(p.getNom());
+                MultiButton mb = new MultiButton(p.getDescription());
                 mb.setUIID("ListItem");
-                mb.setTextLine2("Etoiles : " + Integer.toString(p.getStars()));
-                
-                
-       
+                mb.setTextLine2(p.getDescription());
+                mb.setTextLine3(p.getEntreprise());
+                mb.setTextLine4("Ville :" + p.getVille());
       mb.add(RIGHT, image);
                 mb.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent evt) {
-                     
-                        
-                        new ProductDetailsForm(p,current).show();
-                    
+                       // ProduitDetailsForm.produitS=p;
+
+                        Form bdf = new AddDepotForm();
+                        bdf.show();
                     }
                 });
 
@@ -133,11 +119,11 @@ FontImage  searchIcon= FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s);
     add(BorderLayout.WEST, new Label("West"));
                 
                 */
-                Product.add(FlowLayout.encloseCenter(mb));
+                Depot.add(FlowLayout.encloseCenter(mb));
 
             }
-            }
-            this.add(Product);
+
+            this.add(Depot);
         }
 
     }
@@ -149,11 +135,12 @@ FontImage  searchIcon= FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s);
     private void initGuiBuilderComponents(com.codename1.ui.util.Resources resourceObjectInstance) {
         setInlineStylesTheme(resourceObjectInstance);
         setInlineStylesTheme(resourceObjectInstance);
-        setTitle("productsForm");
-        setName("productsForm");
+        setTitle("depotForm");
+        setName("depotForm");
 
         
 
     }// </editor-fold>
 
+//-- DON'T EDIT ABOVE THIS LINE!!!
 }

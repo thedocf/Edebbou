@@ -71,13 +71,13 @@ public class BaseForm extends Form {
         getToolbar().addCommandToSideMenu("Categories", trendingImage, e -> new categorieForm(res).show());
         getToolbar().addCommandToSideMenu("Produits", trendingImage, e -> new productsForm(res).show());
         getToolbar().addCommandToSideMenu("Meilleure Produits", trendingImage, e -> new productsTriForm(res).show());
+        getToolbar().addCommandToSideMenu("Fournisseur", trendingImage, e -> new fournisseurForm(res).show());
+        getToolbar().addCommandToSideMenu("Depot", trendingImage, e -> new depotForm(res).show());
         
       
         // spacer
         getToolbar().addComponentToSideMenu(new Label(" ", "SideCommand"));
-        getToolbar().addComponentToSideMenu(new Label(SessionManager.getPhoto(), "Container"));
-        getToolbar().addComponentToSideMenu(new Label(SessionManager.getUserName(), "SideCommandNoPad"));
-        getToolbar().addComponentToSideMenu(new Label(SessionManager.getEmail(), "SideCommandSmall"));
+     
     }
 
         

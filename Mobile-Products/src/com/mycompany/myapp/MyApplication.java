@@ -13,10 +13,7 @@ import com.codename1.ui.Toolbar;
 import java.io.IOException;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.io.NetworkEvent;
-import com.mycompany.myapp.gui.Affichage;
-import com.mycompany.myapp.gui.InboxForm;
-import com.mycompany.myapp.gui.PostForm;
-import com.mycompany.myapp.gui.SplashForm;
+
 import com.mycompany.myapp.gui.productsForm;
 import com.mycompany.myapp.gui.categorieForm;
 

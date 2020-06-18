@@ -17,7 +17,7 @@ public class UploadServices {
     public String uploadImage(String Path) {
         String fileNameInServer = "";
 
-        FileUploader fu = new FileUploader("localhost/test");
+        FileUploader fu = new FileUploader("localhost/backt/productimage");
         try {
             //Upload
             fileNameInServer = fu.upload(Path);

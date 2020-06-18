@@ -8,6 +8,7 @@ package com.mycompany.myapp.gui;
 import com.codename1.components.ImageViewer;
 import com.codename1.components.MultiButton;
 import com.codename1.components.ScaleImageLabel;
+import com.codename1.components.ToastBar;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
@@ -88,6 +89,7 @@ public class ProductDetailsForm extends BaseForm {
                {
                    p.setStars(slide.getProgress());
                    ps.evastar(p);
+                   ToastBar.showMessage( p.getNom()+" Evalué", FontImage.MATERIAL_THUMB_UP);
                }
                      
             }
