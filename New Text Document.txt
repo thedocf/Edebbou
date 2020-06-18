@@ -1,0 +1,61 @@
+
+********************************************DbConnection
+
+DbConnection décrit une API commune pour parler à plusieurs bases de données
+tacccedilha service web communication 
+SQL LITE base de donne local elli nekhdmou biha
+
+
+
+
+*********************************************Singleton
+
+une classe singleton est une classe qui ne peut avoir 
+qu'un seul objet (une instance de la classe) une seule
+ instance en mémoire à un instant donné.
+
+pour la classe normale, nous utilisons le constructeur
+pour la classe singleton, nous utilisons la méthode getInstance () 
+
+
+UiManager elli lahi bel apparence de l application
+
+
+**********************************************  PArsejson
+
+trajja une map <string objet> 
+
+response json  tjina sous forme de text JSONParser iconvertiha w imanipuliha  CharArray
+yakhedha string yamlellha mapping bach mbaed el map Map<String,Object> haki nrecuperiw 
+menha w nabiw les entitee mtana
+
+
+
+**********************************************Requette sql 
+
+
+
+
+**********************************************connection request 
+req
+objet de connexion sous forme d une reponse de demande de connexion http/https
+
+
+une fois que nous avons terminé de l'utiliser.
+                La ConnectionRequest req est unique pour tous les appels des methodes donc si on ne supprime
+                pas l'ActionListener il sera enregistré et donc éxécuté même si 
+                la réponse reçue correspond à une autre URL(get par exemple)*/
+
+
+**********************************************network manager
+lahi bel gestion des demande de connexion
+
+
+
+**********************************************getInstance
+trajalek singleton instance mtaa class haki
+
+jdbc api
+
+
+
