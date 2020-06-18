@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="32.png"  />
+    <image name="anonimo.jpg"  />
+    <image name="background.jpg"  />
+    <image name="bg.jpg"  />
+    <image name="bla.jpg" type="multi"  />
+    <image name="bridge.jpg"  />
+    <image name="calendar-background.jpg"  />
+    <image name="calendar-separator.png" type="multi"  />
+    <image name="card.png" type="multi"  />
+    <image name="cart.png"  />
+    <image name="computer-icons-social-media-image-clip-art-logo-png-favpng-yjx1WHd6kwiTsfp5amz63rE61.jpg"  />
+    <image name="contact-a.png" type="multi"  />
+    <image name="contact-b.png" type="multi"  />
+    <image name="contact-c.png" type="multi"  />
+    <image name="dark-rect.png" type="multi"  />
+    <image name="deb.jpg"  />
+    <image name="download (1).png"  />
+    <image name="eddbou.png"  />
+    <image name="entr.gif"  />
+    <image name="favorites.png"  />
+    <image name="fida.jpg"  />
+    <image name="griffith.jpg" type="multi"  />
+    <image name="GroupElement.borderBottom_1.png" type="multi"  />
+    <image name="GroupElement.borderBottomL_1.png" type="multi"  />
+    <image name="GroupElement.borderBottomR_1.png" type="multi"  />
+    <image name="GroupElement.borderCenter_1.png" type="multi"  />
+    <image name="GroupElement.borderLeft_1.png" type="multi"  />
+    <image name="GroupElement.borderRight_1.png" type="multi"  />
+    <image name="GroupElement.borderTop_1.png" type="multi"  />
+    <image name="GroupElement.borderTopL_1.png" type="multi"  />
+    <image name="GroupElement.borderTopR_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderBottom_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderBottomL_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderBottomR_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderCenter_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderLeft_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderRight_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderTop_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderTopL_1.png" type="multi"  />
+    <image name="GroupElementFirst.borderTopR_1.png" type="multi"  />
+    <image name="GroupElementLast.borderBottom_1.png" type="multi"  />
+    <image name="GroupElementLast.borderBottomL_1.png" type="multi"  />
+    <image name="GroupElementLast.borderBottomR_1.png" type="multi"  />
+    <image name="GroupElementLast.borderCenter_1.png" type="multi"  />
+    <image name="GroupElementLast.borderLeft_1.png" type="multi"  />
+    <image name="GroupElementLast.borderRight_1.png" type="multi"  />
+    <image name="GroupElementLast.borderTop_1.png" type="multi"  />
+    <image name="GroupElementLast.borderTopL_1.png" type="multi"  />
+    <image name="GroupElementLast.borderTopR_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderBottom_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderBottomL_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderBottomR_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderCenter_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderLeft_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderRight_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderTop_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderTopL_1.png" type="multi"  />
+    <image name="GroupElementOnly.borderTopR_1.png" type="multi"  />
+    <image name="images.png"  />
+    <image name="Individual-Member-Icon.gif"  />
+    <image name="label_round-selected.png" type="multi"  />
+    <image name="label_round.png" type="multi"  />
+    <image name="learn-codename-one.jpg" type="multi"  />
+    <image name="load.gif"  />
+    <image name="loading-gif-orange-5.gif"  />
+    <image name="loading.gif"  />
+    <image name="logg.png" type="multi"  />
+    <image name="profile.png"  />
+    <image name="profile_image.png" type="multi"  />
+    <image name="prog.png"  />
+    <image name="progress.png"  />
+    <image name="refresh.png"  />
+    <image name="search.png"  />
+    <image name="selection-in-sidemenu.png" type="multi"  />
+    <image name="sidemenu-background.jpg"  />
+    <image name="signup.png"  />
+    <image name="skate-park.jpg"  />
+    <image name="toolbar-profile-pic.png" type="multi"  />
+    <image name="walthru-radio-selected.png" type="multi"  />
+    <image name="walthru-radio-unselected.png" type="multi"  />
+    <image name="welcome-background.jpg"  />
+    <image name="welcome-image-mask.png" type="multi"  />
+    <image name="welcome-separator.png" type="multi"  />
+</resource>
