@@ -20,12 +20,15 @@ package com.mycompany.myapp.gui;
 
 
 import com.codename1.components.MultiButton;
+import com.codename1.components.ToastBar;
 import com.codename1.io.rest.Response;
 import com.codename1.io.rest.Rest;
 import com.codename1.l10n.ParseException;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
+import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
@@ -46,6 +49,7 @@ import java.util.Map;
 public class panier extends com.codename1.ui.Form {
   public static final String ACCOUNT_SID = "ACe03f2ebcf6df3b605cd29841abfd2910";
   public static final String AUTH_TOKEN = "cb809c54635309a8654c31d044858c6a";
+  int i=0;
     public panier() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
     }
@@ -59,7 +63,16 @@ public class panier extends com.codename1.ui.Form {
         hi2.add(new Label(" "));
         hi2.add(new Label(" "));
             PanierService pss = new PanierService();
-            for (Map.Entry<Product2, Integer> entry : PanierService.panier.entrySet()) {
+          
+            if (PanierService.panier==null)
+            {
+               // Dialog.show("Panier"," Votre panier est vide", "Ok" ,null);
+                i=1;
+             }
+            else  {
+                if (i!=1)
+                    {
+                 for (Map.Entry<Product2, Integer> entry : PanierService.panier.entrySet()) {
 
                 MultiButton l = new MultiButton(""+entry.getKey().getNom());  
                 l.setTextLine2("Quantité : "+entry.getValue().toString());
@@ -76,13 +89,25 @@ public class panier extends com.codename1.ui.Form {
                 bt.addActionListener(lll->{
                     PanierService ps = new PanierService();
                     ps.modifProduit(entry.getKey(), Integer.parseInt(tf.getText()));
+                    
+                        System.out.println(i);
                     new panier(resourceObjectInstance).show();
+                   
                 });
+               
                 c.add(tf);
                 c.add(bt);
                 hi2.add(c);
-                
+                  }
         }
+              } 
+            int x = 0;
+            if (PanierService.panier==null)
+            {
+                x=1;
+            }
+            if (x==0)   
+            {
             Label total = new Label("Total : "+pss.total());
             hi2.add(total);
             getToolbar().addCommandToLeftBar("Retour", null, ev -> {
@@ -103,9 +128,9 @@ public class panier extends com.codename1.ui.Form {
             
             hi2.add(checkout);
             add(hi2);
+            }
         //getToolbar().setBackCommand("", e -> last.show());
     }
-
 
 
 }

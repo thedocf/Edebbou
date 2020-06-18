@@ -55,11 +55,11 @@ public class ServiceUser {
         con.setUrl(Url);// Insertion de l'URL de notre demande de connexion
         
         
-        System.out.println(ta.toString());
+     
 
         con.addResponseListener((e) -> {
             String str = new String(con.getResponseData());//Récupération de la réponse du serveur
-            System.out.println(str);//Affichage de la réponse serveur sur la console
+            
 
         });
        //  SendGrid s = SendGrid.create("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");

@@ -51,7 +51,7 @@ public class FournisseurService {
             JSONParser j = new JSONParser();
             Map<String, Object> fournisseurListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
             List<Map<String, Object>> list = (List<Map<String, Object>>) fournisseurListJson.get("root");
-              System.out.println(list);
+             
 
             for (Map<String, Object> obj : list) {
                 fournisseur p;   
@@ -124,7 +124,7 @@ public class FournisseurService {
                 +"&photo="
                 +FilenameInserver;        
         
-        System.out.print(url);
+     
         
         ConnectionRequest con = new ConnectionRequest(url, true);
         con.addResponseListener((e) -> {
@@ -148,12 +148,12 @@ public class FournisseurService {
                 +depot_id
                             ;     
         
-        System.out.print(url);
+     
         
         ConnectionRequest con = new ConnectionRequest(url, true);
         con.addResponseListener((e) -> {
             String str = new String(con.getResponseData());
-            System.out.println(str);
+            
         });
         NetworkManager.getInstance().addToQueueAndWait(con);
     }

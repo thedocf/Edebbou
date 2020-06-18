@@ -68,7 +68,7 @@ public class ProductService {
             JSONParser j = new JSONParser();
             Map<String, Object> productListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
             List<Map<String, Object>> list = (List<Map<String, Object>>) productListJson.get("root");
-              System.out.println("liste:"+list);
+              
 
             for (Map<String, Object> obj : list) {
                 Product p;
