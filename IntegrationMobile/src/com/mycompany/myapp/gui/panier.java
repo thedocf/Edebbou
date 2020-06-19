@@ -66,14 +66,14 @@ public class panier extends com.codename1.ui.Form {
           
             if (PanierService.panier==null)
             {
-               // Dialog.show("Panier"," Votre panier est vide", "Ok" ,null);
+               
                 i=1;
              }
             else  {
-                if (i!=1)
-                    {
+                
                  for (Map.Entry<Product2, Integer> entry : PanierService.panier.entrySet()) {
-
+                        if (i!=1)
+                    {
                 MultiButton l = new MultiButton(""+entry.getKey().getNom());  
                 l.setTextLine2("Quantité : "+entry.getValue().toString());
                 l.setTextLine3("Prix : "+entry.getKey().getPrix());
@@ -81,6 +81,7 @@ public class panier extends com.codename1.ui.Form {
                 
 //Label l = new Label("'"+entry.getKey().getNom()+"'  Qte: '"+entry.getValue().toString()+"' P : '"++"' Tot : "+(entry.getKey().getPrix()*entry.getValue()));
             hi2.add(l);
+            }
                 Container c = new Container(new BoxLayout(BoxLayout.X_AXIS));
                 TextField tf = new TextField();
                 tf.setPreferredW(200);
@@ -98,15 +99,11 @@ public class panier extends com.codename1.ui.Form {
                 c.add(tf);
                 c.add(bt);
                 hi2.add(c);
+                 
                   }
-        }
               } 
-            int x = 0;
-            if (PanierService.panier==null)
-            {
-                x=1;
-            }
-            if (x==0)   
+           
+            if (i==0)
             {
             Label total = new Label("Total : "+pss.total());
             hi2.add(total);
@@ -127,8 +124,16 @@ public class panier extends com.codename1.ui.Form {
             });
             
             hi2.add(checkout);
-            add(hi2);
+            
             }
+            else {
+                Label n= new Label("Votre panier est vide");
+                hi2.add(n);
+                getToolbar().addCommandToLeftBar("Retour", null, ev -> {
+                new productsForm(resourceObjectInstance).showBack();
+            });
+            }
+            add(hi2);
         //getToolbar().setBackCommand("", e -> last.show());
     }
 

@@ -18,6 +18,9 @@ import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.utils.Statics;
+import com.mycompany.myapp.entities.Evenement;
+
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,37 +28,37 @@ import java.util.Map;
 
 
 
-public class FournisseurService {
+public class EventService {
     
-    public ArrayList<fournisseur> fournisseurs;
-    public static FournisseurService instance = null;
+    public ArrayList<Evenement> events;
+    public static EventService instance = null;
     private ConnectionRequest req;
 
-    public FournisseurService() {
+    public EventService() {
         req = new ConnectionRequest();
     }
 
-    public static FournisseurService getInstance() {
+    public static EventService getInstance() {
         if (instance == null) {
-            instance = new FournisseurService();
+            instance = new EventService();
         }
         return instance;
     }
     
 
 
-    public ArrayList<fournisseur> parseFournisseur(String jsonText) {
+    public ArrayList<Evenement> parseEvents(String jsonText) {
         try {
 
-            fournisseurs = new ArrayList<>();
+            events = new ArrayList<>();
             JSONParser j = new JSONParser();
-            Map<String, Object> fournisseurListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
-            List<Map<String, Object>> list = (List<Map<String, Object>>) fournisseurListJson.get("root");
+            Map<String, Object> eventListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
+            List<Map<String, Object>> list = (List<Map<String, Object>>) eventListJson.get("root");
              
 
             for (Map<String, Object> obj : list) {
-                fournisseur p;   
-                p = new fournisseur();
+                Evenement p;   
+                p = new Evenement();
                                 float id = Float.parseFloat(obj.get("id").toString());
                                 System.out.print(id);
                                 p.setId((int) id);
@@ -64,26 +67,27 @@ public class FournisseurService {
                              //  p.setDepot_id((int) depot_id); 
                                 
        
-                                p.setNom(obj.get("nom").toString());
-                                p.setPrenom(obj.get("prenom").toString()); 
-
-                                
-                               float numTel = Float.parseFloat(obj.get("numTel").toString());
-                               p.setNumTel((int) numTel);  
-                                
-                                p.setDisponible(obj.get("disponible").toString());
+                                p.setNomEvent(obj.get("nomEvent").toString());
+                                //p.setAdresse(obj.get("adresse").toString()); 
+                                //p.setType(obj.get("type").toString()); 
+                                p.setDescription(obj.get("description").toString()); 
+                               //float prix = Float.parseFloat(obj.get("prix").toString());
+                               //p.setPrix(prix);  
+                                float nbPlaces = Float.parseFloat(obj.get("nbPlaces").toString());
+                               p.setNbPlaces((int)nbPlaces);  
+                                p.setImage(obj.get("image").toString());
                                 
 
                                 
                              
 
                               
-                fournisseurs.add(p);
+                events.add(p);
             }
         } 
         catch (IOException ex) {
         }
-        return fournisseurs;
+        return events;
     }
 
     
@@ -91,52 +95,28 @@ public class FournisseurService {
     
     
     
-    public ArrayList<fournisseur> getAllFournisseur() {
-        String url = "http://localhost/debou/web/app_dev.php/mobile/fournisseursfour";
+    public ArrayList<Evenement> getAllEvent() {
+        String url = "http://localhost/back/web/app_dev.php/ListEventMobile";
         req.setUrl(url);
         req.setPost(false);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
-                fournisseurs = parseFournisseur(new String(req.getResponseData()));
+                events = parseEvents(new String(req.getResponseData()));
                 req.removeResponseListener(this);
 
             }
         }
         );
         NetworkManager.getInstance().addToQueueAndWait(req);
-                        System.out.println(fournisseurs);
-        return fournisseurs;
+                        System.out.println(events);
+        return events;
     }
     
     
-    public void addDepot(String entreprise, int surface, String ville, int capacite, String description, String FilenameInserver) {
-        String url = "http://localhost/debou/web/app_dev.php/mobile/AjoutDepotMobile?entreprise="
-                + entreprise
-                +"&surface="
-                +surface
-                +"&ville="
-                +ville
-                +"&capacite="
-                +capacite
-                +"&description="
-                +description
-                +"&image="
-                +FilenameInserver;
-                       
-        
-     
-        
-        ConnectionRequest con = new ConnectionRequest(url, true);
-        con.addResponseListener((e) -> {
-            String str = new String(con.getResponseData());
-            System.out.println(str);
-        });
-        NetworkManager.getInstance().addToQueueAndWait(con);
-    }
     
     
-      public void addFournisseur(String nom, String prenom, int numTel, int disponible,int depot_id) {
+     /* public void addFournisseur(String nom, String prenom, int numTel, int disponible,int depot_id) {
         String url = "http://localhost/debou/web/app_dev.php/mobile/AjoutFournisseurMobile?nom="
                 +nom
                 +"&prenom="
@@ -157,5 +137,5 @@ public class FournisseurService {
             
         });
         NetworkManager.getInstance().addToQueueAndWait(con);
-    }
+    }*/
 }

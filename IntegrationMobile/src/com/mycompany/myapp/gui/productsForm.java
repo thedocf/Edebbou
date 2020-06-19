@@ -23,6 +23,7 @@ import com.codename1.components.ToastBar;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
@@ -50,7 +51,7 @@ import java.util.ArrayList;
  * @author shai
  */
 public class productsForm extends BaseForm {
-Form current;
+static Form current;
     public productsForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
     }
@@ -71,19 +72,22 @@ searchField.setUIID("Title");
 searchField.getAllStyles().setAlignment(Component.LEFT);
 FontImage  searchIcon= FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s);
 
-               Button searchbt = new Button("search");
+               Button searchbt = new Button("Search");
              searchbt.getAllStyles().setAlignment(Component.RIGHT);
         
 
         searchContainer.add(searchbt);
         searchContainer.add(searchIcon);
        searchContainer.add(searchField);
-       this.add(searchContainer);
-     
-       searchbt.addActionListener((e) -> {
-       new searchProduct(searchField.getText()).show();
-        System.out.println("maktoub:"+searchField.getText());
-       });
+      
+       String field=searchField.getText();
+       
+       searchbt.addActionListener((ActionListener) (ActionEvent evt) -> {
+           new searchProduct(field).show();
+           System.out.println("field"+field);
+        });
+      
+        this.add(searchContainer);
         getToolbar().setTitleComponent(
                 FlowLayout.encloseCenterMiddle(
                         new Label(" Produits ", "Title")

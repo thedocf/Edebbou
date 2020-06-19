@@ -5,14 +5,11 @@
  */
 package com.mycompany.myapp.gui;
 
-import com.codename1.components.ImageViewer;
 import com.codename1.components.MultiButton;
-import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.ToastBar;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
-import com.codename1.ui.Display;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
@@ -31,7 +28,6 @@ import static com.codename1.ui.plaf.Style.BACKGROUND_NONE;
 import com.mycompany.myapp.entities.Product2;
 import com.mycompany.myapp.services.PanierService;
 import com.mycompany.myapp.services.ProductService;
-import com.mycompany.myapp.services.ProduitService;
 import java.util.HashMap;
 
 /**

@@ -212,8 +212,9 @@ public class AddDepotForm extends BaseForm {
                                 } catch (IOException ex) {
                                    
                                 }
-
-            ad.addDepot(entreprise.getText(),Integer.parseInt(surface.getText()),ville.getText(),Integer.parseInt(capacite.getText()),description.getText(),FilenameInserver);
+                                String photo = "localhost/test/uploads/hadhra.png";
+            ad.addDepot(entreprise.getText(),Integer.parseInt(surface.getText()),ville.getText(),Integer.parseInt(capacite.getText()),description.getText(),photo);
+            ToastBar.showMessage( entreprise.getText()+" ajouté", FontImage.MATERIAL_THUMB_UP);
 
 //Adresse a = new Adresse (adresse.getText(),Pays.getText(),Comp.getText(),cp.getText(),ville.getText());
                             }

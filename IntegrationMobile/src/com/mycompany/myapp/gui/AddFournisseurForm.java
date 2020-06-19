@@ -125,6 +125,8 @@ this.add(row4);
                 //  System.out.println(FilenameInserver);
 
                 ad.addFournisseur(nom.getText(), prenom.getText(), Integer.parseInt(numTel.getText()), Integer.parseInt(disponible.getText()),Integer.parseInt(depot_id.getText()));
+                            ToastBar.showMessage( nom.getText()+" ajouté", FontImage.MATERIAL_THUMB_UP);
+
             }
         });
     }

@@ -37,12 +37,13 @@ import java.util.ArrayList;
 public class searchProduct extends BaseForm{
    
    Form hi;
-     Product b ;
+     
      ProduitService bS = new ProduitService();
      Container listeContainer = new Container(BoxLayout.y());
      public searchProduct(Form prev){}
      
       public searchProduct(String d){
+          System.out.println("d:"+d);
               hi=this;
      Button back = $(new Button("Retour")).addActionListener(e2 -> {
 
@@ -54,6 +55,8 @@ public class searchProduct extends BaseForm{
  
  ArrayList<Product2> liche = bS.SearchProduct(d);
  int x=0;
+ if (liche!=null)
+ {
  for (Product2 guide: liche) {
      x=1;
  Label titre = new Label(guide.getNom());
@@ -96,7 +99,7 @@ public class searchProduct extends BaseForm{
                      
          
             System.out.println(guide);
-            Container guideInfoContainer = new Container(BoxLayout.y());
+          
             listeContainer.add(titre);
             listeContainer.add(date);
             
@@ -107,12 +110,12 @@ public class searchProduct extends BaseForm{
       
         listeContainer.add(back);
         
-        }
+        }}
  Label c = new Label("Produit "+d+" introuvable"); 
- if (x==0) {
+ 
      listeContainer.add(c);
      listeContainer.add(back);
- }
+ 
      hi.add(listeContainer);
         hi.show();
      

@@ -24,12 +24,16 @@ package com.mycompany.myapp.gui;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
+import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
+import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.mycompany.myapp.services.PanierService;
 
 /**
  * Utility methods common to forms e.g. for binding the side menu
@@ -37,6 +41,8 @@ import com.codename1.ui.util.Resources;
  * @author Shai Almog
  */
 public class BaseForm extends Form {
+ 
+   
      public Component createLineSeparator() {
         Label separator = new Label("", "WhiteSeparator");
         separator.setShowEvenIfBlank(true);
@@ -50,6 +56,8 @@ public class BaseForm extends Form {
         separator.setShowEvenIfBlank(true);
         return separator;
     }
+
+
     public void installSidemenu(Resources res) {
         Image selection = res.getImage("selection-in-sidemenu.png");
         
@@ -65,14 +73,22 @@ public class BaseForm extends Form {
         Image statsImage = null;
         if(isCurrentStats()) statsImage = selection;
         
-        
-        getToolbar().addCommandToSideMenu("Blog", trendingImage,  e -> new TrendingForm1(res).show());
-        getToolbar().addCommandToSideMenu("Panier", null, e -> new panier().show());
+         getToolbar().addCommandToSideMenu("Panier", null, e -> new panier().show()); 
+         getToolbar().addCommandToSideMenu("Commandes", null, e -> new commandes().show());
         getToolbar().addCommandToSideMenu("Produits", null, e -> new productsForm().show());
-        getToolbar().addCommandToSideMenu("Meuilleure Produits", null, e -> new productsTriForm().show());
-        getToolbar().addCommandToSideMenu("Categories", null, e -> new categorieForm().show());
-        getToolbar().addCommandToSideMenu("Depots", trendingImage,  e -> new depotForm(res).show());
-        getToolbar().addCommandToSideMenu("Fournisseurs", trendingImage,  e -> new fournisseurForm(res).show());
+       getToolbar().addCommandToSideMenu("Categories", null, e -> new categorieForm().show());
+       getToolbar().addCommandToSideMenu("Meuilleure Produits", null, e -> new productsTriForm().show());
+       getToolbar().addCommandToSideMenu("Evenements", null, e -> new eventForm(res).show());
+       getToolbar().addCommandToSideMenu("Blog", trendingImage,  e -> new TrendingForm1(res).show());
+       getToolbar().addCommandToSideMenu("Depots", trendingImage,  e -> new depotForm(res).show());
+       getToolbar().addCommandToSideMenu("Fournisseurs", trendingImage,  e -> new fournisseurForm(res).show());
+          
+        
+        
+        
+        
+        
+        
         getToolbar().addCommandToSideMenu("Paramétres", null, e -> new UserForm().show());
         
         // spacer

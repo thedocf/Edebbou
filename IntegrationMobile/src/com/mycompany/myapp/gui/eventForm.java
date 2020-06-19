@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (c) 2016, Codename One
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -18,46 +18,33 @@
  */
 package com.mycompany.myapp.gui;
 
-import com.codename1.components.FloatingActionButton;
+
+
 import com.codename1.components.MultiButton;
-import com.codename1.components.ScaleImageLabel;
-import com.codename1.ui.Button;
-import com.codename1.ui.Component;
-import static com.codename1.ui.Component.CENTER;
-import static com.codename1.ui.Component.LEFT;
 import com.codename1.ui.Container;
-import com.codename1.ui.Dialog;
-import com.codename1.ui.Display;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.URLImage;
-import com.codename1.ui.animations.CommonTransitions;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.geom.Rectangle;
-import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
-import com.codename1.ui.layouts.LayeredLayout;
-import com.codename1.ui.plaf.RoundBorder;
-import com.codename1.ui.plaf.Style;
-import com.codename1.ui.plaf.UIManager;
-import com.mycompany.myapp.entities.depot;
-import com.mycompany.myapp.services.DepotService;
-
+import com.mycompany.myapp.entities.Evenement;
+import com.mycompany.myapp.entities.fournisseur;
+import com.mycompany.myapp.services.EventService;
+import com.mycompany.myapp.services.FournisseurService;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * GUI builder created Form
  *
  * @author shai
  */
-public class depotForm extends BaseForm {
+public class eventForm extends BaseForm {
 
-    public depotForm() {
+    public eventForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
     }
 
@@ -66,65 +53,53 @@ public class depotForm extends BaseForm {
         return true;
     }
 
-    public depotForm(com.codename1.ui.util.Resources resourceObjectInstance) {
+    
+    public eventForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         initGuiBuilderComponents(resourceObjectInstance);
 
         getToolbar().setTitleComponent(
                 FlowLayout.encloseCenterMiddle(
-                        new Label(" Depots ", "Title")
+                        new Label("Evenements ", "Title")
                 )
         );
 
         installSidemenu(resourceObjectInstance);
 
-        // getToolbar().addCommandToRightBar("", resourceObjectInstance.getImage("contact-b.png"), e -> {
+        //getToolbar().addCommandToRightBar("", resourceObjectInstance.getImage("contact-b.png"), e -> {
         //});
 
-        int t = depotForm.this.getTintColor();
-        depotForm.this.setTintColor(0);
-        Container Depot = new Container(BoxLayout.y());
-        // gui_Container_3_3.setUIID("List");
-        //  gui_Container_3_3.setScrollableY(true);
-        ArrayList<depot> depot = DepotService.getInstance().getAllDepot();
-        int x=0;
-        if (depot != null) {
-            for (depot p : depot) {
-                x++;
+        int t = eventForm.this.getTintColor();
+        eventForm.this.setTintColor(0);
+        Container Event = new Container(BoxLayout.y());
+        ArrayList<Evenement> ev = EventService.getInstance().getAllEvent();
+        if (ev != null) {
+            for (Evenement p : ev) {
                 EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(this.getWidth()/ 2 , this.getHeight() / 8, 0xFFFFFFFF), true);
-                Image image = URLImage.createToStorage(placeholder, p.getPhoto(), "http://localhost/test/uploads/"+x+".png", URLImage.RESIZE_SCALE_TO_FILL);
+                Image image = URLImage.createToStorage(placeholder, p.getImage(), "http://localhost/backt/productimage/" + p.getImage(), URLImage.RESIZE_SCALE_TO_FILL);
                 Container imgC = new Container();
                 imgC.add(image);
-                
-                MultiButton mb = new MultiButton(p.getDescription());
+                MultiButton mb = new MultiButton(p.getNomEvent());
                 mb.setUIID("ListItem");
                 mb.setTextLine2(p.getDescription());
-                mb.setTextLine3(p.getEntreprise());
-                mb.setTextLine4("Ville :" + p.getVille());
-      mb.add(RIGHT, image);
-                mb.addActionListener(new ActionListener() {
+                mb.setTextLine4(p.getNbPlaces()+" Places");
+                mb.add(RIGHT, image);
+               /* mb.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent evt) {
-                       // ProduitDetailsForm.produitS=p;
+                        /// ProduitDetailsForm.produitS=p;
 
-                        Form bdf = new AddDepotForm();
+                        Form bdf = new AddFournisseurForm();
                         bdf.show();
+                        /// Form bdf = new ProduitDetailsForm(res);
+                        ///bdf.show();
                     }
-                });
+                });*/
 
-                
-                
-                /*      Depot.add(BorderLayout.CENTER, new Label("Center")).
-    add(BorderLayout.SOUTH, new Label("South")).
-    add(BorderLayout.NORTH, new Label("North")).
-    add(BorderLayout.EAST, new Label("East")).
-    add(BorderLayout.WEST, new Label("West"));
-                
-                */
-                Depot.add(FlowLayout.encloseCenter(mb));
+                Event.add(FlowLayout.encloseCenter(mb));
 
             }
 
-            this.add(Depot);
+            this.add(Event);
         }
 
     }
@@ -136,8 +111,7 @@ public class depotForm extends BaseForm {
     private void initGuiBuilderComponents(com.codename1.ui.util.Resources resourceObjectInstance) {
         setInlineStylesTheme(resourceObjectInstance);
         setInlineStylesTheme(resourceObjectInstance);
-        setTitle("depotForm");
-        setName("depotForm");
+        
 
         
 

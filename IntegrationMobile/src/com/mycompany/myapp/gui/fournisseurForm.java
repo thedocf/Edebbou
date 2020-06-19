@@ -75,7 +75,7 @@ public class fournisseurForm extends BaseForm {
 
         getToolbar().setTitleComponent(
                 FlowLayout.encloseCenterMiddle(
-                        new Label("Gestion Fournisseurs ", "Title")
+                        new Label(" Fournisseurs ", "Title")
                 )
         );
 
