@@ -161,12 +161,13 @@ public class SignInForm extends com.codename1.ui.Form {
     public void onButton_2ActionEvent(com.codename1.ui.events.ActionEvent ev) {
          String usr=gui_Text_Field_2.getText();
                String pwd=gui_Text_Field_1.getText();
+               
                try{
            Fos_user s = ServiceUser.getInstance().getConnectedUser2(usr, pwd);
           if (gui_Text_Field_2.getText().contentEquals(s.getEmail())){
             
                         SessionManager.setId(s.getId());
-//                        SessionManager.se(password.getText());
+//                       SessionManager.se(password.getText());
                         SessionManager.setUserName(s.getUsername());
                         SessionManager.setEmail(s.getEmail());
                         SessionManager.setPhoto("anonimo.jpg");

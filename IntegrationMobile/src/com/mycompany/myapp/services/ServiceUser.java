@@ -117,7 +117,7 @@ public class ServiceUser {
 
   
   public Fos_user getConnectedUser2(String u, String p) {
-        String url = Statics.BASE_URL2 + "/api/login/" + u+"/"+p;
+        String url = Statics.BASE_URL2 + "/api/login/"+u+"/"+p;
         Fos_user ss = new Fos_user();
         req.setUrl(url);
         req.setPost(false);

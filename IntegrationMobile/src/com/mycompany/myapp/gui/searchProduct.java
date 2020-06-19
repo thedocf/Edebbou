@@ -55,8 +55,7 @@ public class searchProduct extends BaseForm{
  
  ArrayList<Product2> liche = bS.SearchProduct(d);
  int x=0;
- if (liche!=null)
- {
+ 
  for (Product2 guide: liche) {
      x=1;
  Label titre = new Label(guide.getNom());
@@ -110,12 +109,12 @@ public class searchProduct extends BaseForm{
       
         listeContainer.add(back);
         
-        }}
+        }
  Label c = new Label("Produit "+d+" introuvable"); 
- 
+ if (x==0) {
      listeContainer.add(c);
      listeContainer.add(back);
- 
+ }
      hi.add(listeContainer);
         hi.show();
      

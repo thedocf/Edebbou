@@ -4,13 +4,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Th3Doc/Desktop/piiide/src/com/mycompany/myapp/services/FournisseurService.java</file>
-            <file>file:/C:/Users/Th3Doc/Desktop/piiide/src/com/mycompany/myapp/services/DepotService.java</file>
-            <file>file:/C:/Users/Th3Doc/Desktop/piiide/src/com/mycompany/myapp/services/EventService.java</file>
-            <file>file:/C:/Users/Th3Doc/Desktop/piiide/src/com/mycompany/myapp/gui/eventForm.java</file>
-            <file>file:/C:/Users/Th3Doc/Desktop/piiide/src/com/mycompany/myapp/gui/fournisseurForm.java</file>
             <file>file:/C:/Users/Th3Doc/Desktop/piiide/src/com/mycompany/myapp/gui/productsForm.java</file>
-            <file>file:/C:/Users/Th3Doc/Desktop/piiide/src/com/mycompany/myapp/gui/BaseForm.java</file>
+            <file>file:/C:/Users/Th3Doc/Desktop/piiide/src/com/mycompany/myapp/gui/searchProduct.java</file>
         </group>
     </open-files>
 </project-private>

@@ -159,6 +159,7 @@ public class TrendingForm1 extends BaseForm {
          fab.addActionListener(e -> {
               AjoutForm h = new AjoutForm();
        h.getF().show();
+       
         });
             
          }

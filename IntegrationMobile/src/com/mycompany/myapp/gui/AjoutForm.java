@@ -198,7 +198,7 @@ hi.add("Name").add(Name).
         LocalNotification.REPEAT_MINUTE  // Whether to repeat and what frequency
 );
  
-new InboxForm().show();
+new TrendingForm1().show();
         });
         
      

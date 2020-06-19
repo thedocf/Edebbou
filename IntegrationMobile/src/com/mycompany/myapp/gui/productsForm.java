@@ -72,7 +72,7 @@ searchField.setUIID("Title");
 searchField.getAllStyles().setAlignment(Component.LEFT);
 FontImage  searchIcon= FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s);
 
-               Button searchbt = new Button("Search");
+                Button searchbt = new Button("search");
              searchbt.getAllStyles().setAlignment(Component.RIGHT);
         
 
@@ -80,14 +80,15 @@ FontImage  searchIcon= FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s);
         searchContainer.add(searchIcon);
        searchContainer.add(searchField);
       
-       String field=searchField.getText();
+     this.add(searchContainer);
+       searchbt.addActionListener((e) -> {
+       new searchProduct(searchField.getText()).show();
+        
+       });
+        
        
-       searchbt.addActionListener((ActionListener) (ActionEvent evt) -> {
-           new searchProduct(field).show();
-           System.out.println("field"+field);
-        });
       
-        this.add(searchContainer);
+        
         getToolbar().setTitleComponent(
                 FlowLayout.encloseCenterMiddle(
                         new Label(" Produits ", "Title")
