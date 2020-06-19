@@ -191,7 +191,7 @@ public class AddDepotForm extends BaseForm {
             
            
             try {
-                m = MediaManager.createMedia("audio/browse.mp3", false);
+                m = MediaManager.createMedia("browse.mp3", false);
             } catch (IOException ex) {
                 
             }

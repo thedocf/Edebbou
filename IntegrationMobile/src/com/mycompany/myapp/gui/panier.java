@@ -28,11 +28,14 @@ import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
+import com.codename1.ui.EncodedImage;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
+import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
+import com.codename1.ui.URLImage;
 import com.codename1.ui.layouts.BoxLayout;
 import com.mycompany.myapp.entities.Product;
 import com.mycompany.myapp.entities.Product2;
@@ -74,6 +77,10 @@ public class panier extends com.codename1.ui.Form {
                  for (Map.Entry<Product2, Integer> entry : PanierService.panier.entrySet()) {
                         if (i!=1)
                     {
+                         EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(this.getWidth()/ 2 , this.getHeight() / 8, 0xFFFFFFFF), true);
+                Image image = URLImage.createToStorage(placeholder, entry.getKey().getImage(), "http://localhost/backt/productimage/" + entry.getKey().getImage(), URLImage.RESIZE_SCALE_TO_FILL);
+                Container imgC = new Container();
+          imgC.add(image);
                 MultiButton l = new MultiButton(""+entry.getKey().getNom());  
                 l.setTextLine2("Quantité : "+entry.getValue().toString());
                 l.setTextLine3("Prix : "+entry.getKey().getPrix());
@@ -81,6 +88,7 @@ public class panier extends com.codename1.ui.Form {
                 
 //Label l = new Label("'"+entry.getKey().getNom()+"'  Qte: '"+entry.getValue().toString()+"' P : '"++"' Tot : "+(entry.getKey().getPrix()*entry.getValue()));
             hi2.add(l);
+            hi2.add(imgC);
             }
                 Container c = new Container(new BoxLayout(BoxLayout.X_AXIS));
                 TextField tf = new TextField();

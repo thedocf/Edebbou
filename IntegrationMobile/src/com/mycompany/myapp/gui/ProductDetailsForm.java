@@ -110,6 +110,7 @@ public class ProductDetailsForm extends BaseForm {
                         p2.setPrix(p.getPrix());
                         p2.setImage(p.getImage());
                         p2.setDescription(p.getDescription());
+                        System.out.println("desc:"+p.getDescription());
                         p2.setQte(p.getQte());
                         p2.setStars(p.getStars());
                    ps.evastar(p2);

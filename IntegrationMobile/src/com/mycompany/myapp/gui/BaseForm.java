@@ -74,15 +74,15 @@ public class BaseForm extends Form {
         if(isCurrentStats()) statsImage = selection;
         
          getToolbar().addCommandToSideMenu("Panier", null, e -> new panier().show()); 
-         getToolbar().addCommandToSideMenu("Commandes", null, e -> new commandes().show());
+         getToolbar().addCommandToSideMenu("Commandes", trendingImage, e -> new commandes().show());
         getToolbar().addCommandToSideMenu("Produits", null, e -> new productsForm().show());
        getToolbar().addCommandToSideMenu("Categories", null, e -> new categorieForm().show());
        getToolbar().addCommandToSideMenu("Meuilleure Produits", null, e -> new productsTriForm().show());
        getToolbar().addCommandToSideMenu("Evenements", null, e -> new eventForm(res).show());
-       getToolbar().addCommandToSideMenu("Blog", trendingImage,  e -> new TrendingForm1(res).show());
-       getToolbar().addCommandToSideMenu("Depots", trendingImage,  e -> new depotForm(res).show());
-       getToolbar().addCommandToSideMenu("Fournisseurs", trendingImage,  e -> new fournisseurForm(res).show());
-          
+       getToolbar().addCommandToSideMenu("Blog", null,  e -> new TrendingForm1(res).show());
+       getToolbar().addCommandToSideMenu("Depots", null,  e -> new depotForm(res).show());
+       getToolbar().addCommandToSideMenu("Fournisseurs", null,  e -> new fournisseurForm(res).show());
+        getToolbar().addCommandToSideMenu("Reclamations", null,  e -> new reclamationForm(res).show());  
         
         
         

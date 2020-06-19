@@ -131,6 +131,7 @@ FontImage  searchIcon= FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s);
                         p2.setPrix(p.getPrix());
                        p2.setImage(p.getImage());
                        p2.setQte(p.getQte());
+                       p2.setDescription(p.getDescription());
                        p2.setStars(p.getStars());
                         new ProductDetailsForm(p2,current).show();
                     
