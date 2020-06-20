@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#Trier" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #FFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProduitBackController">
+   <stylesheets>
+      <URL value="@commandeback.css" />
+   </stylesheets>
+   <children>
+      <Label layoutX="665.0" layoutY="14.0" text="Produits">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="search" layoutX="603.0" layoutY="64.0" prefHeight="38.0" prefWidth="208.0" promptText="Rechercher..." styleClass="TextFiled" stylesheets="@../pidev/css/styles.css" />
+      <ScrollPane layoutX="330.0" layoutY="124.0" prefHeight="362.0" prefWidth="767.0">
+         <content>
+            <TableView fx:id="table" prefHeight="359.0" prefWidth="764.0" style="-fx-background-color: #fbb700;">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="name" onEditCommit="#changeName" prefWidth="87.0" text="Nom" />
+                  <TableColumn fx:id="price" onEditCommit="#changePrice" prefWidth="87.0" text="Prix" />
+                  <TableColumn fx:id="qte" onEditCommit="#changeQte" prefWidth="87.0" text="Quantite" />
+                  <TableColumn fx:id="category" prefWidth="95.20001220703125" text="Categorie" />
+                  <TableColumn fx:id="date" prefWidth="104.79998779296875" text="Date Expiration" />
+                  <TableColumn fx:id="desc" onEditCommit="#changeDesc" prefWidth="103.99993896484375" text="Description" />
+                  <TableColumn fx:id="image" prefWidth="120.0" text="Image" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="addButton" layoutX="393.0" layoutY="529.0" mnemonicParsing="false" onAction="#addPro" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="upButton" layoutX="553.0" layoutY="529.0" mnemonicParsing="false" onAction="#updatePro" onMouseClicked="#livreurs" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="supButton" layoutX="694.0" layoutY="529.0" mnemonicParsing="false" onAction="#delPro" onMouseClicked="#livreurs" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="triButton" layoutX="844.0" layoutY="529.0" mnemonicParsing="false" onAction="#triPro" onMouseClicked="#livreurs" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Trier" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="expButton" layoutX="1005.0" layoutY="529.0" mnemonicParsing="false" onAction="#exPro" onMouseClicked="#livreurs" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Exporter" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="dateb" layoutX="393.0" layoutY="529.0" mnemonicParsing="false" onAction="#date" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Date" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="prix" layoutX="553.0" layoutY="529.0" mnemonicParsing="false" onAction="#prix" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Prix" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="category1" layoutX="694.0" layoutY="529.0" mnemonicParsing="false" onAction="#category" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Categorie" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="retour" layoutX="844.0" layoutY="529.0" mnemonicParsing="false" onAction="#retour" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="upload" layoutX="961.0" layoutY="590.0" mnemonicParsing="false" onAction="#changeImage" prefHeight="25.0" prefWidth="87.0" text="Upload" />
+      <Label fx:id="imageLabel" layoutX="877.0" layoutY="587.0" prefHeight="32.0" prefWidth="66.0" text="Image">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="catlabel" layoutX="395.0" layoutY="587.0" prefHeight="17.0" prefWidth="103.0" text="Category">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="category22" layoutX="492.0" layoutY="590.0" prefHeight="26.0" prefWidth="122.0" />
+      <Label fx:id="datelabel" layoutX="645.0" layoutY="587.0" prefHeight="32.0" prefWidth="52.0" text="Date">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="date11" layoutX="697.0" layoutY="590.0" onAction="#dateFacture1" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="appli" layoutX="694.0" layoutY="529.0" mnemonicParsing="false" onAction="#appliquer" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Appliquer" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="img" fitHeight="42.0" fitWidth="44.0" layoutX="1072.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="stat" layoutX="671.0" layoutY="597.0" mnemonicParsing="false" onAction="#stat" prefHeight="38.0" prefWidth="112.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Statistiques" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <PieChart fx:id="piechart" layoutX="453.0" layoutY="465.0" prefHeight="228.0" prefWidth="350.0" />
+      <Button fx:id="retour1" layoutX="877.0" layoutY="584.0" mnemonicParsing="false" onAction="#retour" prefHeight="38.0" prefWidth="100.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="exlab" layoutX="803.0" layoutY="516.0" prefHeight="43.0" prefWidth="261.0" text="Produits expiré par Categorie">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="700.0" prefWidth="197.0" style="-fx-background-color: #333333;">
+         <children>
+            <Button id="login" fx:id="logout" layoutX="56.0" layoutY="635.0" mnemonicParsing="false" onAction="#logout" onMouseClicked="#logout" onMouseEntered="#Onmouseenter" onMouseExited="#onmouseexit" prefHeight="38.0" prefWidth="83.0" styleClass="login" stylesheets="@../pidev/css/styles.css" text="logout">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Text fill="WHITE" layoutX="51.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="Gdepotsss" layoutY="188.0" mnemonicParsing="false" onAction="#Gdepotsss" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Gestion Depot" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Glivreur" layoutY="317.0" mnemonicParsing="false" onAction="#Glivreur" onMouseClicked="#livreurs" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text=" Livreurs" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="GProduit" layoutX="3.0" layoutY="360.0" mnemonicParsing="false" onAction="#GProduit" onMouseClicked="#products" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Produits" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="GCategorie" layoutY="402.0" mnemonicParsing="false" onAction="#GCategorie" onMouseClicked="#categoriess" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Categorie" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="95.0" fitWidth="162.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../ressources/logo2.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="envoyer_btn" />
+                  <String fx:value="content-area-circle-btns" />
+                  <String fx:value="img" />
+               </styleClass>
+            </ImageView>
+            <Button fx:id="Gcommande" layoutY="274.0" mnemonicParsing="false" onAction="#Gcommande" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Commandes" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Ghome" layoutX="3.0" layoutY="118.0" mnemonicParsing="false" onAction="#Ghome" prefHeight="43.0" prefWidth="189.0" style="-fx-background-color: FFCC00;" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="GF" layoutY="231.0" mnemonicParsing="false" onAction="#GF" prefHeight="43.0" prefWidth="189.0" styleClass="login2" stylesheets="@../pidev/css/styles.css" text="Gestion fournisseurs" textFill="WHITE">
+               <font>
+                  <Font name="Lato Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
